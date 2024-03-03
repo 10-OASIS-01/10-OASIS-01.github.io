@@ -20,6 +20,6 @@ My research interests include RAG and information retrieval.
 ## Papers
 
 
-You can find my CV here: [Yibin Liu's Curriculum Vitae](../assets/Curriculum_Vitae.pdf).
+You can find my CV here: [Yibin Liu's Curriculum Vitae](../assets/kelvin-lau.pdf).
 
 
