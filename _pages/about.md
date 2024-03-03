@@ -14,7 +14,7 @@ This is Yibin Liu's personal homepage.
 
 I am a second-year artificial intelligence undergraduate student at Northeastern University. I am fortunate to be advised by Associate Professor [Zhenghao Liu](https://edwardzh.github.io/). 
 
-My research interests include RAG and information retrieval.
+My research interests include RAG , QA and Other NLP or Information Retrieval tasks.
 
 
 ## Papers
