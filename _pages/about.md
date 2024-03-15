@@ -14,7 +14,7 @@ This is Yibin Liu's personal homepage.
 
 I am a second-year undergraduate student majoring in Artificial Intelligence at Northeastern University, under the guidance of Associate Professor [Zhenghao Liu](https://edwardzh.github.io/). Currently, I am doing a research internship in the Information Retrieval Group at Northeastern University [(NEUIR)](https://neuir.github.io/), 
 
-My research interests include Faithful Reasoning of LLM，RAG-sft, QA and Other NLP tasks.
+My research interests include faithful reasoning of LLM，RAG-sft, QA and Other NLP tasks.
 
 
 ## Papers
