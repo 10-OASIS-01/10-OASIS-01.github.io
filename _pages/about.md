@@ -25,6 +25,11 @@ Zhipeng Xu\*, Zhenghao Liu\*, **Yibin Liu**, Chenyan Xiong, Yukun Yan, Shuo Wang
 
 
 ## CV
-You can find my CV here: [Yibin Liu's Curriculum Vitae](../assets/kelvin-lau.pdf).
+You can find my CV here: 
+
+[Yibin Liu's Curriculum Vitae (EN)](../assets/kelvin-lau.pdf).
+
+[Yibin Liu's Curriculum Vitae (CN)](../assets/yibinliu_cn.pdf).
+
 
 
