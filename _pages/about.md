@@ -10,7 +10,7 @@ redirect_from:
 
 This is Yibin Liu's personal homepage.
 
-## Introduction
+## 📖 Introduction
 
 I am a second-year undergraduate student majoring in Artificial Intelligence at Northeastern University, under the guidance of Associate Professor [Zhenghao Liu](https://edwardzh.github.io/). Currently, I am doing a research internship in the Information Retrieval Group at Northeastern University [(NEUIR)](https://neuir.github.io/), 
 
