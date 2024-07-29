@@ -14,7 +14,7 @@ This is Yibin Liu's personal homepage.
 
 I was a third-year undergraduate student majoring in Artificial Intelligence at Northeastern University. 
 
-My research interests lie at the intersection of NLP and HCI, focusing on enhancing the interaction between Edge AI models on mobile devices and humans, as well as exploring LLM applications in sports and health.
+My research interests lie at the intersection of NLP and HCI, focusing on enhancing the interaction between Edge AI models on mobile devices and humans, as well as exploring LLM applications in Health & Exercise.
 
 Currently, I am conducting research under the guidance of [Dr. Nan Gao](https://nancygao.com/), a Shuimu Scholar postdoc researcher at the [Pervasive HCI Lab](https://pi.cs.tsinghua.edu.cn/) of Tsinghua University. Together, we are addressing issues in family education using LLM and HCI technologies, aiming to infer human behaviors and mental states to improve self-awareness and promote human well-being.
 
