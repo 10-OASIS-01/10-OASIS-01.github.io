@@ -36,6 +36,8 @@ Zhipeng Xu\*, Zhenghao Liu\*, **Yibin Liu**, Chenyan Xiong, Yukun Yan, Shuo Wang
 - 2023.11 Future Technology Taihu Scholarship
 - 2023.09 Excellent Student Scholarship in Northeastern University
 
+## 💬 Talks
+- 2024.08, “Retrieval-Augmented Generation Modeling” for Mingtong Weilai (Beijing).
   
 ## CV
 You can find my CV here: 
