@@ -38,6 +38,11 @@ Zhipeng Xu\*, Zhenghao Liu\*, **Yibin Liu**, Chenyan Xiong, Yukun Yan, Shuo Wang
 
 ## 💬 Talks
 - 2024.08, “Retrieval-Augmented Generation Modeling” for Mingtong Weilai (Beijing).
+
+## 👥 Academic Service
+
+- Reviewer for [Chinese CHI 2024](http://chchi.icachi.org/24/).
+
   
 ## CV
 You can find my CV here: 
