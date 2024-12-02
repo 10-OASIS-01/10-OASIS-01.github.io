@@ -1,5 +1,6 @@
 ---
 permalink: /
+title: "Yibin (Léon) Liu"
 excerpt: "About me"
 author_profile: true
 redirect_from: 
