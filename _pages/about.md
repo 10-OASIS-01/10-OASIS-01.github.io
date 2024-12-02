@@ -8,8 +8,6 @@ redirect_from:
   - /about.html
 ---
 
-This is Yibin (Léon) Liu's personal homepage.
-
 ## 📖 Introduction
 
 I was a third-year undergraduate student majoring in Artificial Intelligence at Northeastern University. 
