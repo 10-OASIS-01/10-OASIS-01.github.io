@@ -1,13 +1,3 @@
----
-permalink: /
-title: "Yibin (Léon) Liu"
-excerpt: "About me"
-author_profile: true
-redirect_from: 
-  - /about/
-  - /about.html
----
-
 ## 📖 Introduction
 
 I was a third-year undergraduate student majoring in Artificial Intelligence at Northeastern University. 
@@ -49,6 +39,19 @@ Zhipeng Xu\*, Zhenghao Liu\*, **Yibin Liu**, Chenyan Xiong, Yukun Yan, Shuo Wang
 - 2023.09 Excellent Student Scholarship in Northeastern University
 
 
+
+<!--
+---
+permalink: /
+title: "Yibin (Léon) Liu"
+excerpt: "About me"
+author_profile: true
+redirect_from: 
+  - /about/
+  - /about.html
+---
+
+-->
 
 
 
