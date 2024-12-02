@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Yibin Liu"
+title: "Yibin (Léon) Liu"
 excerpt: "About me"
 author_profile: true
 redirect_from: 
@@ -8,13 +8,13 @@ redirect_from:
   - /about.html
 ---
 
-This is Yibin Liu's personal homepage.
+This is Yibin (Léon) Liu's personal homepage.
 
 ## 📖 Introduction
 
 I was a third-year undergraduate student majoring in Artificial Intelligence at Northeastern University. 
 
-My research interests lie at finding a harmonious balance between **language data**, **interaction**, and **society**, leveraging **AI technology** as the primary implementation tool. By applying **NLP** and **DL** to this interdisciplinary area, my goal is to develop technology solutions that are not only intelligent and human-centered but also socially responsible. This research not only contributes to social welfare but also explores how language models can better understand human society and culture, collaborating with humans in decision-making to promote sustainable societal progress.
+My research interests lie at finding a harmonious balance between **language data**, **interaction**, and **society**, leveraging **AI technology** as the primary implementation tool. By applying **NLP** and **DL** to this interdisciplinary area, my goal is to develop Autonomous Systems that are intelligent, human-centered, and socially responsible. This research not only contributes to social welfare but also explores how language models can better understand human society and culture, collaborating with humans in decision-making to promote sustainable societal progress.
 
 
 ### Core Concept:         
