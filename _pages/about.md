@@ -17,7 +17,7 @@ My research interests focus on how computational models can learn from real-worl
 
 Currently, I am conducting research under the guidance of [Dr. Nan Gao](https://nancygao.com/), a Shuimu Scholar postdoc researcher at the [Pervasive HCI Lab](https://pi.cs.tsinghua.edu.cn/) of Tsinghua University. Together, we are addressing issues in family education using LLM and HCI technologies, aiming to infer human behaviors and mental states to improve self-awareness and promote human well-being.
 
-During my second year, I had an enriching research experience in the Information Retrieval Group at Northeastern University [(NEUIR)](https://neuir.github.io/), under the guidance of Associate Professor [Zhenghao Liu](https://edwardzh.github.io/). During this time, my research focused on Faithful Reasoning of LLM, RAG-sft, QA, and other NLP tasks.
+During my second year, I had an enriching research experience in the Information Retrieval Group at Northeastern University [(NEUIR)](https://neuir.github.io/), under the guidance of Associate Professor [Zhenghao Liu](https://edwardzh.github.io/). During this time, I'm dedicated to exploring RAG methods that address the knowledge needs of LLMs. my research also focused on Faithful Reasoning of LLM, RAG-sft, QA, and other NLP tasks.
 
 
 ## 📝 Publications
