@@ -13,14 +13,7 @@ redirect_from:
 
 I was a third-year undergraduate student majoring in Artificial Intelligence at Northeastern University. 
 
-My research interests lie at finding a harmonious balance between **language data**, **interaction**, and **society**, leveraging **AI technology** as the primary implementation tool. By applying **NLP** and **DL** to this interdisciplinary area, my goal is to develop Autonomous Systems that are intelligent, human-centered, and socially responsible. This research not only contributes to social welfare but also explores how language models can better understand human society and culture, collaborating with humans in decision-making to promote sustainable societal progress.
-
-
-### Core Concept:         
-
-- **Language**: Language data here is defined broadly to encompass not only text but also multimodal expressions like images and audio. Through AI, models can not only process and understand these diverse symbols of language but also grasp the cultural contexts and values behind them. In this sense, language becomes more than a tool for communication; it’s a reflection of culture and social consciousness. AI models should, therefore, be able to respect and understand cultural diversity, especially in applications related to societal impact and public policy, making technology more inclusive and adaptable.
-
-- **Interaction, Control, and Collaboration**: Interaction is not merely about the way people engage with systems but also about how language can be used to control them effectively. AI models should be capable not only of engaging in dialogue with users but also of assisting users in controlling intelligent systems through natural language and multimodal inputs. Additionally, AI systems can act as collaborative decision-makers, supporting humans in public affairs and policy-making through data analysis and intelligent insights, enabling people to make decisions more scientifically and comprehensively, thus influencing the direction of society.
+My research interests focus on how computational models can learn from real-world data, uncover the underlying causal relationships, and use this understanding to perform reasoning and decision-making. Ultimately, I aim to explore how these models interact more effectively with the real world and generate positive impacts. Building on this foundation, I am also keen to investigate how these technologies can be applied to control complex systems and collaborate with humans on specific tasks.
 
 Currently, I am conducting research under the guidance of [Dr. Nan Gao](https://nancygao.com/), a Shuimu Scholar postdoc researcher at the [Pervasive HCI Lab](https://pi.cs.tsinghua.edu.cn/) of Tsinghua University. Together, we are addressing issues in family education using LLM and HCI technologies, aiming to infer human behaviors and mental states to improve self-awareness and promote human well-being.
 
