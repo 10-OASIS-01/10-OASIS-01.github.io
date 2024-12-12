@@ -1,15 +1,11 @@
 ---
 permalink: /
-title: "Yibin (Léon) Liu"
-excerpt: "About me"
+title: "📖 Introduction"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
-
-
-## 📖 Introduction
 
 I was a third-year undergraduate student majoring in Artificial Intelligence at Northeastern University. 
 
