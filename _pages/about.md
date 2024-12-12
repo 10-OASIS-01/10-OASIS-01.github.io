@@ -9,7 +9,7 @@ redirect_from:
 
 I was a third-year undergraduate student majoring in Artificial Intelligence at Northeastern University. 
 
-My research interests focus on how computational models can learn from real-world data, uncover the underlying causal relationships, and use this understanding to perform reasoning and decision-making. Ultimately, I aim to explore how these models interact more effectively with the real world and generate positive impacts. Building on this foundation, I am also keen to investigate how these technologies can be applied to control complex systems and collaborate with humans on specific tasks.
+My research interests focus on how computational models can learn from real-world data, uncover the underlying causal relationships, and use this understanding to perform reasoning and decision-making. Ultimately, I aim to explore how these models interact more effectively with the real world and generate positive impacts. Building on this foundation, I am also keen to investigate how these technologies can be applied to control robotic systems and collaborate with humans on specific tasks.
 
 Currently, I am conducting research under the guidance of [Dr. Nan Gao](https://nancygao.com/), a Shuimu Scholar postdoc researcher at the [Pervasive HCI Lab](https://pi.cs.tsinghua.edu.cn/) of Tsinghua University. Together, we are addressing issues in family education using LLM and HCI technologies, aiming to infer human behaviors and mental states to improve self-awareness and promote human well-being.
 
