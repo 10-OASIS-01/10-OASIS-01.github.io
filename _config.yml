@@ -55,7 +55,9 @@ bing_site_verification   :
 alexa_site_verification  :
 yandex_site_verification :
 
-# Social Sharing
+# Social Sharing  
+linkedin:
+ username                : &twitter
 twitter:
   username               : &twitter
 facebook:
