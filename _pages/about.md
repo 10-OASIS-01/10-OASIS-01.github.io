@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-I was a third-year undergraduate student majoring in Artificial Intelligence at Northeastern University. 
+I am a junior undergraduate student majoring in Artificial Intelligence at Northeastern University.
 
 My research interests focus on how computational models can learn from real-world data, uncover the underlying causal relationships, and use this understanding to perform reasoning and decision-making. Ultimately, I aim to explore how these models interact more effectively with the real world and generate positive impacts. Building on this foundation, I am also keen to investigate how these technologies can be applied to control robotic systems and collaborate with humans on specific tasks.
 
