@@ -8,9 +8,9 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-title                    : "Yibin (Léon) Liu"
+title                    : "Yibin (Leon) Liu"
 title_separator          : "-"
-name                     : &name "Yibin (Léon) Liu"
+name                     : &name "Yibin (Leon) Liu"
 description              : &description "personal description"
 url                      : https://10-oasis-01.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -21,14 +21,14 @@ repository               : "10-OASIS-01/10-OASIS-01.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  name             : "Yibin (Léon) Liu"
+  name             : "Yibin (Leon) Liu"
   avatar           : "touxiang.jpg"
   pronouns         : # example: "she/her"  
   bio              : "Only by defying tradition can we keep innovating."
   location         : "Shenyang, China"
   employer         : "Northeastern University"
   uri              : # URL
-  email            : "kelvin.lau.cn@outlook.com"
+  email            : "liuyibin@stumail.neu.edu.cn"
 
   # Academic websites
   arxiv            : # URL - Update with the correct link to your profile
