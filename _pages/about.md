@@ -22,6 +22,8 @@ During my second year, I had an enriching research experience in the Information
 
 **Yibin Liu**, Zhenghao Liu, Yukun Yan, Shi Yu, Shuo Wang, Liner Yang, Yu Gu, Ge Yu, Huimin Chen. Self-Guide: A LLM Reasoning Enhancement Method Based on Self-Guided Planning. **CCL 2024 / Journal of Chinese Information Processing, accepted.**. ([Paper EN](https://github.com/10-OASIS-01/10-OASIS-01.github.io/blob/master/assets/_CCL2024__Self_Guide__A_LLM_Reasoning_Enhancement_Method_Based_on_Self_Guided_Planning_EN_-4.pdf) / [Paper CN](https://10-oasis-01.github.io/assets/183_self_guide_.pdf)/ [Code](https://github.com/NEUIR/Self-Guide))
 
+Nan Gao, **Yibin Liu**, Xin Tang, Yanyan Liu, Chun Yu, Yun Huang, Xuhai "Orson" Xu, Jun Wei, Yuanchun Shi. The Homework Wars: Exploring Emotions, Behaviours, and Conflicts in Parent-Child Homework Interactions. **Under Review of IMWUT 2025**.
+
 Zhipeng Xu\*, Zhenghao Liu\*, **Yibin Liu**, Chenyan Xiong, Yukun Yan, Shuo Wang, Shi Yu, Zhiyuan Liu, Ge Yu. ActiveRAG: Revealing the Treasures of Knowledge via Active Learning. arXiv. ([Paper](https://arxiv.org/abs/2402.13547) / [Code](https://github.com/OpenMatch/ActiveRAG))
 
 ## 💬 Talks
