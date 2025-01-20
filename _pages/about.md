@@ -24,7 +24,7 @@ During my second year, I had an enriching research experience in the Information
 
 Nan Gao, **Yibin Liu**, Xin Tang, Yanyan Liu, Chun Yu, Yun Huang, Xuhai "Orson" Xu, Jun Wei, Yuanchun Shi. The Homework Wars: Exploring Emotions, Behaviours, and Conflicts in Parent-Child Homework Interactions. **Under Review of IMWUT 2025**.
 
-Zhipeng Xu\*, Zhenghao Liu\*, **Yibin Liu**, Chenyan Xiong, Yukun Yan, Shuo Wang, Shi Yu, Zhiyuan Liu, Ge Yu. ActiveRAG: Revealing the Treasures of Knowledge via Active Learning. arXiv. ([Paper](https://arxiv.org/abs/2402.13547) / [Code](https://github.com/OpenMatch/ActiveRAG))
+Zhipeng Xu\*, Zhenghao Liu\*, **Yibin Liu**, Chenyan Xiong, Yukun Yan, Shuo Wang, Shi Yu, Zhiyuan Liu, Ge Yu. ActiveRAG: Revealing the Treasures of Knowledge via Active Learning. arXiv. ([Paper](https://arxiv.org/abs/2402.13547v1) / [Code](https://github.com/OpenMatch/ActiveRAG))
 
 ## 💬 Talks
 - 2024.08, “Retrieval-Augmented Generation Modeling” for Mingtong Weilai (Beijing).
