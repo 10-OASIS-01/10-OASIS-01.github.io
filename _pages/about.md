@@ -12,13 +12,13 @@ I am a junior undergraduate student majoring in Artificial Intelligence at North
 My research interests focus on grounding language in action and perception, specifically how computational models can learn from real-world data, uncover the underlying causal relationships, and use this understanding to perform reasoning and decision-making. Ultimately, I aim to explore how these models interact more effectively with the real world and generate positive impacts. Building on this foundation, I am also keen to investigate how these technologies can be applied to control robotic systems and collaborate with humans on specific tasks.
 
 
-Currently, I am conducting research under the guidance of [Dr. Nan Gao](https://nancygao.com/), a Shuimu Scholar postdoc researcher at the [Pervasive HCI Lab](https://pi.cs.tsinghua.edu.cn/) of Tsinghua University. Together, we are addressing issues in family education using LLM and HCI technologies, aiming to infer human behaviors and mental states to improve self-awareness and promote human well-being.
+Currently, I am conducting research under the guidance of [Dr. Nan Gao](https://nancygao.com/), a Shuimu Scholar postdoc researcher at the [Pervasive HCI Lab](https://pi.cs.tsinghua.edu.cn/) of Tsinghua University. Together, we are addressing issues in family education using LLM and HCI technologies, aiming to infer human behaviors and mental states to improve self-awareness and promote human well-being. our research represents a novel application of LLMs to directly encode and analyze human behavior through dialogue data, and developed a family education strategies recommendation System in real-world scenarios.
 
-During my second year, I had an enriching research experience in the Information Retrieval Group at Northeastern University [(NEUIR)](https://neuir.github.io/), under the guidance of Associate Professor [Zhenghao Liu](https://edwardzh.github.io/). During this time, I'm dedicated to exploring RAG methods that address the knowledge needs of LLMs. my research also focused on Faithful Reasoning of LLM, RAG-sft, QA, and other NLP tasks.
+During my second year, I had an enriching research experience in the Information Retrieval Group at Northeastern University [(NEUIR)](https://neuir.github.io/), under the guidance of Associate Professor [Zhenghao Liu](https://edwardzh.github.io/). During this time, I'm dedicated to exploring RAG methods that address the knowledge needs of LLMs. Centered around the concept of augmentation, our research explores from a cognitive science perspective how to effectively leverage external knowledge and the parametric memory of LLM to enhance its capabilities. 
 
 
 ## 📝 Publications
-(*indicates equal contribution)
+(*indicates equal contribution) 
 
 **Yibin Liu**, Zhenghao Liu, Yukun Yan, Shi Yu, Shuo Wang, Liner Yang, Yu Gu, Ge Yu, Huimin Chen. Self-Guide: A LLM Reasoning Enhancement Method Based on Self-Guided Planning. **CCL 2024 / Journal of Chinese Information Processing, accepted.**. ([Paper EN](https://github.com/10-OASIS-01/10-OASIS-01.github.io/blob/master/assets/_CCL2024__Self_Guide__A_LLM_Reasoning_Enhancement_Method_Based_on_Self_Guided_Planning_EN_-4.pdf) / [Paper CN](https://10-oasis-01.github.io/assets/183_self_guide_.pdf)/ [Code](https://github.com/NEUIR/Self-Guide))
 
