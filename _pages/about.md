@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "📖 About Me"
+title: ""
 author_profile: true
 redirect_from: 
   - /about/
@@ -18,7 +18,6 @@ Currently, I am a research assistant (RA) working on **Embodied AI, Spatial Inte
 ### **Tsinghua University – [Pervasive HCI Lab](https://pi.cs.tsinghua.edu.cn/)**  
 
 📅 **June 2024 – January 2025**  
-
 👨‍🏫 **Advisor:** [Dr. Nan Gao](https://nancygao.com/), Shuimu Scholar postdoc researcher, currently associate professor at Nankai University.
 
 - Conducted research on **family education support using LLM and HCI technologies**.  
@@ -30,7 +29,6 @@ Currently, I am a research assistant (RA) working on **Embodied AI, Spatial Inte
 ### **Northeastern University – [Information Retrieval Group (NEUIR)](https://neuir.github.io/)**  
 
 📅 **Second Year Undergraduate**  
-
 👨‍🏫 **Advisor:** [Associate Professor Zhenghao Liu](https://edwardzh.github.io/)  
 
 - Focused on **Retrieval-Augmented Generation (RAG) methods** to enhance LLM knowledge capabilities.  
