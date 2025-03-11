@@ -11,10 +11,27 @@ I am a junior undergraduate student majoring in Artificial Intelligence at North
 
 My research interests focus on **grounding language in spatial understanding and robotic manipulation**, specifically how computational models can learn from real-world data, uncover the underlying causal relationships, and use this understanding to perform reasoning and decision-making. Ultimately, I aim to explore how these models interact more effectively with the real world and generate positive impacts. 
 
-From June 2024 to January 2025, I conducted research under the guidance of [Dr. Nan Gao](https://nancygao.com/), a Shuimu Scholar postdoc researcher at the [Pervasive HCI Lab](https://pi.cs.tsinghua.edu.cn/) of Tsinghua University. I had a wonderful and fulfilling summer at the Pervasive HCI lab, where we addressed issues in family education using LLM and HCI technologies, aiming to infer human behaviors and mental states to improve self-awareness and promote human well-being. Our research represented a novel application of LLMs to directly encode and analyze human behavior through dialogue data, and we innovatively led the way in using LLMs in collaboration with human experts for qualitative coding and analysis of real-world data. We also developed a family education strategies recommendation system for real-world scenarios.
+Currently, I am a research assistant (RA) working on **Embodied AI, Spatial Intelligence and Robotics** under the supervision of [Prof. Yao (Mark) Mu](https://yaomarkmu.github.io/) at [ScaleLab](https://scalelab-sjtu.github.io/index.html), Shanghai Jiao Tong University. Meanwhile, I closely collaborate with [Zhixuan Liang](https://liang-zx.github.io/) from MMLab@HKU.  
 
+# 📖 Past Research Experiences
 
-During my second year, I had an enriching research experience in the Information Retrieval Group at Northeastern University [(NEUIR)](https://neuir.github.io/), under the guidance of Associate Professor [Zhenghao Liu](https://edwardzh.github.io/). During this time, I'm dedicated to exploring RAG methods that address the knowledge needs of LLMs. Centered around the concept of augmentation, our research explores from a cognitive science perspective how to effectively leverage external knowledge and the parametric memory of LLM to enhance its capabilities. Specifically, enhancing LLMs' reasoning capabilities by leveraging self-generated common sense knowledge and reasoning instructions.
+#### **Tsinghua University – [Pervasive HCI Lab](https://pi.cs.tsinghua.edu.cn/)**  
+📅 **June 2024 – January 2025**  
+👨‍🏫 **Advisor:** [Dr. Nan Gao](https://nancygao.com/), Shuimu Scholar postdoc researcher, currently associate professor at Nankai University.
+
+- Conducted research on **family education support using LLM and HCI technologies**.  
+- Developed methods to **infer human behaviors and mental states** to enhance self-awareness and promote well-being.  
+- Proposed a **novel LLM application** to encode and analyze human behavior through dialogue data.  
+- Innovatively combined **LLM-based analysis with human expert qualitative coding** to process real-world data.  
+- Designed and implemented a **family education strategies recommendation system** for practical applications.  
+
+#### **Northeastern University – [Information Retrieval Group (NEUIR)](https://neuir.github.io/)**  
+📅 **Second Year Undergraduate**  
+👨‍🏫 **Advisor:** [Associate Professor Zhenghao Liu](https://edwardzh.github.io/)  
+
+- Focused on **Retrieval-Augmented Generation (RAG) methods** to enhance LLM knowledge capabilities.  
+- Explored **cognitive science-inspired augmentation** techniques to integrate external knowledge with parametric memory.  
+- Investigated **self-generated common sense knowledge** and **reasoning instructions** to improve LLM reasoning ability.  
 
 
 ## 📝 Publications
