@@ -13,7 +13,7 @@ My research interests focus on **grounding language in spatial understanding and
 
 Currently, I am a research assistant (RA) working on **Embodied AI, Spatial Intelligence and Robotics** under the supervision of [Prof. Yao (Mark) Mu](https://yaomarkmu.github.io/) at [ScaleLab](https://scalelab-sjtu.github.io/index.html), Shanghai Jiao Tong University. Meanwhile, I closely collaborate with [Zhixuan Liang](https://liang-zx.github.io/) from MMLab@HKU.  
 
-# 📖 Past Research Experiences
+## 📖 Past Research Experiences
 
 #### **Tsinghua University – [Pervasive HCI Lab](https://pi.cs.tsinghua.edu.cn/)**  
 📅 **June 2024 – January 2025**  
