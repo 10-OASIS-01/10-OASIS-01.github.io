@@ -15,7 +15,7 @@ Currently, I am a research assistant (RA) working on **Embodied AI, Spatial Inte
 
 ## 📖 Past Research Experiences
 
-#### **Tsinghua University – [Pervasive HCI Lab](https://pi.cs.tsinghua.edu.cn/)**  
+### **Tsinghua University – [Pervasive HCI Lab](https://pi.cs.tsinghua.edu.cn/)**  
 
 📅 **June 2024 – January 2025**  
 
@@ -27,7 +27,7 @@ Currently, I am a research assistant (RA) working on **Embodied AI, Spatial Inte
 - Innovatively combined **LLM-based analysis with human expert qualitative coding** to process real-world data.  
 - Designed and implemented a **family education strategies recommendation system** for practical applications.  
 
-#### **Northeastern University – [Information Retrieval Group (NEUIR)](https://neuir.github.io/)**  
+### **Northeastern University – [Information Retrieval Group (NEUIR)](https://neuir.github.io/)**  
 
 📅 **Second Year Undergraduate**  
 
