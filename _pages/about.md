@@ -7,7 +7,8 @@ redirect_from:
   - /about.html
 ---
 
-I am a junior undergraduate student majoring in Artificial Intelligence at Northeastern University.
+I am a junior undergraduate student majoring in Artificial Intelligence at Northeastern University. Currently, I have been working as a Research Assistant working on **Embodied AI, Spatial Intelligence and Robotics** under the supervision of [Prof. Yao (Mark) Mu](https://yaomarkmu.github.io/) at Shanghai AI Lab & [ScaleLab, SJTU](https://scalelab-sjtu.github.io/index.html). Meanwhile, I closely collaborate with [Zhixuan Liang](https://liang-zx.github.io/) from MMLab@HKU. Our collaboration focuses on robotic behavior code generation through reinforcement learning in closed-loop physical simulations. 
+
 
 My research interests mainly focus on：
 
@@ -15,7 +16,6 @@ My research interests mainly focus on：
 
 - **Learning robotic poses and structures in specific task and workspace settings**
 
-Currently, I have been working as a Research Assistant working on **Embodied AI, Spatial Intelligence and Robotics** under the supervision of [Prof. Yao (Mark) Mu](https://yaomarkmu.github.io/) at Shanghai AI Lab & [ScaleLab, SJTU](https://scalelab-sjtu.github.io/index.html). Meanwhile, I closely collaborate with [Zhixuan Liang](https://liang-zx.github.io/) from MMLab@HKU. Our collaboration focuses on robotic behavior code generation through reinforcement learning in closed-loop physical simulations. 
 
 ## 📖 Past Research Experiences
 
