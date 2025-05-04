@@ -16,6 +16,7 @@ My research interests mainly focus on：
 
 - **Learning robotic poses and structures in specific task and workspace settings**
 
+**I am looking for a Ph.D. position starting in 2026 Fall. Please feel free to reach out!**
 
 ## 📖 Past Research Experiences
 
