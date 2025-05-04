@@ -25,11 +25,9 @@ My research interests mainly focus on：
 📅 **June 2024 – January 2025**  
 👨‍🏫 **Advisor:** [Dr. Nan Gao](https://nancygao.com/), Shuimu Scholar postdoc researcher, currently associate professor at Nankai University.
 
-- Conducted research on **family education support using LLM and HCI technologies**.  
-- Developed methods to **infer human behaviors and mental states** to enhance self-awareness and promote well-being.  
-- Proposed a **novel LLM application** to encode and analyze human behavior through dialogue data.  
-- Innovatively combined **LLM-based analysis with human expert qualitative coding** to process real-world data.  
-- Designed and implemented a **family education strategies recommendation system** for practical applications.  
+- Conducted research on **family education support** by integrating **large language models (LLMs) and human-computer interaction (HCI)** technologies.
+- Developed novel methods to **infer human behaviors and mental states** from dialogue data, enhancing self-awareness and promoting well-being.
+- Combined **LLM-driven analysis with expert qualitative coding** to process real-world data and built a **recommendation system for family education strategies**.
 
 ### **Northeastern University – [Information Retrieval Group (NEUIR)](https://neuir.github.io/)**  
 
