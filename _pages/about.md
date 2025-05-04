@@ -9,9 +9,13 @@ redirect_from:
 
 I am a junior undergraduate student majoring in Artificial Intelligence at Northeastern University.
 
-My research interests focus on **grounding language in spatial understanding and robotic manipulation**, specifically how computational models can learn from real-world data, uncover the underlying causal relationships, and use this understanding to perform reasoning and decision-making. Ultimately, I aim to explore how these models interact more effectively with the real world and generate positive impacts. 
+My research interests mainly focus on：
 
-Currently, I am a research assistant (RA) working on **Embodied AI, Spatial Intelligence and Robotics** under the supervision of [Prof. Yao (Mark) Mu](https://yaomarkmu.github.io/) at [ScaleLab](https://scalelab-sjtu.github.io/index.html), Shanghai Jiao Tong University. Meanwhile, I closely collaborate with [Zhixuan Liang](https://liang-zx.github.io/) from MMLab@HKU.  
+- **grounding language in spatial understanding and robotic manipulation**,
+
+- **Learning robotic poses and structures in specific task and workspace settings**
+
+Currently, I have been working as a Research Assistant working on **Embodied AI, Spatial Intelligence and Robotics** under the supervision of [Prof. Yao (Mark) Mu](https://yaomarkmu.github.io/) at Shanghai AI Lab & [ScaleLab, SJTU](https://scalelab-sjtu.github.io/index.html). Meanwhile, I closely collaborate with [Zhixuan Liang](https://liang-zx.github.io/) from MMLab@HKU. Our collaboration focuses on robotic behavior code generation through reinforcement learning in closed-loop physical simulations. 
 
 ## 📖 Past Research Experiences
 
@@ -39,8 +43,7 @@ Currently, I am a research assistant (RA) working on **Embodied AI, Spatial Inte
 ## 📝 Publications
 (*indicates equal contribution) 
 
-Nan Gao, **Yibin Liu**, Xin Tang, Yanyan Liu, Chun Yu, Yun Huang, Xuhai "Orson" Xu, Jun Wei, Yuanchun Shi. The Homework Wars: Exploring Emotions, Behaviours, and Conflicts in Parent-Child Homework Interactions. **Under Review of IMWUT 2025**. ([Paper](https://arxiv.org/abs/2502.01325v2))
-
+Nan Gao, **Yibin Liu**, Xin Tang, Yanyan Liu, Chun Yu, Yun Huang, Xuhai "Orson" Xu, Jun Wei, Yuanchun Shi. The Homework Wars: Exploring Emotions, Behaviours, and Conflicts in Parent-Child Homework Interactions. **Under major revision for ACM IMWUT/UbiComp 2025**. ([Paper](https://arxiv.org/abs/2502.01325v2))
 
 **Yibin Liu**, Zhenghao Liu, Yukun Yan, Shi Yu, Shuo Wang, Liner Yang, Yu Gu, Ge Yu, Huimin Chen. Self-Guide: A LLM Reasoning Enhancement Method Based on Self-Guided Planning. **CCL 2024 / Journal of Chinese Information Processing, accepted**. ([Paper EN](https://github.com/10-OASIS-01/10-OASIS-01.github.io/blob/master/assets/_CCL2024__Self_Guide__A_LLM_Reasoning_Enhancement_Method_Based_on_Self_Guided_Planning_EN_-4.pdf) / [Paper CN](https://10-oasis-01.github.io/assets/183_self_guide_.pdf)/ [Code](https://github.com/NEUIR/Self-Guide))
 
