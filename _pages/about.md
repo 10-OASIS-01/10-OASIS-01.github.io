@@ -12,7 +12,7 @@ I am a junior undergraduate student majoring in Artificial Intelligence at North
 
 My research interests mainly focus on：
 
-- **grounding language in spatial understanding and robotic manipulation**,
+- **Grounding language in spatial understanding and robotic manipulation**,
 
 - **Learning robotic poses and structures in specific task and workspace settings**
 
