@@ -56,7 +56,7 @@ Nan Gao, **Yibin Liu**, Xin Tang, Yanyan Liu, Chun Yu, Yun Huang, Xuhai "Orson" 
 ## 🏆 Awards
 
 - 2024.11 Outstanding Individual in Technological Innovation of Northeastern University.
-- 2024.05 Finalist of Mathematical Contest in Modeling / Interdisciplinary Contest in Modeling (MCM/ICM 2024, **Top 2% in 10,387 teams**).
+- 2024.05 Finalist of Mathematical Contest in Modeling / Interdisciplinary Contest in Modeling (MCM/ICM 2024, **Top 1.69% in 10,387 teams**).
 - 2023.10 National Level Third Prize in 2023 RoboCup China Competition Simulation 3D League Simulation (RoboCup 2023).
 - 2023.10 National Level Second Prize in 2023 FIRA SimuroSot China Competition (RoboCup 2023).
 - 2023.11 Future Technology Taihu Scholarship
