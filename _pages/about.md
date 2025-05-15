@@ -23,7 +23,7 @@ My research interests mainly focus on：
 ### **Tsinghua University – [Pervasive HCI Lab](https://pi.cs.tsinghua.edu.cn/)**  
 
 📅 **June 2024 – January 2025**  
-👨‍🏫 **Advisor:** [A/Prof Nan Gao](https://nancygao.com/), Shuimu Scholar postdoc researcher, currently associate professor at Nankai University.
+👨‍🏫 **Advisor:** [A/Prof Nan Gao](https://nancygao.com/), [A/Prof Chun Yu](https://pi.cs.tsinghua.edu.cn/lab/people/ChunYu/).
 
 - Conducted research on **family education support** by integrating **large language models (LLMs) and human-computer interaction (HCI)** technologies.
 - Developed novel methods to **infer human behaviors and mental states** from dialogue data, enhancing self-awareness and promoting well-being.
