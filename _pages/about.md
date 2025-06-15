@@ -14,7 +14,8 @@ My research interests mainly focus on：
 
 - **Grounding language in spatial understanding and robotic manipulation**,
 
-- **Learning robotic poses and structures in specific task and workspace settings**
+- **Reasoning and planning in multi-modality and embodied AI systems**
+
 
 **I am looking for a Ph.D. position starting in 2026 Fall. Please feel free to reach out!**
 
