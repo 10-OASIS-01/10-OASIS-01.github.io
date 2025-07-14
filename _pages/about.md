@@ -13,9 +13,11 @@ I am a junior undergraduate student majoring in Artificial Intelligence at North
 
 My research interests mainly focus on：
 
-- **Grounding language in spatial understanding and robotic manipulation**,
+- **Grounding language in spatial understanding and robotic manipulation**
 
 - **Reasoning and planning in multi-modality and embodied AI systems**
+
+- **Human-Robot Collaborative Interaction in Real-Simulation Hybrid Environments**
 
 
 **I am looking for a Ph.D. position starting in 2026 Fall. Please feel free to reach out!**
