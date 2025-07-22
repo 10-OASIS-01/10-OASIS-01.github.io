@@ -28,7 +28,7 @@ My research interests mainly focus on：
 
 Tianxing Chen\*, Zanxin Chen\*, Baijun Chen\*, Zijian Cai\*, **Yibin Liu**\*, ... Ping Luo†, Yao Mu†. RoboTwin 2.0: A Scalable Data Generator and Benchmark with Strong Domain Randomization for Robust Bimanual Robotic Manipulation. **arXiv 2025**. ([Webpage](https://robotwin-platform.github.io) / [Repo](https://github.com/RoboTwin-Platform/RoboTwin)) <img alt="GitHub repo stars" src="https://img.shields.io/github/stars/RoboTwin-Platform/RoboTwin">
 
-Nan Gao†, **Yibin Liu**, Xin Tang, Yanyan Liu, Chun Yu, Yun Huang, Xuhai "Orson" Xu, Jun Wei, Yuanchun Shi. The Homework Wars: Exploring Emotions, Behaviours, and Conflicts in Parent-Child Homework Interactions. **ACM IMWUT/UbiComp 2025**. ([Paper](https://arxiv.org/abs/2502.01325v2))
+Nan Gao†, **Yibin Liu**, Xin Tang, Yanyan Liu, Chun Yu, Yun Huang, Yuntao Wang, Flora D. Salim, Xuhai Orson Xu, Jun Wei, Yuanchun Shi. The Homework Wars: Exploring Emotions, Behaviours, and Conflicts in Parent-Child Homework Interactions. **ACM IMWUT/UbiComp 2025**. ([Paper](https://arxiv.org/abs/2502.01325v2))
 
 **Yibin Liu**, Zhenghao Liu†, Yukun Yan, Shi Yu, Shuo Wang, Liner Yang, Yu Gu, Ge Yu, Huimin Chen. Self-Guide: A LLM Reasoning Enhancement Method Based on Self-Guided Planning. **CCL 2024 / Journal of Chinese Information Processing**. ([Paper EN](https://github.com/10-OASIS-01/10-OASIS-01.github.io/blob/master/assets/_CCL2024__Self_Guide__A_LLM_Reasoning_Enhancement_Method_Based_on_Self_Guided_Planning_EN_-4.pdf) / [Paper CN](https://10-oasis-01.github.io/assets/183_self_guide_.pdf)/ [Code](https://github.com/NEUIR/Self-Guide))
 
