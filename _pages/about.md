@@ -31,29 +31,29 @@ Nan Gao†, **Yibin Liu**, Xin Tang, Yanyan Liu, Chun Yu, Yun Huang, Yuntao Wang
 
 ## 📖 Research Experiences
 
-### **Northwestern University, USA – [MLL Lab](https://mll-lab-nu.github.io)** July 2025 – Present
+### **Northwestern University, USA – [MLL Lab](https://mll-lab-nu.github.io)** 
 
-**Advisor:** [Prof. Manling Li](https://limanling.github.io)
+**Advisor:** [Prof. Manling Li](https://limanling.github.io), 📅**July 2025 – Present**
 
 Embodied multimodal LLM agents (Ongoing).
 
-### **Joint Research Internship – UNC-Chapel Hill, Horizon Robotics, SJTU**  March 2025 – Present
+### **Joint Research Internship – UNC-Chapel Hill, Horizon Robotics, SJTU**  
 
-**Advisor:** [Prof. Mingyu Ding (UNC)](https://dingmyu.github.io), [Yusen Qin (VP of D-Robotics)](https://www.linkedin.com/in/yusen-qin-5b23345b/?originalSubdomain=cn), [Prof. Yao Mu (SJTU)](https://yaomarkmu.github.io/) 
+**Advisor:** [Prof. Mingyu Ding (UNC)](https://dingmyu.github.io), [Yusen Qin (VP of D-Robotics)](https://www.linkedin.com/in/yusen-qin-5b23345b/?originalSubdomain=cn), [Prof. Yao Mu (SJTU)](https://yaomarkmu.github.io/), 📅**March 2025 – Present**
 
 In this joint internship, I am empowering multimodal large language models (MLLMs) with spatial understanding and action-level reasoning for robotic manipulation. My contributions include developing robotic behavior code generation pipelines in closed-loop physical simulation environments and creating an LLM-powered Copilot to assist robotic system development for Horizon Robotics.
 
 ### **Tsinghua University – [Pervasive HCI Lab](https://pi.cs.tsinghua.edu.cn/)**
-**June 2024 – January 2025**
 
-**Advisor:** [A/Prof Nan Gao](https://nancygao.com/), [A/Prof Chun Yu](https://pi.cs.tsinghua.edu.cn/lab/people/ChunYu/)  
+**Advisor:** [A/Prof Nan Gao](https://nancygao.com/), [A/Prof Chun Yu](https://pi.cs.tsinghua.edu.cn/lab/people/ChunYu/), 📅**June 2024 – January 2025**
+
 
 At Tsinghua, I developed LLM-based methods to infer human behaviors and mental states from dialogue data, aiming to enhance self-awareness and promote well-being. I combined LLM-driven analysis with expert qualitative coding to process real-world data and built a recommendation system for family education strategies.
 
 
-### **Northeastern University, China**  October 2023 – April 2024
+### **Northeastern University, China**  
 
-**Advisor:** [A/Prof Zhenghao Liu](https://edwardzh.github.io/) 
+**Advisor:** [A/Prof Zhenghao Liu](https://edwardzh.github.io/), 📅**October 2023 – April 2024**
 
 
 My research here explored Retrieval-Augmented Generation (RAG) methods to address the knowledge needs of LLMs. I specifically investigated how self-generated common sense knowledge and reasoning instructions could improve the reasoning abilities of large language models.
