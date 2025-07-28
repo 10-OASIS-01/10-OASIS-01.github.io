@@ -10,7 +10,6 @@ redirect_from:
 I am a junior undergraduate student majoring in Artificial Intelligence at Northeastern University, China. Currently, I have been working as a Research Assistant working on **Embodied AI, Spatial Intelligence and Robotics** under the supervision of [Prof. Mingyu Ding](https://dingmyu.github.io) at UNC-Chapel Hill and [Prof. Yao (Mark) Mu](https://yaomarkmu.github.io/) at [ScaleLab, SJTU](https://scalelab-sjtu.github.io/index.html) & Shanghai AI Lab. Meanwhile, I closely collaborate with [Zhixuan Liang](https://liang-zx.github.io/) from MMLab@HKU and [Weiliang Tang](https://cuhkwilliam.github.io) from CUHK.
 
 
-
 My research interests mainly focus on:
 - **Grounding language in spatial understanding and robotic manipulation**
 - **Reasoning and planning in multi-modality and embodied AI systems**
@@ -19,7 +18,8 @@ My research interests mainly focus on:
 **I am looking for a Ph.D. position starting in 2026 Fall. Please feel free to reach out!**
 
 
-## 📝 Publications (*: equal contribution; †: corresponding author)
+## 📝 Publications 
+(*: equal contribution; †: corresponding author)
 
 Tianxing Chen\*, Zanxin Chen\*, Baijun Chen\*, Zijian Cai\*, **Yibin Liu***, ... Ping Luo†, Yao Mu†. RoboTwin 2.0: A Scalable Data Generator and Benchmark with Strong Domain Randomization for Robust Bimanual Robotic Manipulation. **arXiv 2025**. ([Webpage](https://robotwin-platform.github.io) / [Repo](https://github.com/RoboTwin-Platform/RoboTwin)) <img alt="GitHub repo stars" src="https://img.shields.io/github/stars/RoboTwin-Platform/RoboTwin">
 
@@ -29,31 +29,34 @@ Nan Gao†, **Yibin Liu**, Xin Tang, Yanyan Liu, Chun Yu, Yun Huang, Yuntao Wang
 
 **Yibin Liu**, Zhenghao Liu†, Yukun Yan, Shi Yu, Shuo Wang, Liner Yang, Yu Gu, Ge Yu, Huimin Chen. Self-Guide: A LLM Reasoning Enhancement Method Based on Self-Guided Planning. **CCL 2024 / Journal of Chinese Information Processing**. ([Paper EN](https://github.com/10-OASIS-01/10-OASIS-01.github.io/blob/master/assets/_CCL2024__Self_Guide__A_LLM_Reasoning_Enhancement_Method_Based_on_Self_Guided_Planning_EN_-4.pdf) / [Paper CN](https://10-oasis-01.github.io/assets/183_self_guide_.pdf)/ [Code](https://github.com/NEUIR/Self-Guide))
 
-## 📖 Past Research Experiences
+## 📖 Research Experiences
 
-### **Northwestern University – [MLL Lab](https://mll-lab-nu.github.io)**
-📅 **July 2025 – Present**
-👨‍🏫 **Advisor:** [Prof. Manling Li](https://limanling.github.io)
-- embodied multimodal LLM agents (Ongoing).
+### **Northwestern University, USA – [MLL Lab](https://mll-lab-nu.github.io)** July 2025 – Present
 
-### **Joint Research Internship – UNC-Chapel Hill, Horizon Robotics, SJTU**
-📅 **March 2025 – Present**
-👨‍🏫 **Advisor:** [Prof. Mingyu Ding (UNC)](https://dingmyu.github.io), [Yusen Qin (VP of D-Robotics)](https://www.linkedin.com/in/yusen-qin-5b23345b/?originalSubdomain=cn), [Prof. Yao Mu (SJTU)](https://yaomarkmu.github.io/)
-- Empowering MLLMs with spatial understanding and action-level reasoning for robotic manipulation (Ongoing).
-- Developed robotic behavior code generation pipelines in **closed-loop physical simulation environments**.
-- Developed LLM-powered Copilot that assists robotic system development for Horizon Robotics.
+**Advisor:** [Prof. Manling Li](https://limanling.github.io)
+
+Embodied multimodal LLM agents (Ongoing).
+
+### **Joint Research Internship – UNC-Chapel Hill, Horizon Robotics, SJTU**  March 2025 – Present
+
+**Advisor:** [Prof. Mingyu Ding (UNC)](https://dingmyu.github.io), [Yusen Qin (VP of D-Robotics)](https://www.linkedin.com/in/yusen-qin-5b23345b/?originalSubdomain=cn), [Prof. Yao Mu (SJTU)](https://yaomarkmu.github.io/) 
+
+In this joint internship, I am empowering multimodal large language models (MLLMs) with spatial understanding and action-level reasoning for robotic manipulation. My contributions include developing robotic behavior code generation pipelines in closed-loop physical simulation environments and creating an LLM-powered Copilot to assist robotic system development for Horizon Robotics.
 
 ### **Tsinghua University – [Pervasive HCI Lab](https://pi.cs.tsinghua.edu.cn/)**
-📅 **June 2024 – January 2025**
-👨‍🏫 **Advisor:** [A/Prof Nan Gao](https://nancygao.com/), [A/Prof Chun Yu](https://pi.cs.tsinghua.edu.cn/lab/people/ChunYu/)
-- Developed LLM based methods to **infer human behaviors and mental states** from dialogue data, enhancing self-awareness and promoting well-being.
-- Combined **LLM-driven analysis with expert qualitative coding** to process real-world data and built a **recommendation system for family education strategies**.
+**June 2024 – January 2025**
 
-### **Northeastern University – [Information Retrieval Group (NEUIR)](https://neuir.github.io/)**
-📅 **October 2023 – April 2024**
-👨‍🏫 **Advisor:** [A/Prof Zhenghao Liu](https://edwardzh.github.io/)
-- Research on exploring RAG methods that address the knowledge needs of LLMs.
-- Investigated **self-generated common sense knowledge** and **reasoning instructions** to improve LLM reasoning ability.
+**Advisor:** [A/Prof Nan Gao](https://nancygao.com/), [A/Prof Chun Yu](https://pi.cs.tsinghua.edu.cn/lab/people/ChunYu/)  
+
+At Tsinghua, I developed LLM-based methods to infer human behaviors and mental states from dialogue data, aiming to enhance self-awareness and promote well-being. I combined LLM-driven analysis with expert qualitative coding to process real-world data and built a recommendation system for family education strategies.
+
+
+### **Northeastern University, China**  October 2023 – April 2024
+
+**Advisor:** [A/Prof Zhenghao Liu](https://edwardzh.github.io/) 
+
+
+My research here explored Retrieval-Augmented Generation (RAG) methods to address the knowledge needs of LLMs. I specifically investigated how self-generated common sense knowledge and reasoning instructions could improve the reasoning abilities of large language models.
 
 
 ## 💬 Talks
