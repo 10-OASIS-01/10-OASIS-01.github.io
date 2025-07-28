@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-I am a junior undergraduate student majoring in Artificial Intelligence at Northeastern University, China. Currently, I have been working as a Research Assistant working on **Embodied AI, Spatial Intelligence and Robotics** under the supervision of [Prof. Mingyu Ding](https://dingmyu.github.io) at UNC-Chapel Hill and [Prof. Yao (Mark) Mu](https://yaomarkmu.github.io/) at [ScaleLab, SJTU](https://scalelab-sjtu.github.io/index.html) & Shanghai AI Lab. Meanwhile, I closely collaborate with [Zhixuan Liang](https://liang-zx.github.io/) from MMLab@HKU and [Weiliang Tang](https://cuhkwilliam.github.io) from CUHK.
+I am a senior undergraduate student majoring in Artificial Intelligence at Northeastern University, China. Currently, I have been working as a Research Assistant working on **Embodied AI, Spatial Intelligence and Robotics** under the supervision of [Prof. Mingyu Ding](https://dingmyu.github.io) at UNC-Chapel Hill and [Prof. Yao (Mark) Mu](https://yaomarkmu.github.io/) at [ScaleLab, SJTU](https://scalelab-sjtu.github.io/index.html) & Shanghai AI Lab. Meanwhile, I closely collaborate with [Zhixuan Liang](https://liang-zx.github.io/) from MMLab@HKU and [Weiliang Tang](https://cuhkwilliam.github.io) from CUHK.
 
 
 My research interests mainly focus on:
