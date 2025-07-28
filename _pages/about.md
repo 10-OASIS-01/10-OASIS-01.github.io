@@ -96,7 +96,7 @@ My research here explored Retrieval-Augmented Generation (RAG) methods to addres
 
 ## 🛠️ Technologies
 
-**Languages:** Python, C++, C, HTML/CSS, JavaScript, SQL, MATLAB/Simulink, LaTeX
+**Languages:** Python, C++, C, HTML/CSS, JavaScript, Swift, SQL, MATLAB/Simulink, LaTeX
 
 **Technologies:** PyTorch, Hugging Face, scikit-learn, ROS, OpenCV, NumPy, Git, RAG, Linux, SLAM
 
