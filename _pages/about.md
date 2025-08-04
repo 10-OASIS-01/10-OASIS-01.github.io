@@ -17,8 +17,7 @@ My research interests mainly focus on:
 
 My long-term research goal is to develop embodied agents that learn from rich, physically-informed data gathered through real-world interaction. I am dedicated to imbuing these agents with the capacity for causal reasoning and sophisticated decision-making, enabling them to collaborate seamlessly and safely with humans. This pursuit is guided by a core principle: to create technology that is fundamentally **with everyone**, **for everyone**, ensuring that advancements in AI provide **accessible assistance** to people from all walks of life.
 
-
-**✨ I am looking for a Ph.D. position starting in 2026 Fall. Please feel free to reach out!**
+<span style="color:blue; font-weight:bold">✨ I am looking for a Ph.D. position starting in 2026 Fall. Please feel free to reach out!</span>
 
 
 ## 📝 Publications 
