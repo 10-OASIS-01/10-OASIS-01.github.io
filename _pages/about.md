@@ -54,18 +54,12 @@ In this joint internship, I am empowering multimodal large language models (MLLM
 At Tsinghua, I developed LLM-based methods to infer human behaviors and mental states from dialogue data, aiming to enhance self-awareness and promote well-being. I combined LLM-driven analysis with expert qualitative coding to process real-world data and built a recommendation system for family education strategies.
 
 
-### **Northeastern University, China**  
-
-**Advisor:** [A/Prof Zhenghao Liu](https://edwardzh.github.io/), 📅**October 2023 – April 2024**
-
-
-My research here explored Retrieval-Augmented Generation (RAG) methods to address the knowledge needs of LLMs. I specifically investigated how self-generated common sense knowledge and reasoning instructions could improve the reasoning abilities of large language models.
-
-
 ## 💬 Talks
 - 2024.08, “Retrieval-Augmented Generation Modeling” for Mingtong Weilai (Beijing) Digital Health Science & Technology Research Institute.
 
 ## 👥 Academic Service
+
+
 
 - Contributor of [Embodied-AI-Guide](https://github.com/TianxingChen/Embodied-AI-Guide) <img alt="GitHub repo stars" src="https://img.shields.io/github/stars/TianxingChen/Embodied-AI-Guide">
 
