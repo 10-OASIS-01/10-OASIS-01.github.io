@@ -78,21 +78,21 @@ At Tsinghua, I developed LLM-based methods to infer human behaviors and mental s
 
 ### **RDK Copilot: LLM-powered Development Copilot for Robotics at Horizon Robotics**
 - Developed and deployed a **VSCode plugin** that assists robotic system development using LLMs. Supported features include automatic coding, environment setup, code completion, test generation, code explanation, and manipulation data acquisition.
-- **Tools Used:** Python, TypeScript, VSCode Extension API, ROS
 
 ### **[MinRL: Minimal, Clean Code for Reinforcement Learning](https://github.com/10-OASIS-01/minrl)**  <img alt="GitHub repo stars" src="https://img.shields.io/github/stars/10-OASIS-01/minrl">
 - **Recognized and pinned by [MathFoundationRL](https://github.com/MathFoundationRL/Book-Mathematical-Foundation-of-Reinforcement-Learning)**, the most popular RL course on Chinese platforms, under "Third-party code and materials."
-- **Tools Used:** Python, PyTorch, pytest
-
+  
 ### **[Bencao RAG Medical Intelligent Assistant](https://github.com/10-OASIS-01/BenCao_RAG)**
 - Developed a medical knowledge question-answering system that integrates context awareness, internet access, knowledge graphs, and RAG method to provide accurate and personalized medical information.
-- **Tools Used:** Python, RAG, LLM, LangChain, Streamlit, Neo4j, Knowledge Graph
+
+
 
 ## 🛠️ Technologies
 
 **Languages:** Python, C++, C, HTML/CSS, JavaScript, Swift, SQL, MATLAB/Simulink, LaTeX
 
-**Technologies:** PyTorch, Hugging Face, scikit-learn, ROS, OpenCV, NumPy, Git, RAG, Linux, SLAM
+**Technologies:** PyTorch, Hugging Face, scikit-learn, ROS, OpenCV, NumPy, Git, RAG, Linux, SLAM, iOS Development (SwiftUI, UIKit), ARKit, RealityKit
+
 
 
 <!--
