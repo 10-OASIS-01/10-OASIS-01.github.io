@@ -59,7 +59,7 @@ At Tsinghua, I developed LLM-based methods to infer human behaviors and mental s
 
 ## 👥 Academic Service
 
-
+- Student Committee of [TriFusion Workshop @ SIGGRAPH Asia 2025](https://sa2025.siggraph.org/) — *Towards Embodied Intelligence Across Humans, Avatars, and Humanoid Robotics* (responsible for workshop email communications).
 
 - Contributor of [Embodied-AI-Guide](https://github.com/TianxingChen/Embodied-AI-Guide) <img alt="GitHub repo stars" src="https://img.shields.io/github/stars/TianxingChen/Embodied-AI-Guide">
 
