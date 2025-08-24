@@ -34,11 +34,6 @@ Nan Gao†, **Yibin Liu**, Xin Tang, Yanyan Liu, Chun Yu, Yun Huang, Yuntao Wang
 
 ## 📖 Research Experiences
 
-### **Northwestern University, USA – [MLL Lab](https://mll-lab-nu.github.io)** 
-
-**Advisor:** [Prof. Manling Li](https://limanling.github.io), 📅**July 2025 – Present**
-
-Embodied multimodal LLM agents (Ongoing).
 
 ### **Joint Research Internship – UNC-Chapel Hill, Horizon Robotics, SJTU**  
 
