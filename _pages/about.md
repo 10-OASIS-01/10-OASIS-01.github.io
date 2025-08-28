@@ -12,6 +12,7 @@ I am a senior undergraduate student majoring in Artificial Intelligence at North
 
 My research interests mainly focus on:
 - **Grounding language in spatial understanding and robotic manipulation**
+- **Egocentric embodied self-perception of MLLMs**
 - **Reasoning and planning in multi-modality and embodied AI systems**
 - **Human-Robot Collaborative Interaction in Real-Simulation Hybrid Environments**
 
