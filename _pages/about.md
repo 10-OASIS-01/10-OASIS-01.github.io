@@ -36,18 +36,36 @@ Nan Gao†, **Yibin Liu**, Xin Tang, Yanyan Liu, Chun Yu, Yun Huang, Yuntao Wang
 ## 📖 Research Experiences
 
 
-### **Joint Research Internship – UNC-Chapel Hill, Horizon Robotics, SJTU**  
+### **University of North Carolina at Chapel Hill – Research Intern**
 
-**Advisor:** [Prof. Mingyu Ding (UNC)](https://dingmyu.github.io), [Yusen Qin (VP of D-Robotics)](https://www.linkedin.com/in/yusen-qin-5b23345b/?originalSubdomain=cn), [Prof. Yao Mu (SJTU)](https://yaomarkmu.github.io/), 📅**March 2025 – Present**
+**Advisor:** [Prof. Mingyu Ding](https://dingmyu.github.io) · 📅 **June 2025 – Present**, Remote
 
-In this joint internship, I am empowering multimodal large language models (MLLMs) with spatial understanding and action-level reasoning for robotic manipulation. My contributions include developing robotic behavior code generation pipelines in closed-loop physical simulation environments and creating an LLM-powered Copilot to assist robotic system development for Horizon Robotics.
+At UNC, I work on empowering multimodal large language models (MLLMs) with **spatial understanding** and **action-level reasoning** for robotic manipulation, exploring how embodied agents can leverage language grounding to perform complex tasks more effectively.
+
+
+### **Shanghai Jiao Tong University – Research Assistant**
+
+**Advisor:** [Prof. Yao Mu](https://yaomarkmu.github.io) · 📅 **March 2025 – Present**, Shanghai, China
+
+At SJTU, I serve as an equal first author and core contributor of **RoboTwin 2.0**, a scalable benchmark for robust bimanual robotic manipulation. I led the design and implementation of the **robot policy code generation agent**, where my focus was on developing **robotic behavior code generation pipelines in closed-loop physical simulation environments**, providing the foundation for robust policy learning in embodied agents.
+
 
 ### **Tsinghua University – [Pervasive HCI Lab](https://pi.cs.tsinghua.edu.cn/)**
 
-**Advisor:** [A/Prof Nan Gao](https://nancygao.com/), [A/Prof Chun Yu](https://pi.cs.tsinghua.edu.cn/lab/people/ChunYu/), 📅**June 2024 – January 2025**
+**Advisor:** [A/Prof Nan Gao](https://nancygao.com/), [A/Prof Chun Yu](https://pi.cs.tsinghua.edu.cn/lab/people/ChunYu/) · 📅 **June 2024 – January 2025**, Beijing, China
+
+At Tsinghua, I developed **LLM-based methods** to infer **human behaviors and mental states** from dialogue data, aiming to enhance self-awareness and promote well-being. I combined **LLM-driven analysis** with **expert qualitative coding** to process large-scale family education data and built a **recommendation system** that provides personalized guidance for parent–child interactions.
 
 
-At Tsinghua, I developed LLM-based methods to infer human behaviors and mental states from dialogue data, aiming to enhance self-awareness and promote well-being. I combined LLM-driven analysis with expert qualitative coding to process real-world data and built a recommendation system for family education strategies.
+
+## 🏢 Industry Experiences
+
+### **Horizon Robotics – Cloud Platform Intern**
+
+**Mentor:** [Yusen Qin (VP of Technology, D-Robotics)](https://www.linkedin.com/in/yusen-qin-5b23345b/?originalSubdomain=cn) · 📅 **June 2025 – Present**, Beijing, China · Hybrid
+
+At Horizon Robotics, I focus on the development of the **RDK-agent** and the design of an **embodied intelligence simulation platform**. I am building an **LLM-powered Copilot system** within VSCode to support robotic system development, including **automatic coding, environment setup, test generation, code explanation, and manipulation data acquisition**, bridging cutting-edge language models with industrial-grade robotics development workflows.
+
 
 
 ## 💬 Talks
