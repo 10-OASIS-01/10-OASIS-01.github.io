@@ -50,7 +50,7 @@ At UNC, I work on empowering multimodal large language models (MLLMs) with **spa
 At SJTU, I serve as an equal first author and core contributor of **RoboTwin 2.0**, a scalable benchmark for robust bimanual robotic manipulation. I led the design and implementation of the **robot policy code generation agent**, where my focus was on developing **robotic behavior code generation pipelines in closed-loop physical simulation environments**, providing the foundation for robust policy learning in embodied agents.
 
 
-### **Tsinghua University – [Pervasive HCI Lab](https://pi.cs.tsinghua.edu.cn/)**
+### **Tsinghua University – [Pervasive HCI Lab](https://pi.cs.tsinghua.edu.cn/) – Research Assistant**
 
 **Advisor:** [A/Prof Nan Gao](https://nancygao.com/), [A/Prof Chun Yu](https://pi.cs.tsinghua.edu.cn/lab/people/ChunYu/) · 📅 **June 2024 – January 2025**, Beijing, China
 
