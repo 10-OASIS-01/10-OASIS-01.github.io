@@ -47,7 +47,7 @@ At UNC, I work on empowering multimodal large language models (MLLMs) with **spa
 
 **Advisor:** [Prof. Yao Mu](https://yaomarkmu.github.io) · 📅 **March 2025 – Present**, Shanghai, China
 
-At SJTU, I serve as an equal first author and core contributor of **RoboTwin 2.0**, a scalable benchmark for robust bimanual robotic manipulation. I led the design and implementation of the **robot policy code generation agent**, where my focus was on developing **robotic behavior code generation pipelines in closed-loop physical simulation environments**, providing the foundation for robust policy learning in embodied agents.
+At SJTU, I serve as an equal first author and core contributor of **RoboTwin 2.0**, a scalable benchmark for robust bimanual robotic manipulation. I led the design and implementation of the **robot policy code generation agent**, providing the foundation for robust policy data generation in embodied agents.
 
 
 ### **Tsinghua University – [Pervasive HCI Lab](https://pi.cs.tsinghua.edu.cn/) – Research Assistant**
@@ -64,7 +64,7 @@ At Tsinghua, I developed **LLM-based methods** to infer **human behaviors and me
 
 **Mentor:** [Yusen Qin (VP of Technology, D-Robotics)](https://www.linkedin.com/in/yusen-qin-5b23345b/?originalSubdomain=cn) · 📅 **June 2025 – Present**, Beijing, China · Hybrid
 
-At Horizon Robotics, I focus on the development of the **RDK-agent** and the design of an **embodied intelligence simulation platform**. I am building an **LLM-powered Copilot system** within VSCode to support robotic system development, including **automatic coding, environment setup, test generation, code explanation, and manipulation data acquisition**, bridging cutting-edge language models with industrial-grade robotics development workflows.
+At Horizon Robotics, I focus on the development of the **RDK-agent** . I am building an **LLM-powered Copilot system** within VSCode to support robotic system development, including **automatic coding, environment setup, test generation, code explanation, and manipulation data acquisition**, bridging cutting-edge language models with industrial-grade robotics development workflows.
 
 
 
@@ -72,6 +72,8 @@ At Horizon Robotics, I focus on the development of the **RDK-agent** and the des
 - 2024.08, “Retrieval-Augmented Generation Modeling” for Mingtong Weilai (Beijing) Digital Health Science & Technology Research Institute.
 
 ## 👥 Academic Service
+
+- Co-Founder of [VapourX](https://vapour-x.cn), an open community for embodied AI beginners, enthusiasts, and researchers.
 
 - Student Committee of [TriFusion Workshop @ SIGGRAPH Asia 2025](https://sa2025.siggraph.org/) — *Towards Embodied Intelligence Across Humans, Avatars, and Humanoid Robotics* (responsible for workshop email communications).
 
@@ -81,12 +83,14 @@ At Horizon Robotics, I focus on the development of the **RDK-agent** and the des
   
 ## 🏆 Awards
 
+- 2025.07 Outstanding Poster at ChinaSI 2025 (**Ranking 1st among 61 posters**, RoboTwin 2.0).
 - 2024.11 Outstanding Individual in Technological Innovation of Northeastern University.
 - 2024.05 Finalist of Mathematical Contest in Modeling / Interdisciplinary Contest in Modeling (MCM/ICM 2024, **Top 1.69% in 10,387 teams**).
 - 2023.10 National Level Third Prize in 2023 RoboCup China Competition Simulation 3D League Simulation (RoboCup 2023).
 - 2023.10 National Level Second Prize in 2023 FIRA SimuroSot China Competition (RoboCup 2023).
-- 2023.11 Future Technology Taihu Scholarship
-- 2023.09 Excellent Student Scholarship in Northeastern University
+- 2023.11 Future Technology Taihu Scholarship.
+- 2023.09 Excellent Student Scholarship in Northeastern University.
+
 
 ## 💻 Projects
 
