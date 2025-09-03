@@ -40,8 +40,7 @@ Nan Gao†, **Yibin Liu**, Xin Tang, Yanyan Liu, Chun Yu, Yun Huang, Yuntao Wang
 
 **Advisor:** [Prof. Mingyu Ding](https://dingmyu.github.io) · 📅 **June 2025 – Present**, Remote
 
-At UNC, I work on empowering multimodal large language models (MLLMs) with **spatial understanding** and **action-level reasoning** for robotic manipulation, exploring how embodied agents can leverage language grounding to perform complex tasks more effectively.
-
+At UNC, I work on enhancing multimodal large language models (MLLMs) with **spatial understanding** and **action-level reasoning** for robotic manipulation, by leveraging **human language instructions** and **interactive guidance in augmented reality (AR) environments**. This research explores how embodied agents can better ground language in physical contexts to perform complex tasks more effectively.
 
 ### **Shanghai Jiao Tong University – Research Assistant**
 
