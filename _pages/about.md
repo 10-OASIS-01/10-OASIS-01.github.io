@@ -84,7 +84,7 @@ At Horizon Robotics, I focus on the development of the **RDK-agent** . I am buil
 
 - 2025.07 Outstanding Poster at ChinaSI 2025 (**Ranking 1st among 61 posters**, RoboTwin 2.0).
 - 2024.11 Outstanding Individual in Technological Innovation of Northeastern University.
-- 2024.05 Finalist of Mathematical Contest in Modeling / Interdisciplinary Contest in Modeling (MCM/ICM 2024, **Top 1.69% in 10,387 teams**).
+- 2024.05 Finalist of Mathematical Contest in Modeling (MCM/ICM 2024, **Top 1.69% in 10,387 teams**).
 - 2023.10 National Level Third Prize in 2023 RoboCup China Competition Simulation 3D League Simulation (RoboCup 2023).
 - 2023.10 National Level Second Prize in 2023 FIRA SimuroSot China Competition (RoboCup 2023).
 - 2023.11 Future Technology Taihu Scholarship.
