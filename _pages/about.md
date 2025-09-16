@@ -111,6 +111,9 @@ At Horizon Robotics, I focus on the development of the **RDK-agent** . I am buil
 **Technologies:** PyTorch, Hugging Face, scikit-learn, ROS, OpenCV, NumPy, Git, RAG, Linux, SLAM, iOS Development (SwiftUI, UIKit), ARKit, RealityKit
 
 
+---
+
+*"Live, travel, adventure, bless, and don't be sorry.🌍✨"* — Jack Kerouac
 
 <!--
 ---
