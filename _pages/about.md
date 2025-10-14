@@ -24,7 +24,12 @@ My long-term research goal is to develop embodied agents that learn from rich, p
 ## 📝 Publications 
 (*: equal contribution; †: corresponding author)
 
-Tianxing Chen\*, Zanxin Chen\*, Baijun Chen\*, Zijian Cai\*, **Yibin Liu***, ... Ping Luo†, Yao Mu†. RoboTwin 2.0: A Scalable Data Generator and Benchmark with Strong Domain Randomization for Robust Bimanual Robotic Manipulation. **arXiv 2025**. ([Webpage](https://robotwin-platform.github.io) / [Repo](https://github.com/RoboTwin-Platform/RoboTwin)) <img alt="GitHub repo stars" src="https://img.shields.io/github/stars/RoboTwin-Platform/RoboTwin">
+
+Ganlin Yang, Tianyi Zhang, Haoran Hao, Weiyun Wang, **Yibin Liu**, Dehui Wang, Guanzhou Chen, Zijian Cai, Junting Chen, Weijie Su, Wengang Zhou, Yu Qiao, Jifeng Dai, Jiangmiao Pang, Gen Luo, Wenhai Wang, Yao Mu†, Zhi Hou†. Vlaser: Vision-Language-Action Model with Synergistic Embodied Reasoning. **arXiv 2025**. ([Paper](https://arxiv.org/pdf/2510.11027) / [Code](https://github.com/OpenGVLab/Vlaser?tab=readme-ov-file) / [Webpage](https://internvl.github.io/blog/2025-10-11-Vlaser/)) <img alt="GitHub repo stars" src="https://img.shields.io/github/stars/OpenGVLab/Vlaser">
+
+
+Tianxing Chen*, Zanxin Chen*, Baijun Chen*, Zijian Cai*, **Yibin Liu***, ... Ping Luo†, Yao Mu†. RoboTwin 2.0: A Scalable Data Generator and Benchmark with Strong Domain Randomization for Robust Bimanual Robotic Manipulation. **arXiv 2025**. ([Paper](https://arxiv.org/pdf/2506.18088) / [Webpage](https://robotwin-platform.github.io) / [Repo](https://github.com/RoboTwin-Platform/RoboTwin)) <img alt="GitHub repo stars" src="https://img.shields.io/github/stars/RoboTwin-Platform/RoboTwin">
+
 
 Nan Gao†, **Yibin Liu**, Xin Tang, Yanyan Liu, Chun Yu, Yun Huang, Yuntao Wang, Flora D. Salim, Xuhai Orson Xu, Jun Wei, Yuanchun Shi. The Homework Wars: Exploring Emotions, Behaviours, and Conflicts in Parent-Child Homework Interactions. **ACM IMWUT/UbiComp 2025**. ([Paper](https://arxiv.org/abs/2502.01325v2))
 
