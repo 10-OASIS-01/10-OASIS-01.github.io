@@ -7,16 +7,20 @@ redirect_from:
   - /about.html
 ---
 
-I am a senior undergraduate student majoring in Artificial Intelligence at Northeastern University, China. Currently, I have been working as a Research Assistant working on **Embodied AI, Spatial Intelligence and Robotics** under the supervision of [Prof. Mingyu Ding](https://dingmyu.github.io) at UNC-Chapel Hill and [Prof. Yao (Mark) Mu](https://yaomarkmu.github.io/) at [ScaleLab, SJTU](https://scalelab-sjtu.github.io/index.html). 
+I am a senior undergraduate student majoring in Artificial Intelligence at Northeastern University, China. Currently, I have been working as a Research Assistant under the supervision of [Prof. Mingyu Ding](https://dingmyu.github.io) at UNC-Chapel Hill and [Prof. Yao (Mark) Mu](https://yaomarkmu.github.io/) at [ScaleLab, SJTU](https://scalelab-sjtu.github.io/index.html). 
 
 
-My research interests mainly focus on:
-- **Grounding language in spatial understanding and robotic manipulation**
-- **Egocentric embodied self-perception of MLLMs**
-- **Reasoning and planning in multi-modality and embodied AI systems**
-- **Human-Robot Collaborative Interaction in Real-Simulation Hybrid Environments**
+My research lies at the intersection of **embodied intelligence**, **multimodal reasoning**, and **human-robot interaction**. I am particularly interested in developing foundation models that ground **language and perception** in real-world physical understanding, enabling robots to reason, plan, and act effectively in complex environments.
 
-My long-term research goal is to develop embodied agents that learn from rich, physically-informed data gathered through real-world interaction. I am dedicated to imbuing these agents with the capacity for causal reasoning and sophisticated decision-making, enabling them to collaborate seamlessly and safely with humans. This pursuit is guided by a core principle: to create technology **with everyone**, **for everyone**, ensuring that advancements in AI provide **accessible assistance** to people from all walks of life.
+My work focuses on the following directions:
+
+* **Language Grounding and Spatial Manipulation:** Connecting structured representations with spatial reasoning and physically grounded robotic actions.
+* **Egocentric Embodied Perception in MLLMs:** Studying how multimodal large language models perceive and interpret the world from an embodied, first-person perspective.
+* **Multimodal Reasoning and Planning:** Enabling embodied agents to integrate vision, language, and action for structured decision-making and open-world generalization.
+* **Human–Robot Collaborative Intelligence:** Designing interactive systems that support safe and adaptive collaboration between humans and robots in real–simulation hybrid environments.
+
+Ultimately, my goal is to build **embodied agents that learn from real-world interactions**, developing **causal reasoning** and **compositional skills** for generalizable mobile manipulation. Guided by the principle of creating technology *with everyone, for everyone*, my research aims to advance **accessible, human-centered AI** that enhances daily life and broadens equitable access to intelligent systems.
+
 
 <span style="color:blue; font-weight:bold">✨ I am looking for a Ph.D. position starting in 2026 Fall. Please feel free to reach out!</span>
 
