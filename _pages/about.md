@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-I am a senior undergraduate student majoring in Artificial Intelligence at Northeastern University, China. Currently, I have been working as a Research Assistant under the supervision of [Prof. Mingyu Ding](https://dingmyu.github.io) at UNC-Chapel Hill and [Prof. Yao (Mark) Mu](https://yaomarkmu.github.io/) at [ScaleLab, SJTU](https://scalelab-sjtu.github.io/index.html). 
+I am a senior undergraduate student majoring in Artificial Intelligence at Northeastern University, China. Currently, I have been working as a Research Assistant under the supervision of [Prof. Mingyu Ding](https://dingmyu.github.io) at UNC-Chapel Hill and [Prof. Yao (Mark) Mu](https://yaomarkmu.github.io/) at Shanghai Jiao Tong University. 
 
 
 My research lies at the intersection of **embodied intelligence**, **multimodal reasoning**, and **human-robot interaction**. I am particularly interested in developing foundation models that ground **language and perception** in real-world physical understanding, enabling robots to reason, plan, and act effectively in complex environments.
