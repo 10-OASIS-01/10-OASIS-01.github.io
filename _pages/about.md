@@ -10,7 +10,8 @@ redirect_from:
 I am a senior undergraduate student majoring in Artificial Intelligence at Northeastern University, China. Currently, I have been working as a Research Assistant under the supervision of [Prof. Mingyu Ding](https://dingmyu.github.io) at UNC-Chapel Hill and [Prof. Yao (Mark) Mu](https://yaomarkmu.github.io/) at Shanghai Jiao Tong University. 
 
 
-My research lies at the intersection of **embodied intelligence**, **multimodal reasoning**, and **human-robot interaction**. I am particularly interested in developing foundation models that ground **language and perception** in real-world physical understanding, enabling robots to reason, plan, and act effectively in complex environments.
+My research lies at the intersection of **Language Grounding**, **Multimodal Reasoning and Planning**, and **Human-Robot Interaction**. I am particularly interested in developing foundation models that ground **language and perception** in real-world physical understanding, enabling robots to reason, plan, and act effectively in complex environments.
+
 
 * **Language Grounding and Spatial Manipulation:** Connecting structured representations with spatial reasoning and physically grounded robotic actions.
 * **Egocentric Embodied Perception in MLLMs:** Studying how multimodal large language models perceive and interpret the world from an embodied, first-person perspective.
