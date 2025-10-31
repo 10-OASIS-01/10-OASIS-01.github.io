@@ -88,7 +88,7 @@ At Horizon Robotics, I focus on the development of the **RDK-agent** . I am buil
 
 - Contributor of [Embodied-AI-Guide](https://github.com/TianxingChen/Embodied-AI-Guide) <img alt="GitHub repo stars" src="https://img.shields.io/github/stars/TianxingChen/Embodied-AI-Guide">
 
-- Reviewer for [Chinese CHI 2024](http://chchi.icachi.org/24/).
+- Reviewer for CHI 2025, Chinese CHI 2024.    
   
 ## 🏆 Awards
 
