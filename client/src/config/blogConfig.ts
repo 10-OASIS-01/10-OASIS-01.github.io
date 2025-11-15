@@ -22,7 +22,7 @@ export const blogPosts: BlogPost[] = [
     excerpt: "Exploring the intersection of language grounding, multimodal reasoning, and robotics. This post discusses my research journey and the challenges I've encountered in building foundation models for embodied agents.",
     date: "2025-01-15",
     readTime: "5 min read",
-    tags: ["Embodied AI", "Robotic"],
+    tags: ["Embodied AI", "Robotics"],
     slug: "journey-into-embodied-ai",
   },
   {
