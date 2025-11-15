@@ -25,7 +25,7 @@ export const personalInfo = {
   aboutMe: {
     intro: `I am a senior undergraduate student majoring in Artificial Intelligence at Northeastern University, China. Currently, I have been working as a Research Assistant under the supervision of Prof. Mingyu Ding at UNC-Chapel Hill and Prof. Yao (Mark) Mu at Shanghai Jiao Tong University.`,
     
-    researchFocus: `My research lies at the intersection of Language Grounding, Multimodal Reasoning and Planning, and Human-Robot Interaction. I am particularly interested in developing foundation models that ground language and perception in real-world physical understanding, enabling robots to reason, plan, and act effectively in complex environments.`,
+    researchFocus: `My research lies at the intersection of Language Grounding, Multimodal Reasoning and Planning, and Human-Robot Interaction. I am particularly interested in developing foundation models that ground language and perception in real-world physical understanding, enabling robots to reason, plan, and act effectively in complex environments. Ultimately, my goal is to build embodied agents that learn from real-world interactions, developing causal reasoning and compositional skills for generalizable mobile manipulation.`,
     
     researchInterests: [
       {
@@ -46,7 +46,7 @@ export const personalInfo = {
       }
     ],
     
-    goal: `Ultimately, my goal is to build embodied agents that learn from real-world interactions, developing causal reasoning and compositional skills for generalizable mobile manipulation. Guided by the principle of creating technology with everyone, for everyone, my research aims to advance accessible, human-centered AI that enhances daily life and broadens equitable access to intelligent systems.`,
+    goal: `Guided by the principle of creating technology with everyone, for everyone, my research aims to advance accessible, human-centered AI that enhances daily life and broadens equitable access to intelligent systems.`,
     
     lookingFor: "✨ I am looking for a Ph.D. position starting in 2026 Fall. Please feel free to reach out!"
   },
