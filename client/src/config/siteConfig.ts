@@ -3,6 +3,7 @@
  * 
  * This file contains all the configurable content for the personal academic homepage.
  * Update this file to modify site content without touching the component code.
+ <!-- Cache bust: 2025-11-15 17:06:43 -->
  */
 
 // ===========================
