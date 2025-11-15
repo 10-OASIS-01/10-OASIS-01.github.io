@@ -4,6 +4,14 @@ on:
   push:
     branches:
       - master
+    paths:
+      - 'client/**'
+      - 'server/**'
+      - 'drizzle/**'
+      - 'package.json'
+      - 'pnpm-lock.yaml'
+      - 'vite.config.ts'
+      - '.github/workflows/deploy.yml'
 
 jobs:
   build:
@@ -27,7 +35,7 @@ jobs:
         id: pnpm-cache
         shell: bash
         run: |
-          echo "STORE_PATH=$(pnpm store path )" >> $GITHUB_OUTPUT
+          echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
 
       - name: Setup pnpm cache
         uses: actions/cache@v3
@@ -49,9 +57,30 @@ jobs:
           mkdir -p docs
           cp -r dist/public/* docs/
 
+      - name: Check for changes
+        id: check-changes
+        run: |
+          if git diff --quiet && git diff --staged --quiet; then
+            echo "No changes to commit"
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          else
+            echo "Changes detected"
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+          fi
+
       - name: Commit and push changes
+        if: steps.check-changes.outputs.has_changes == 'true'
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add docs/
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-deploy: Build and update docs directory" && git push)
+          git commit -m "Auto-deploy: Build and update docs directory"
+          git push
+
+      - name: Deployment summary
+        run: |
+          echo "✅ Deployment completed"
+          echo "Repository: ${{ github.repository }}"
+          echo "Branch: ${{ github.ref }}"
+          echo "Commit: ${{ github.sha }}"
+          echo "Build timestamp: $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
