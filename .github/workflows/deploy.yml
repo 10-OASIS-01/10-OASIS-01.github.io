@@ -15,7 +15,7 @@ on:
       - '.github/workflows/deploy.yml'
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -58,29 +58,22 @@ jobs:
           mkdir -p docs
           cp -r dist/public/* docs/
 
-      - name: Check for changes
-        id: check-changes
+      - name: Add build timestamp to force changes
         run: |
-          if git diff --quiet && git diff --staged --quiet; then
-            echo "No changes to commit"
-            echo "has_changes=false" >> $GITHUB_OUTPUT
-          else
-            echo "Changes detected"
-            echo "has_changes=true" >> $GITHUB_OUTPUT
-          fi
+          echo "Build timestamp: $(date -u +'%Y-%m-%d %H:%M:%S UTC')" >> docs/build-info.txt
+          echo "Commit: ${{ github.sha }}" >> docs/build-info.txt
 
-      - name: Commit and push changes
-        if: steps.check-changes.outputs.has_changes == 'true'
+      - name: Force commit and push changes
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add docs/
-          git commit -m "Auto-deploy: Build and update docs directory"
+          git commit -m "Auto-deploy: Build and update docs directory [2025-11-15 17:02:43]"
           git push
 
       - name: Deployment summary
         run: |
-          echo "✅ Deployment completed"
+          echo "✅ Force deployment completed successfully"
           echo "Repository: ${{ github.repository }}"
           echo "Branch: ${{ github.ref }}"
           echo "Commit: ${{ github.sha }}"
