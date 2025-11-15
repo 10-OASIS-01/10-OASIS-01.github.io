@@ -34,6 +34,17 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Debug - Check repository structure
+        run: |
+          echo "=== Repository Structure ==="
+          ls -la
+          echo ""
+          echo "=== Client directory contents ==="
+          ls -la client/ || echo "Client directory not found"
+          echo ""
+          echo "=== Package.json exists? ==="
+          cat package.json || echo "package.json not found"
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
@@ -43,6 +54,13 @@ jobs:
         uses: pnpm/action-setup@v2
         with:
           version: 8
+
+      - name: Debug - Check pnpm version and Node.js version
+        run: |
+          echo "=== Environment Information ==="
+          node --version
+          pnpm --version
+          echo "Current working directory: $(pwd)"
 
       - name: Get pnpm store directory
         id: pnpm-cache
@@ -59,18 +77,88 @@ jobs:
             ${{ runner.os }}-pnpm-store-
 
       - name: Install dependencies
-        run: pnpm install
+        run: |
+          echo "=== Installing dependencies ==="
+          pnpm install
+          echo "=== Dependencies installed ==="
+
+      - name: Debug - Check dependencies and scripts
+        run: |
+          echo "=== Available scripts in package.json ==="
+          pnpm run || echo "No scripts found"
+          echo ""
+          echo "=== Node modules structure ==="
+          ls -la node_modules/ | head -10 || echo "No node_modules found"
 
       - name: Build project
-        run: pnpm build
+        run: |
+          echo "=== Starting build process ==="
+          pnpm build
+          echo "=== Build process completed ==="
+
+      - name: Debug - Check build output
+        run: |
+          echo "=== Build Output Analysis ==="
+          echo "Current directory contents after build:"
+          ls -la
+          echo ""
+          echo "=== Checking dist directory ==="
+          if [ -d "dist" ]; then
+            echo "dist directory exists"
+            ls -la dist/
+            echo ""
+            echo "=== Checking dist/public directory ==="
+            if [ -d "dist/public" ]; then
+              echo "dist/public directory exists"
+              ls -la dist/public/
+              echo ""
+              echo "=== File count in dist/public ==="
+              find dist/public -type f | wc -l
+              echo ""
+              echo "=== Sample files in dist/public ==="
+              find dist/public -type f | head -10
+              echo ""
+              echo "=== Check for index.html ==="
+              if [ -f "dist/public/index.html" ]; then
+                echo "index.html found ✅"
+                head -5 dist/public/index.html
+              else
+                echo "index.html NOT found ❌"
+              fi
+            else
+              echo "dist/public directory NOT found ❌"
+            fi
+          else
+            echo "dist directory NOT found ❌"
+          fi
 
       - name: Setup Pages
         uses: actions/configure-pages@v3
+
+      - name: Debug - Pre-upload check
+        run: |
+          echo "=== Pre-upload verification ==="
+          if [ -d "./dist/public" ]; then
+            echo "Upload path exists ✅"
+            echo "Total size of dist/public:"
+            du -sh ./dist/public
+            echo ""
+            echo "Directory structure to be uploaded:"
+            tree ./dist/public || find ./dist/public -type f
+          else
+            echo "Upload path ./dist/public does NOT exist ❌"
+            exit 1
+          fi
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: './dist/public'
+
+      - name: Debug - Post-upload info
+        run: |
+          echo "=== Upload completed successfully ✅ ==="
+          echo "Artifact should now be available for deployment"
 
   deploy:
     environment:
@@ -80,6 +168,18 @@ jobs:
     needs: build
     
     steps:
+      - name: Debug - Pre-deployment info
+        run: |
+          echo "=== Starting deployment process ==="
+          echo "Build job completed successfully"
+          echo "Attempting to deploy artifact to GitHub Pages"
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
+
+      - name: Debug - Post-deployment info
+        run: |
+          echo "=== Deployment completed ==="
+          echo "Site URL: ${{ steps.deployment.outputs.page_url }}"
+          echo "Deployment successful ✅"
