@@ -33,10 +33,6 @@ export const personalInfo = {
         description: "Connecting structured representations with spatial reasoning and physically grounded robotic actions."
       },
       {
-        title: "Egocentric Embodied Perception in MLLMs",
-        description: "Studying how multimodal large language models perceive and interpret the world from an embodied, first-person perspective."
-      },
-      {
         title: "Multimodal Reasoning and Planning",
         description: "Enabling embodied agents to integrate vision, language, and action for structured decision-making and open-world generalization."
       },
