@@ -1,77 +1,386 @@
-# Academic Pages
-**Academic Pages is a Github Pages template for academic websites.**
+# Personal Academic Homepage
 
-![Academic Pages template example](images/homepage.png "Academic Pages template example")
+A modern, minimalist personal academic homepage built with React, TypeScript, and Tailwind CSS. Inspired by Apple's design language, this website showcases research, publications, awards, and blog posts in a clean and professional manner.
 
-# Getting Started
+## 🌟 Features
 
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Click the "Use this template" button in the top right.
-1. On the "New repository" page, enter your repository name as "[your GitHub username].github.io", which will also be your website's URL.
-1. Set site-wide configuration and add your content.
-1. Upload any files (like PDFs, .zip files, etc.) to the `files/` directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.
-1. Check status by going to the repository settings, in the "GitHub pages" section
-1. (Optional) Use the Jupyter notebooks or python scripts in the `markdown_generator` folder to generate markdown files for publications and talks from a TSV file.
+- **Apple-inspired Design**: Clean, minimalist UI with frosted glass navigation and smooth transitions
+- **Responsive Layout**: Optimized for desktop and mobile devices
+- **Modular Architecture**: Easy-to-maintain configuration-based content management
+- **Blog System**: Built-in blog with tag support and clean card layout
+- **Dark Mode Ready**: Theme configuration supports dark mode (can be enabled)
+- **Fast Performance**: Built with Vite for lightning-fast development and production builds
 
-See more info at https://academicpages.github.io/
+## 📁 Project Structure
 
-## Running locally
-
-When you are initially working your website, it is very useful to be able to preview the changes locally before pushing them to GitHub. To work locally you will need to:
-
-1. Clone the repository and made updates as detailed above.
-1. Make sure you have ruby-dev, bundler, and nodejs installed
-    
-    On most Linux distribution and [Windows Subsystem Linux](https://learn.microsoft.com/en-us/windows/wsl/about) the command is:
-    ```bash
-    sudo apt install ruby-dev ruby-bundler nodejs
-    ```
-    On MacOS the commands are:
-    ```bash
-    brew install ruby
-    brew install node
-    gem install bundler
-    ```
-1. Run `bundle install` to install ruby dependencies. If you get errors, delete Gemfile.lock and try again.
-1. Run `jekyll serve -l -H localhost` to generate the HTML and serve it from `localhost:4000` the local server will automatically rebuild and refresh the pages on change.
-
-If you are running on Linux it may be necessary to install some additional dependencies prior to being able to run locally: `sudo apt install build-essential gcc make`
-
-## Using Docker
-
-Working from a different OS, or just want to avoid installing dependencies? You can use the provided `Dockerfile` to build a container that will run the site for you if you have [Docker](https://www.docker.com/) installed.
-
-Start by build the container:
-
-```bash
-docker build -t jekyll-site .
+```
+client/
+├── public/              # Static assets
+├── src/
+│   ├── components/      # Reusable UI components
+│   │   ├── Navigation.tsx
+│   │   ├── HeroSection.tsx
+│   │   ├── SidebarProfile.tsx
+│   │   ├── MainContent.tsx
+│   │   └── Footer.tsx
+│   ├── pages/           # Page components
+│   │   ├── Home.tsx
+│   │   ├── Blog.tsx
+│   │   └── NotFound.tsx
+│   ├── config/          # Configuration files
+│   │   ├── siteConfig.ts  # **Main configuration file**
+│   │   ├── blogConfig.ts  # Blog posts configuration
+│   │   └── themeConfig.ts # Theme configuration (optional)
+│   ├── contexts/        # React contexts
+│   ├── hooks/           # Custom React hooks
+│   ├── lib/             # Utility functions
+│   ├── App.tsx          # Main app component with routing
+│   ├── main.tsx         # React entry point
+│   └── index.css        # Global styles and theme
+└── package.json
 ```
 
-Next, run the container:
+## 🚀 Quick Start
+
+### Prerequisites
+
+- Node.js 22.x or higher
+- pnpm (recommended) or npm
+
+### Installation
+
+1. Clone the repository:
 ```bash
-docker run -p 4000:4000 --rm -v $(pwd):/usr/src/app jekyll-site
+git clone <repository-url>
+cd personal-academic-homepage
 ```
 
-# Maintenance
+2. Install dependencies:
+```bash
+cd client
+pnpm install
+```
 
-Bug reports and feature requests to the template should be [submitted via GitHub](https://github.com/academicpages/academicpages.github.io/issues/new/choose). For questions concerning how to style the template, please feel free to start a [new discussion on GitHub](https://github.com/academicpages/academicpages.github.io/discussions).
+3. Start the development server:
+```bash
+pnpm dev
+```
 
-This repository was forked (then detached) by [Stuart Geiger](https://github.com/staeiou) from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/), which is © 2016 Michael Rose and released under the MIT License (see LICENSE.md). It is currently being maintained by [Robert Zupko](https://github.com/rjzupkoii) and additional maintainers would be welcomed.
+4. Open your browser and navigate to `http://localhost:3000`
 
-## Bugfixes and enhancements
+### Build for Production
 
-If you have bugfixes and enhancements that you would like to submit as a pull request, you will need to [fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) this repository as opposed to using it as a template. This will also allow you to [synchronize your copy](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) of template to your fork as well.
+```bash
+pnpm build
+```
 
-Unfortunately, one logistical issue with a template theme like Academic Pages that makes it a little tricky to get bug fixes and updates to the core theme. If you use this template and customize it, you will probably get merge conflicts if you attempt to synchronize. If you want to save your various .yml configuration files and markdown files, you can delete the repository and fork it again. Or you can manually patch.
+The built files will be in the `client/dist` directory.
+
+## ⚙️ Configuration
+
+All website content can be easily modified through the configuration files located at:
+
+```
+client/src/config/siteConfig.ts   # Main site configuration
+client/src/config/blogConfig.ts   # Blog posts configuration
+```
+
+### What You Can Configure
+
+#### 1. Personal Information
+```typescript
+export const personalInfo = {
+  name: "Your Name",
+  chineseName: "中文名",
+  title: "Your Title",
+  university: "Your University",
+  email: "your.email@example.com",
+  bio: "Your bio...",
+  // ... more fields
+};
+```
+
+#### 2. Images and Assets
+```typescript
+export const images = {
+  heroBackground: "https://your-image-url.jpg",
+  profileAvatar: "https://your-avatar-url.jpg",
+};
+```
+
+#### 3. Social Media Links
+```typescript
+export const socialLinks = {
+  googleScholar: "https://scholar.google.com/...",
+  github: "https://github.com/...",
+  linkedin: "https://linkedin.com/in/...",
+  // ... more links
+};
+```
+
+#### 4. Publications
+```typescript
+export const publications = [
+  {
+    id: 1,
+    title: "Paper Title",
+    authors: "Author 1, Author 2",
+    venue: "Conference Name",
+    year: 2024,
+    links: {
+      paper: "https://arxiv.org/...",
+      project: "https://project-page.com",
+      code: "https://github.com/...",
+    },
+  },
+  // ... more publications
+];
+```
+
+#### 5. Research & Industry Experiences
+```typescript
+export const researchExperiences = [
+  {
+    id: 1,
+    position: "Institution Name",
+    role: "Your Role",
+    duration: "Start - End",
+    description: "Description...",
+    highlights: ["Highlight 1", "Highlight 2"],
+  },
+];
+```
+
+#### 6. Awards
+```typescript
+export const awards = [
+  {
+    id: 1,
+    title: "Award Name",
+    year: "2024",
+    description: "Award description...",
+  },
+];
+```
+
+#### 7. Projects
+```typescript
+export const projects = [
+  {
+    id: 1,
+    title: "Project Name",
+    description: "Project description...",
+    link: "https://github.com/...",
+    tags: ["Tag1", "Tag2"],
+  },
+];
+```
+
+#### 8. Blog Posts (in `blogConfig.ts`)
+```typescript
+export const blogPosts = [
+  {
+    id: 1,
+    title: "Blog Post Title",
+    excerpt: "Short excerpt...",
+    date: "2025-01-15",
+    readTime: "5 min read",
+    tags: ["Tag1", "Tag2"],
+    slug: "blog-post-slug",
+  },
+];
+
+export const blogConfig = {
+  title: "📝 Blog",
+  description: "Your blog description...",
+  comingSoonMessage: "More blog posts coming soon...",
+};
+```
+
+#### 9. Navigation Menu
+```typescript
+export const navigationMenu = [
+  { label: "Home", href: "/" },
+  { label: "Publications", href: "/#publications" },
+  { label: "Blog", href: "/blog" },
+  // ... more menu items
+];
+```
+
+#### 10. Theme Configuration
+```typescript
+export const themeConfig = {
+  colors: {
+    primary: "blue-900",
+    secondary: "blue-800",
+    // ... more colors
+  },
+  fonts: {
+    sans: "...",
+    mono: "...",
+  },
+};
+```
+
+## 🎨 Customization
+
+### Changing Colors
+
+The website uses Tailwind CSS for styling. To change the color scheme:
+
+1. Update `themeConfig.colors` in `client/src/config/siteConfig.ts`
+2. Modify CSS variables in `client/src/index.css` for more advanced theming
+
+### Adding New Sections
+
+1. Create a new component in `client/src/components/`
+2. Import and use it in `client/src/pages/Home.tsx` or other pages
+3. Add corresponding data to `client/src/config/siteConfig.ts`
+
+### Enabling Dark Mode
+
+1. Uncomment the `switchable` prop in `client/src/App.tsx`:
+```typescript
+<ThemeProvider
+  defaultTheme="light"
+  switchable  // Uncomment this line
+>
+```
+
+2. Add a theme toggle button using the `useTheme` hook
+
+## 📝 Adding Content
+
+### Adding a New Publication
+
+1. Open `client/src/config/siteConfig.ts`
+2. Add a new entry to the `publications` array:
+```typescript
+{
+  id: 7,  // Increment the ID
+  title: "Your New Paper Title",
+  authors: "Author Names",
+  venue: "Conference/Journal Name",
+  year: 2025,
+  links: {
+    paper: "https://arxiv.org/...",
+    project: "https://project-page.com",  // Optional
+    code: "https://github.com/...",        // Optional
+  },
+  note: "Optional note",  // Optional
+}
+```
+
+### Adding a New Blog Post
+
+1. Open `client/src/config/blogConfig.ts`
+2. Add a new entry to the `blogPosts` array:
+```typescript
+{
+  id: 3,
+  title: "New Blog Post Title",
+  excerpt: "Brief description of the post...",
+  date: "2025-01-20",
+  readTime: "6 min read",
+  tags: ["Tag1", "Tag2", "Tag3"],
+  slug: "new-blog-post-slug",
+}
+```
+
+### Adding a New Award
+
+1. Open `client/src/config/siteConfig.ts`
+2. Add a new entry to the `awards` array:
+```typescript
+{
+  id: 8,
+  title: "New Award Name",
+  year: "2025",
+  description: "Award description and significance.",
+}
+```
+
+## 🔧 Development
+
+### Available Scripts
+
+- `pnpm dev` - Start development server
+- `pnpm build` - Build for production
+- `pnpm preview` - Preview production build locally
+- `pnpm lint` - Run ESLint
+
+### Technology Stack
+
+- **Framework**: React 19
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS 4
+- **Routing**: Wouter
+- **Build Tool**: Vite
+- **UI Components**: shadcn/ui
+- **Icons**: Lucide React
+
+## 📱 Responsive Design
+
+The website is fully responsive and optimized for:
+- Desktop (1920px and above)
+- Laptop (1024px - 1919px)
+- Tablet (768px - 1023px)
+- Mobile (below 768px)
+
+## 🌐 Deployment
+
+### Deploy to Vercel
+
+1. Push your code to GitHub
+2. Import the project in Vercel
+3. Set the root directory to `client`
+4. Deploy!
+
+### Deploy to Netlify
+
+1. Push your code to GitHub
+2. Import the project in Netlify
+3. Set the build command to `pnpm build`
+4. Set the publish directory to `client/dist`
+5. Deploy!
+
+### Deploy to GitHub Pages
+
+1. Update `vite.config.ts` with your repository name:
+```typescript
+export default defineConfig({
+  base: '/your-repo-name/',
+  // ... other config
+});
+```
+
+2. Build and deploy:
+```bash
+pnpm build
+pnpm run deploy  # If you have gh-pages configured
+```
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 📧 Contact
+
+For questions or feedback, please reach out via:
+- Email: liuyibin@stumail.neu.edu.cn
+- GitHub: [@10-OASIS-01](https://github.com/10-OASIS-01)
+- LinkedIn: [Yibin (Leon) Liu](https://www.linkedin.com/in/yibin-leon-liu)
+
+## 🙏 Acknowledgments
+
+- Design inspired by Apple's design language
+- Built with amazing open-source tools and libraries
+- Special thanks to the React and Tailwind CSS communities
 
 ---
-<div align="center">
-    
-![pages-build-deployment](https://github.com/academicpages/academicpages.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)
-[![GitHub contributors](https://img.shields.io/github/contributors/academicpages/academicpages.github.io.svg)](https://github.com/academicpages/academicpages.github.io/graphs/contributors)
-[![GitHub release](https://img.shields.io/github/v/release/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io/releases/latest)
-[![GitHub license](https://img.shields.io/github/license/academicpages/academicpages.github.io?color=blue)](https://github.com/academicpages/academicpages.github.io/blob/master/LICENSE)
 
-[![GitHub stars](https://img.shields.io/github/stars/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io)
-[![GitHub forks](https://img.shields.io/github/forks/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io/fork)
-</div>
+**Made with ❤️ by Yibin (Leon) Liu**
