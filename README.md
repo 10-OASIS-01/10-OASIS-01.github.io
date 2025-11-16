@@ -2,7 +2,9 @@
 
 A modern, responsive academic personal website built with React and deployed as a static site on GitHub Pages.
 
-## 🌟 Features
+> **For detailed development information, see [DEVELOPMENT.md](DEVELOPMENT.md)**
+
+## Features
 
 - **Modern Tech Stack**: Built with React 19, Vite, TypeScript, and Tailwind CSS
 - **Responsive Design**: Optimized for all devices using Radix UI components
@@ -10,11 +12,11 @@ A modern, responsive academic personal website built with React and deployed as 
 - **Fast Performance**: Static site generation with optimized builds
 - **Academic Focus**: Designed specifically for academic professionals and researchers
 
-## 🚀 Live Website
+## Live Website
 
 Visit the live website: [https://10-oasis-01.github.io](https://10-oasis-01.github.io)
 
-## 🏗️ Architecture
+## Architecture
 
 This is a **single-page application (SPA)** deployed as a static website:
 
@@ -24,7 +26,7 @@ This is a **single-page application (SPA)** deployed as a static website:
 - **Build Tool**: Vite for fast development and optimized builds
 - **Deployment**: GitHub Pages with automated CI/CD
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 ├── client/                 # Frontend application
@@ -39,7 +41,7 @@ This is a **single-page application (SPA)** deployed as a static website:
 └── package.json           # Dependencies and scripts
 ```
 
-## 🛠️ Development
+## Quick Start
 
 ### Prerequisites
 - Node.js 18+
@@ -71,7 +73,9 @@ pnpm preview
 - `pnpm check` - Type checking
 - `pnpm format` - Format code with Prettier
 
-## 🎨 Customization
+For detailed development documentation, including architecture, configuration, and deployment guides, see [DEVELOPMENT.md](DEVELOPMENT.md).
+
+## Customization
 
 ### Personal Information
 Edit `client/src/config/siteConfig.ts` to update:
@@ -86,17 +90,13 @@ Edit `client/src/config/blogConfig.ts` to:
 - Modify existing content
 - Update blog metadata
 
-## 🚀 Deployment
+## Deployment
 
 The site automatically deploys to GitHub Pages when changes are pushed to the `master` branch via GitHub Actions.
 
-### Manual Deployment
-```bash
-pnpm build
-# Upload contents of `dist/public/` to your hosting provider
-```
+For manual deployment and advanced configuration, see the [Deployment section in DEVELOPMENT.md](DEVELOPMENT.md#deployment).
 
-## 🔍 SEO Features
+## SEO Features
 
 - Comprehensive meta tags for search engines
 - Open Graph tags for social media sharing  
@@ -106,7 +106,7 @@ pnpm build
 - Robots.txt for crawler guidance
 - Canonical URLs and proper heading hierarchy
 
-## 📱 Performance
+## Performance
 
 - Static site generation for fast loading
 - Code splitting and lazy loading
@@ -114,7 +114,7 @@ pnpm build
 - Minimal bundle size
 - Progressive Web App features
 
-## 🧪 Technology Stack
+## Technology Stack
 
 ### Core
 - **React 19** - UI framework
@@ -132,15 +132,21 @@ pnpm build
 - **React Hook Form** - Form handling
 - **Date-fns** - Date utilities
 
-## 📄 License
+## Documentation
+
+- [README.md](README.md) - This file, quick start and overview
+- [DEVELOPMENT.md](DEVELOPMENT.md) - Comprehensive development documentation
+- [FILE_STORAGE_GUIDE.md](FILE_STORAGE_GUIDE.md) - File storage and asset management
+
+## License
 
 MIT License - see [LICENSE](LICENSE) file for details.
 
-## 🤝 Contributing
+## Contributing
 
-Contributions, issues, and feature requests are welcome!
+Contributions, issues, and feature requests are welcome! Please read [DEVELOPMENT.md](DEVELOPMENT.md) for development guidelines.
 
-## 📞 Contact
+## Contact
 
 **Yibin (Leon) Liu**
 - Email: kevin.lau.stu@gmail.com
