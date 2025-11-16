@@ -319,7 +319,7 @@ export const projects = [
     title: "MinRL: Minimal, Clean Code for Reinforcement Learning",
     description: "Recognized and pinned by MathFoundationRL, the most popular RL course on Chinese platforms, under \"Third-party code and materials.\"",
     githubStars: "https://img.shields.io/github/stars/10-OASIS-01/minrl",
-    link: "https://github.com/10-OASIS-01/MuRIL"
+    link: "https://github.com/10-OASIS-01/MinRL"
   },
   {
     id: 3,
