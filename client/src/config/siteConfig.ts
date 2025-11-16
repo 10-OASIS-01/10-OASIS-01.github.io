@@ -326,7 +326,7 @@ export const projects = [
     title: "Bencao RAG Medical Intelligent Assistant",
     description: "Developed a medical knowledge question-answering system that integrates context awareness, internet access, knowledge graphs, and RAG method to provide accurate and personalized medical information.",
     githubStars: "https://img.shields.io/github/stars/10-OASIS-01/BenCao_RAG",
-    link: "https://github.com/10-OASIS-01/Biovap"
+    link: "https://github.com/10-OASIS-01/Bencao"
   },
 ];
 
