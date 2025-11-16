@@ -1,4 +1,3 @@
-import { useAuth } from "@/_core/hooks/useAuth";
 import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
 import SidebarProfile from "@/components/SidebarProfile";
@@ -6,10 +5,6 @@ import MainContent from "@/components/MainContent";
 import Footer from "@/components/Footer";
 
 export default function Home() {
-  // The userAuth hooks provides authentication state
-  // To implement login/logout functionality, simply call logout() or redirect to getLoginUrl()
-  let { user, loading, error, isAuthenticated, logout } = useAuth();
-
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
