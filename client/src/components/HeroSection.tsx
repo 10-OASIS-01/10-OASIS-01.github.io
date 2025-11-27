@@ -5,8 +5,8 @@ export default function HeroSection() {
     <div className="relative w-full h-[50vh] bg-cover bg-center flex items-center justify-center overflow-hidden pt-16" style={{
       backgroundImage: `url('${images.heroBackground}')`,
       backgroundAttachment: 'fixed',
-      backgroundSize: 'cover',
-      backgroundPosition: 'center center',
+      backgroundSize: '100% auto',
+      backgroundPosition: 'center top',
     }}>
       {/* Subtle dark overlay for text contrast */}
       <div className="absolute inset-0 bg-black/20" />
