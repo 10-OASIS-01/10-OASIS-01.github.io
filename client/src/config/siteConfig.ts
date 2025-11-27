@@ -64,7 +64,7 @@ export const personalInfo = {
 // Images and Assets
 // ===========================
 export const images = {
-  heroBackground: "/assets/tebet.jpg",
+  heroBackground: "/assets/tebet3.jpg",
   profileAvatar: "/assets/avatar.jpg",
 };
 
