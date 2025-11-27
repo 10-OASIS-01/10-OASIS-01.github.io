@@ -6,7 +6,7 @@ export default function HeroSection() {
       backgroundImage: `url('${images.heroBackground}')`,
       backgroundAttachment: 'fixed',
       backgroundSize: '100% auto',
-      backgroundPosition: 'center center',
+      backgroundPosition: 'center top',
     }}>
       {/* Subtle dark overlay for text contrast */}
       <div className="absolute inset-0 bg-black/20" />
