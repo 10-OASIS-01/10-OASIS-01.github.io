@@ -55,7 +55,7 @@ export const personalInfo = {
     },
     {
       name: "Prof. Yao (Mark) Mu",
-      url: "https://yaomarkmu.github.io/"
+      url: "https://yaomarkmu.github.io"
     }
   ]
 };
