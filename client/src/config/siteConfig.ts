@@ -87,9 +87,10 @@ export const navigationMenu = [
   { label: "Publications", href: "/#publications" },
   { label: "Awards", href: "/#awards" },
   { label: "Misc", href: "/#misc" },
-  { label: "Blog", href: "/blog" },
+  { label: "Blog", href: "https://yibinleonliu.substack.com", external: true },
   { label: "CV", href: "/assets/Leon_s_CV-20.pdf", external: true },
 ];
+
 
 // ===========================
 // Publications
