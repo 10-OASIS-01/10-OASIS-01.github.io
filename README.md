@@ -16,6 +16,13 @@ A modern, responsive academic personal website built with React and deployed as 
 
 Visit the live website: [https://10-oasis-01.github.io](https://10-oasis-01.github.io)
 
+Also check out these amazing homepage based on Yibin's version: 
+
+[Jingqi Fan's personal academic website](https://jingqi-fan.github.io),
+
+
+
+
 ## Architecture
 
 This is a **single-page application (SPA)** deployed as a static website:
