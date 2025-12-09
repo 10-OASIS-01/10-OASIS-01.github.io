@@ -2,6 +2,14 @@
 
 A modern, responsive academic personal website built with React and deployed as a static site on GitHub Pages.
 
+
+Visit the live website: [https://10-oasis-01.github.io](https://10-oasis-01.github.io)
+
+Also check out these amazing homepages based on Yibin's version: 
+
+[Jingqi Fan's personal academic website](https://jingqi-fan.github.io),
+
+
 > **For detailed development information, see [DEVELOPMENT.md](DEVELOPMENT.md)**
 
 ## Features
@@ -11,17 +19,6 @@ A modern, responsive academic personal website built with React and deployed as 
 - **SEO Optimized**: Comprehensive meta tags, structured data, and sitemap
 - **Fast Performance**: Static site generation with optimized builds
 - **Academic Focus**: Designed specifically for academic professionals and researchers
-
-## Live Website
-
-Visit the live website: [https://10-oasis-01.github.io](https://10-oasis-01.github.io)
-
-Also check out these amazing homepages based on Yibin's version: 
-
-[Jingqi Fan's personal academic website](https://jingqi-fan.github.io),
-
-
-
 
 ## Architecture
 
