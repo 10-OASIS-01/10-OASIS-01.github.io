@@ -150,7 +150,7 @@ export const publications = [
     year: 2025,
     links: [
       { text: "Paper", url: "https://arxiv.org/abs/2508.02629" },
-      { text: "Code", url: "https://github.com/NEUIR/Self-Guide" },
+      { text: "Code", url: "https://robotwin-platform.github.io/doc/usage/expert-code-gen.html" },
     ],
   },
   {
@@ -162,7 +162,7 @@ export const publications = [
     links: [
       { text: "Paper EN", url: "https://github.com/10-OASIS-01/10-OASIS-01.github.io/blob/master/assets/_CCL2024__Self_Guide__A_LLM_Reasoning_Enhancement_Method_Based_on_Self_Guided_Planning_EN_-4.pdf" },
       { text: "Paper CN", url: "https://aclanthology.org/2024.ccl-1.67/" },
-      { text: "Code", url: "https://robotwin-platform.github.io/doc/usage/expert-code-gen.html" },
+      { text: "Code", url: "https://github.com/NEUIR/Self-Guide" },
     ],
   },
 ];
