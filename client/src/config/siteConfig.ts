@@ -100,7 +100,7 @@ export const publications = [
     id: 1,
     authors: "Ganlin Yang, Tianyi Zhang, Haoran Hao, Weiyun Wang, Yibin Liu, Dehui Wang, Guanzhou Chen, Zijian Cai, Junting Chen, Weijie Su, Wengang Zhou, Yu Qiao, Jifeng Dai, Jiangmiao Pang, Gen Luo, Wenhai Wang, Yao Mu†, Zhi Hou†",
     title: "Vlaser: Vision-Language-Action Model with Synergistic Embodied Reasoning",
-    venue: "arXiv 2025, Under Review",
+    venue: "ICLR 2026",
     year: 2025,
     githubStars: "https://img.shields.io/github/stars/OpenGVLab/Vlaser",
     links: [
