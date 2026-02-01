@@ -357,3 +357,10 @@ export const themeConfig = {
     mono: "'Courier New', Courier, monospace",
   },
 };
+
+// ===========================
+// Site Metadata
+// ===========================
+export const siteMetadata = {
+  lastUpdated: "2026-02-01", // 网站最后更新日期，格式：YYYY-MM-DD
+};

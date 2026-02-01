@@ -1,6 +1,8 @@
+import { siteMetadata } from "@/config/siteConfig";
+
 export default function Footer() {
   const currentYear = new Date().getFullYear();
-  const lastUpdated = new Date().toISOString().split('T')[0];
+  const lastUpdated = siteMetadata.lastUpdated;
 
   return (
     <footer className="bg-gray-900 text-gray-400 py-8">
