@@ -40,7 +40,7 @@ jobs:
       - name: Install pnpm
         uses: pnpm/action-setup@v2
         with:
-          version: 8
+          version: 10
 
       - name: Get pnpm store directory
         id: pnpm-cache
@@ -57,13 +57,22 @@ jobs:
             ${{ runner.os }}-pnpm-store-
 
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --frozen-lockfile
 
       - name: Build project
         run: pnpm build
+        env:
+          NODE_ENV: production
 
       - name: Create 404.html for SPA routing
-        run: cp dist/public/index.html dist/public/404.html
+        run: |
+          if [ -f dist/public/index.html ]; then
+            cp dist/public/index.html dist/public/404.html
+            echo "✅ 404.html created successfully"
+          else
+            echo "❌ Error: index.html not found"
+            exit 1
+          fi
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
