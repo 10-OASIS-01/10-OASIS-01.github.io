@@ -51,8 +51,7 @@ export default defineConfig({
             '@radix-ui/react-toggle-group',
             '@radix-ui/react-tooltip'
           ],
-          'lucide': ['lucide-react'],
-          'vendor': ['react', 'react-dom', 'wouter']
+          'vendor': ['react', 'react-dom', 'wouter', 'lucide-react']  // 添加 lucide-react
         }
       }
     }
