@@ -13,8 +13,8 @@ export const personalInfo = {
   name: "Yibin (Leon) Liu",
   chineseName: "刘艺彬",
   pronouns: "he/him",
-  title: "Undergraduate Student",
-  university: "Northeastern University",
+  title: "Incoming PhD Student",
+  university: "University of Utah",
   location: "Shenyang, China",
   email: "kevin.lau.stu@gmail.com",
   
@@ -24,7 +24,7 @@ export const personalInfo = {
   
   // About Me
   aboutMe: {
-    intro: `I am a senior undergraduate student majoring in Artificial Intelligence at Northeastern University, China. Currently, I have been working as a Research Assistant under the supervision of Prof. Mingyu Ding at UNC-Chapel Hill and Prof. Yao (Mark) Mu at Shanghai Jiao Tong University.`,
+    intro: `I am a senior undergraduate student majoring in Artificial Intelligence at Northeastern University, China. Starting Fall 2026, I will be pursuing a PhD in Computer Science at the Kahlert School of Computing at the University of Utah, advised by Prof. Weiyu Liu and Prof. Kenneth Marino. Currently, I have been working as a Research Assistant under the supervision of Prof. Mingyu Ding at UNC-Chapel Hill and Prof. Yao (Mark) Mu at Shanghai Jiao Tong University.`,
     
     researchFocus: `My research lies at the intersection of Language Grounding, Multimodal Reasoning and Planning, and Human-Robot Interaction. I am particularly interested in developing foundation models that ground language and perception in real-world physical understanding, enabling robots to reason, plan, and act effectively in complex environments. Ultimately, my goal is to build embodied agents that learn from real-world interactions, developing causal reasoning and compositional skills for generalizable mobile manipulation.`,
     
@@ -45,10 +45,18 @@ export const personalInfo = {
     
     goal: `Guided by the principle of creating technology with everyone, for everyone, my research aims to advance accessible, human-centered AI that enhances daily life and broadens equitable access to intelligent systems.`,
     
-    lookingFor: "✨ I am looking for a Ph.D. position starting in 2026 Fall. Please feel free to reach out!"
+    lookingFor: "✨ I will be joining the Kahlert School of Computing at the University of Utah as a PhD student in Fall 2026. Please feel free to reach out!"
   },
   
   advisors: [
+    {
+      name: "Prof. Weiyu Liu",
+      url: "https://www.weiyuliu.com/"
+    },
+    {
+      name: "Prof. Kenneth Marino",
+      url: "https://kennethmarino.com/"
+    },
     {
       name: "Prof. Mingyu Ding",
       url: "https://dingmyu.github.io"
