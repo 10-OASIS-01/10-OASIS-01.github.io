@@ -21,7 +21,7 @@ export default function MainContent() {
         </h2>
         <div className="text-gray-700 dark:text-gray-300 leading-relaxed space-y-4">
           <p>
-            {personalInfo.aboutMe.intro.split('Prof. Weiyu Liu')[0]}
+            {personalInfo.aboutMe.intro.split('Kahlert School of Computing at the University of Utah')[0]}
             <a
               href="https://www.cs.utah.edu/"
               target="_blank"
