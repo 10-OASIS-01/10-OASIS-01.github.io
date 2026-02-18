@@ -24,7 +24,9 @@ export default function Footer() {
         
         {/* Visitor Map Widget */}
         <div className="mt-6 flex justify-center">
-          <div id="mapmyvisitors-container"></div>
+          <div className="max-w-md">
+            <div id="mapmyvisitors-container"></div>
+          </div>
         </div>
       </div>
     </footer>
