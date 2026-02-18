@@ -21,6 +21,11 @@ export default function Footer() {
             @10-OASIS-01/10-OASIS-01.github.io
           </a>
         </p>
+        
+        {/* Visitor Map Widget */}
+        <div className="mt-6 flex justify-center">
+          <div id="mapmyvisitors-container"></div>
+        </div>
       </div>
     </footer>
   );
