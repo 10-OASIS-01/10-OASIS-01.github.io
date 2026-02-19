@@ -14,7 +14,7 @@ export const personalInfo = {
   chineseName: "刘艺彬",
   pronouns: "he/him",
   title: "Incoming PhD Student",
-  university: "University of Utah",
+  university: "University of Utah / Northeastern University",
   location: "Shenyang, China",
   email: "kevin.lau.stu@gmail.com",
   
