@@ -1,8 +1,25 @@
 import { siteMetadata } from "@/config/siteConfig";
+import { useEffect } from "react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   const lastUpdated = siteMetadata.lastUpdated;
+
+  useEffect(() => {
+    // 检查脚本是否已经加载
+    if (!document.getElementById('mapmyvisitors')) {
+      const script = document.createElement('script');
+      script.id = 'mapmyvisitors';
+      script.type = 'text/javascript';
+      script.src = 'https://mapmyvisitors.com/map.js?d=OsdhPxdEczfiTFHwqskcKzqDSwDY6eYWewwj-JzD56E&cl=ffffff&w=200';
+      script.async = true;
+      
+      const container = document.getElementById('mapmyvisitors-container');
+      if (container) {
+        container.appendChild(script);
+      }
+    }
+  }, []);
 
   return (
     <footer className="bg-gray-900 text-gray-400 py-8">
