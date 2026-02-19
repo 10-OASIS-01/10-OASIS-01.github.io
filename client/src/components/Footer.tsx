@@ -7,6 +7,8 @@ export default function Footer() {
 
   useEffect(() => {
     // Check if script is already loaded
+    let scriptCreated = false;
+    
     if (!document.getElementById('mapmyvisitors')) {
       const script = document.createElement('script');
       script.id = 'mapmyvisitors';
@@ -17,14 +19,18 @@ export default function Footer() {
       const container = document.getElementById('mapmyvisitors-container');
       if (container) {
         container.appendChild(script);
+        scriptCreated = true;
       }
     }
 
     // Cleanup function to remove script when component unmounts
+    // Only remove if this effect instance created the script
     return () => {
-      const scriptElement = document.getElementById('mapmyvisitors');
-      if (scriptElement && scriptElement.parentNode) {
-        scriptElement.parentNode.removeChild(scriptElement);
+      if (scriptCreated) {
+        const scriptElement = document.getElementById('mapmyvisitors');
+        if (scriptElement && scriptElement.parentNode) {
+          scriptElement.parentNode.removeChild(scriptElement);
+        }
       }
     };
   }, []);
