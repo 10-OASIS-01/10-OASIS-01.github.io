@@ -1,8 +1,39 @@
 import { siteMetadata } from "@/config/siteConfig";
+import { useEffect, useRef } from "react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   const lastUpdated = siteMetadata.lastUpdated;
+  const scriptCreatedRef = useRef(false);
+
+  useEffect(() => {
+    // Check if script is already loaded
+    if (!document.getElementById('mapmyvisitors')) {
+      const script = document.createElement('script');
+      script.id = 'mapmyvisitors';
+      script.type = 'text/javascript';
+      script.src = 'https://mapmyvisitors.com/map.js?d=OsdhPxdEczfiTFHwqskcKzqDSwDY6eYWewwj-JzD56E&cl=ffffff&w=200';
+      script.async = true;
+      
+      const container = document.getElementById('mapmyvisitors-container');
+      if (container) {
+        container.appendChild(script);
+        scriptCreatedRef.current = true;
+      }
+    }
+
+    // Cleanup function to remove script when component unmounts
+    // Only remove if this component instance created the script
+    return () => {
+      if (scriptCreatedRef.current) {
+        const scriptElement = document.getElementById('mapmyvisitors');
+        if (scriptElement && scriptElement.parentNode) {
+          scriptElement.parentNode.removeChild(scriptElement);
+        }
+        scriptCreatedRef.current = false;
+      }
+    };
+  }, []);
 
   return (
     <footer className="bg-gray-900 text-gray-400 py-8">
