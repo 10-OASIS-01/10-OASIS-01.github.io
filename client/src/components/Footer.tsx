@@ -18,6 +18,14 @@ export default function Footer() {
       if (container) {
         container.appendChild(script);
       }
+
+      // Cleanup function to remove script when component unmounts
+      return () => {
+        const scriptElement = document.getElementById('mapmyvisitors');
+        if (scriptElement && scriptElement.parentNode) {
+          scriptElement.parentNode.removeChild(scriptElement);
+        }
+      };
     }
   }, []);
 
