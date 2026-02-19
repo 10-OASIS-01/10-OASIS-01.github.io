@@ -6,7 +6,7 @@ export default function Footer() {
   const lastUpdated = siteMetadata.lastUpdated;
 
   useEffect(() => {
-    // 检查脚本是否已经加载
+    // Check if script is already loaded
     if (!document.getElementById('mapmyvisitors')) {
       const script = document.createElement('script');
       script.id = 'mapmyvisitors';
@@ -18,15 +18,15 @@ export default function Footer() {
       if (container) {
         container.appendChild(script);
       }
-
-      // Cleanup function to remove script when component unmounts
-      return () => {
-        const scriptElement = document.getElementById('mapmyvisitors');
-        if (scriptElement && scriptElement.parentNode) {
-          scriptElement.parentNode.removeChild(scriptElement);
-        }
-      };
     }
+
+    // Cleanup function to remove script when component unmounts
+    return () => {
+      const scriptElement = document.getElementById('mapmyvisitors');
+      if (scriptElement && scriptElement.parentNode) {
+        scriptElement.parentNode.removeChild(scriptElement);
+      }
+    };
   }, []);
 
   return (
