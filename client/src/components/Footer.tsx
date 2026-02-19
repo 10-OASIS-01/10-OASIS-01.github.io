@@ -12,7 +12,7 @@ export default function Footer() {
       const script = document.createElement('script');
       script.id = 'mapmyvisitors';
       script.type = 'text/javascript';
-      script.src = 'https://mapmyvisitors.com/map.js?d=OsdhPxdEczfiTFHwqskcKzqDSwDY6eYWewwj-JzD56E&cl=ffffff&w=200';
+      script.src = 'https://mapmyvisitors.com/map.js?cl=ffffff&w=400&t=tt&d=OsdhPxdEczfiTFHwqskcKzqDSwDY6eYWewwj-JzD56E&co=0f1827';
       script.async = true;
       
       const container = document.getElementById('mapmyvisitors-container');
@@ -55,14 +55,12 @@ export default function Footer() {
         
         {/* Visitor Map Widget */}
         <div className="mt-6 flex justify-center">
-          <div style={{ maxWidth: '200px', width: '100%' }}>
+          <div style={{ maxWidth: '400px', width: '100%' }}>
             <div 
               id="mapmyvisitors-container" 
               style={{ 
                 maxWidth: '100%', 
-                overflow: 'hidden',
-                transform: 'scale(0.7)',
-                transformOrigin: 'center'
+                overflow: 'hidden'
               }}
             ></div>
           </div>
