@@ -24,8 +24,16 @@ export default function Footer() {
         
         {/* Visitor Map Widget */}
         <div className="mt-6 flex justify-center">
-          <div style={{ maxWidth: '450px', width: '100%' }}>
-            <div id="mapmyvisitors-container" style={{ maxWidth: '100%', overflow: 'hidden' }}></div>
+          <div style={{ maxWidth: '200px', width: '100%' }}>
+            <div 
+              id="mapmyvisitors-container" 
+              style={{ 
+                maxWidth: '100%', 
+                overflow: 'hidden',
+                transform: 'scale(0.7)',
+                transformOrigin: 'center'
+              }}
+            ></div>
           </div>
         </div>
       </div>
