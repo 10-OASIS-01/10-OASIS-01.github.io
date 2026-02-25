@@ -144,7 +144,7 @@ export const publications = [
     id: 4,
     authors: "Nan Gao†, Yibin Liu, Xin Tang, Yanyan Liu, Chun Yu, Yun Huang, Yuntao Wang, Flora D. Salim, Xuhai Orson Xu, Jun Wei, Yuanchun Shi",
     title: "The Homework Wars: Exploring Emotions, Behaviours, and Conflicts in Parent-Child Homework Interactions",
-    venue: "ACM IMWUT/UbiComp 2025",
+    venue: "ACM IMWUT/UbiComp 2025 [Rank A*, CCF A]",
     year: 2025,
     links: [
       { text: "Paper", url: "https://arxiv.org/abs/2502.01325v2" },
@@ -165,7 +165,7 @@ export const publications = [
     id: 6,
     authors: "Yibin Liu, Zhenghao Liu†, Yukun Yan, Shi Yu, Shuo Wang, Liner Yang, Yu Gu, Ge Yu, Huimin Chen",
     title: "Self-Guide: A LLM Reasoning Enhancement Method Based on Self-Guided Planning",
-    venue: "CCL 2024 / Journal of Chinese Information Processing",
+    venue: "CCL 2024 / Journal of Chinese Information Processing [CCF B]",
     year: 2024,
     links: [
       { text: "Paper EN", url: "https://github.com/10-OASIS-01/10-OASIS-01.github.io/blob/master/assets/_CCL2024__Self_Guide__A_LLM_Reasoning_Enhancement_Method_Based_on_Self_Guided_Planning_EN_-4.pdf" },
