@@ -24,7 +24,7 @@ export const personalInfo = {
   
   // About Me
   aboutMe: {
-    intro: `I am a senior undergraduate student majoring in Artificial Intelligence at Northeastern University, China. Starting Fall 2026, I will be pursuing a PhD in Computer Science at the Kahler School of Computing at the University of Utah, advised by Prof. Weiyu Liu and Prof. Kenneth Marino. Currently, I have been working as a Research Assistant under the supervision of Prof. Mingyu Ding at UNC-Chapel Hill and Prof. Yao (Mark) Mu at Shanghai Jiao Tong University.`,
+    intro: `I am a senior undergraduate student majoring in Artificial Intelligence at Northeastern University, China. Starting Fall 2026, I will begin my PhD in Computer Science at the Kahlert School of Computing at the University of Utah, where I will be advised by Prof. Weiyu Liu and collaborate closely with Prof. Kenneth Marino.`,
     
     researchFocus: `My research lies at the intersection of Language Grounding, Multimodal Reasoning and Planning, and Human-Robot Interaction. I am particularly interested in developing foundation models that ground language and perception in real-world physical understanding, enabling robots to reason, plan, and act effectively in complex environments. Ultimately, my goal is to build embodied agents that learn from real-world interactions, developing causal reasoning and compositional skills for generalizable mobile manipulation.`,
     
