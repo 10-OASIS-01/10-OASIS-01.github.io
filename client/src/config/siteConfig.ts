@@ -197,7 +197,7 @@ export const researchExperiences = [
       { name: "Prof. Yao (Mark) Mu", url: "https://yaomarkmu.github.io/" }
     ],
     location: "Onsite / Shanghai, China",
-    duration: "March 2025 – Present"
+    duration: "March 2025 – Jan 2026"
   },
   {
     id: 3,
@@ -223,7 +223,7 @@ export const industryExperiences = [
     period: "Mentor: Yusen Qin (VP of Technology, D-Robotics)",
     mentorLink: "https://www.linkedin.com/in/yusen-qin-5b23345b/?originalSubdomain=cn",
     location: "Beijing, China",
-    duration: "June 2025 – Present"
+    duration: "June 2025 – Jan 2026"
   },
 ];
 
