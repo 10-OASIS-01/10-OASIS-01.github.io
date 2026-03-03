@@ -30,7 +30,7 @@ export default function MainContent() {
             >
               Kahlert School of Computing at the University of Utah
             </a>
-            {', advised by '}
+            {', where I will be advised by '}
             <a
               href={personalInfo.advisors[0].url}
               target="_blank"
@@ -39,7 +39,7 @@ export default function MainContent() {
             >
               {personalInfo.advisors[0].name}
             </a>
-            {' and '}
+            {' and collaborate closely with '}
             <a
               href={personalInfo.advisors[1].url}
               target="_blank"
@@ -48,25 +48,7 @@ export default function MainContent() {
             >
               {personalInfo.advisors[1].name}
             </a>
-            {'. Currently, I have been working as a Research Assistant under the supervision of '}
-            <a
-              href={personalInfo.advisors[2].url}
-              target="_blank"
-              rel="noopener"
-              className="text-blue-900 dark:text-blue-300 hover:text-blue-700 dark:hover:text-blue-200 font-semibold underline decoration-2 underline-offset-2"
-            >
-              {personalInfo.advisors[2].name}
-            </a>
-            {' at UNC-Chapel Hill and '}
-            <a
-              href={personalInfo.advisors[3].url}
-              target="_blank"
-              rel="noopener"
-              className="text-blue-900 dark:text-blue-300 hover:text-blue-700 dark:hover:text-blue-200 font-semibold underline decoration-2 underline-offset-2"
-            >
-              {personalInfo.advisors[3].name}
-            </a>
-            {' at Shanghai Jiao Tong University.'}
+            {'.'}
           </p>
 
           <p>{personalInfo.aboutMe.researchFocus}</p>
