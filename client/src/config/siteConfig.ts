@@ -57,14 +57,14 @@ export const personalInfo = {
       name: "Prof. Kenneth Marino",
       url: "https://kennethmarino.com/"
     },
-    {
-      name: "Prof. Mingyu Ding",
-      url: "https://dingmyu.github.io"
-    },
-    {
-      name: "Prof. Yao (Mark) Mu",
-      url: "https://yaomarkmu.github.io"
-    }
+    // {
+    //   name: "Prof. Mingyu Ding",
+    //   url: "https://dingmyu.github.io"
+    // },
+    // {
+    //   name: "Prof. Yao (Mark) Mu",
+    //   url: "https://yaomarkmu.github.io"
+    // }
   ]
 };
 
