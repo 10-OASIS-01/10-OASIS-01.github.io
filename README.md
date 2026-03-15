@@ -88,6 +88,8 @@ Edit `client/src/config/siteConfig.ts` to update:
 - Social media links
 - Academic affiliations
 
+> **Note:** When you add new link fields (e.g. `companyLink`, `mentorLink`) to entries in `siteConfig.ts`, you must also update `client/src/components/MainContent.tsx` to render those links. The config file holds the data; the component controls how it is displayed.
+
 ### Blog Posts
 Edit `client/src/config/blogConfig.ts` to:
 - Add new blog posts

@@ -221,7 +221,9 @@ export const industryExperiences = [
     id: 1,
     title: "Robbyant (part of Ant Group) – Research Intern",
     period: "Focus: Large-scale Foundation Models for mobile manipulation",
+    companyName: "Robbyant",
     companyLink: "https://technology.robbyant.com/",
+    parentCompanyName: "Ant Group",
     parentCompanyLink: "https://www.antgroup.com/en/technology/",
     location: "Remote",
     duration: "March 2026 – Present"

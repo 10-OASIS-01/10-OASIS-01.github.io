@@ -21,7 +21,36 @@ export default function MainContent() {
         </h2>
         <div className="text-gray-700 dark:text-gray-300 leading-relaxed space-y-4">
           <p>
-            {personalInfo.aboutMe.intro.split('Kahlert School of Computing at the University of Utah')[0]}
+            {personalInfo.aboutMe.intro.split('Robbyant (part of Ant Group)')[0]}
+            {'companyLink' in industryExperiences[0] && (
+              <>
+                <a
+                  href={industryExperiences[0].companyLink}
+                  target="_blank"
+                  rel="noopener"
+                  className="text-blue-900 dark:text-blue-300 hover:text-blue-700 dark:hover:text-blue-200 font-semibold underline decoration-2 underline-offset-2"
+                >
+                  {industryExperiences[0].companyName}
+                </a>
+                {'parentCompanyLink' in industryExperiences[0] && (
+                  <>
+                    {' (part of '}
+                    <a
+                      href={industryExperiences[0].parentCompanyLink}
+                      target="_blank"
+                      rel="noopener"
+                      className="text-blue-900 dark:text-blue-300 hover:text-blue-700 dark:hover:text-blue-200 font-semibold underline decoration-2 underline-offset-2"
+                    >
+                      {industryExperiences[0].parentCompanyName}
+                    </a>
+                    {')'}
+                  </>
+                )}
+              </>
+            )}
+            {personalInfo.aboutMe.intro
+              .split('Robbyant (part of Ant Group)')[1]
+              .split('Kahlert School of Computing at the University of Utah')[0]}
             <a
               href="https://www.cs.utah.edu/"
               target="_blank"
@@ -168,7 +197,27 @@ export default function MainContent() {
         <div className="space-y-4">
           {industryExperiences.map((exp) => (
             <div key={exp.id} className="space-y-1">
-              <h3 className="font-semibold text-gray-900 dark:text-gray-100">{exp.title}</h3>
+              <h3 className="font-semibold text-gray-900 dark:text-gray-100">
+                {'companyLink' in exp ? (
+                  <>
+                    <a href={exp.companyLink} target="_blank" rel="noopener noreferrer" className="text-blue-900 dark:text-blue-300 hover:underline">
+                      {exp.companyName}
+                    </a>
+                    {'parentCompanyLink' in exp && (
+                      <>
+                        {' (part of '}
+                        <a href={exp.parentCompanyLink} target="_blank" rel="noopener noreferrer" className="text-blue-900 dark:text-blue-300 hover:underline">
+                          {exp.parentCompanyName}
+                        </a>
+                        {')'}
+                      </>
+                    )}
+                    {exp.title.slice(exp.title.indexOf(' \u2013 '))}
+                  </>
+                ) : (
+                  exp.title
+                )}
+              </h3>
               <p className="text-sm text-gray-600 dark:text-gray-400">
                 {exp.mentorLink ? (
                   <>
