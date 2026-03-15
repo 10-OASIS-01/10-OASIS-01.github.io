@@ -24,7 +24,7 @@ export const personalInfo = {
   
   // About Me
   aboutMe: {
-    intro: `I am a senior undergraduate student majoring in Artificial Intelligence at Northeastern University, China. Starting Fall 2026, I will begin my PhD in Computer Science at the Kahlert School of Computing at the University of Utah, where I will be advised by Prof. Weiyu Liu and collaborate closely with Prof. Kenneth Marino.`,
+    intro: `I am a senior undergraduate student majoring in Artificial Intelligence at Northeastern University, China, currently interning at Robbyant (part of Ant Group) as a Research Intern focusing on Large-scale Foundation Models for mobile manipulation. Starting Fall 2026, I will begin my PhD in Computer Science at the Kahlert School of Computing at the University of Utah, where I will be advised by Prof. Weiyu Liu and collaborate closely with Prof. Kenneth Marino.`,
     
     researchFocus: `My research lies at the intersection of Language Grounding, Multimodal Reasoning and Planning, and Human-Robot Interaction. I am particularly interested in developing foundation models that ground language and perception in real-world physical understanding, enabling robots to reason, plan, and act effectively in complex environments. Ultimately, my goal is to build embodied agents that learn from real-world interactions, developing causal reasoning and compositional skills for generalizable mobile manipulation.`,
     
@@ -219,6 +219,17 @@ export const researchExperiences = [
 export const industryExperiences = [
   {
     id: 1,
+    title: "Robbyant (part of Ant Group) – Research Intern",
+    period: "Focus: Large-scale Foundation Models for mobile manipulation",
+    companyName: "Robbyant",
+    companyLink: "https://technology.robbyant.com/",
+    parentCompanyName: "Ant Group",
+    parentCompanyLink: "https://www.antgroup.com/en/technology/",
+    location: "Remote",
+    duration: "March 2026 – Present"
+  },
+  {
+    id: 2,
     title: "Horizon Robotics – Cloud Platform Intern",
     period: "Mentor: Yusen Qin (VP of Technology, D-Robotics)",
     mentorLink: "https://www.linkedin.com/in/yusen-qin-5b23345b/?originalSubdomain=cn",
