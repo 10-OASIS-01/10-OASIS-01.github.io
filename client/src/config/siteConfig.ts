@@ -225,7 +225,7 @@ export const industryExperiences = [
     companyLink: "https://technology.robbyant.com/",
     parentCompanyName: "Ant Group",
     parentCompanyLink: "https://www.antgroup.com/en/technology/",
-    location: "Remote",
+    location: "Shanghai, China",
     duration: "March 2026 – Present"
   },
   {
