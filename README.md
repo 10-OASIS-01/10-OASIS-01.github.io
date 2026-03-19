@@ -5,9 +5,11 @@ A modern, responsive academic personal website built with React and deployed as 
 
 Visit the live website: [https://10-oasis-01.github.io](https://10-oasis-01.github.io)
 
-Also check out these amazing homepages based on Yibin's version: 
+Also check out these incredible researchers' homepages based on Yibin's version: 
 
-[Jingqi Fan's personal academic website](https://jingqi-fan.github.io),
+[Buqiang Xu, Zhejiang University](https://xubqpanda.github.io/),
+
+[Jingqi Fan, UMass Amherst](https://jingqi-fan.github.io),
 
 
 > **For detailed development information, see [DEVELOPMENT.md](DEVELOPMENT.md)**
