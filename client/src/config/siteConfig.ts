@@ -148,7 +148,7 @@ export const publications = [
     venue: "Under Review",
     year: 2025,
     links: [
-      { text: "Paper", url: "https://github.com/10-OASIS-01/10-OASIS-01.github.io/blob/master/assets/Family_educantion_strategy_CHI_2026-2.pdf" },
+      { text: "Paper", url: "https://github.com/10-OASIS-01/10-OASIS-01.github.io/blob/master/assets/Family_educantion_strategy_CHI_2026-4.pdf" },
     ],
   },
   {
