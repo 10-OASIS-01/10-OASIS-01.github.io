@@ -106,6 +106,17 @@ export const navigationMenu = [
 export const publications = [
   {
     id: 1,
+    authors: "Yibin Liu*, Yaxing Lyu*, Daqi Gao*, Zhixuan Liang, Weiliang Tang, Shilong Mu, Xiaokang Yang, Yao Mu†",
+    title: "From Passive Observer to Active Critic: Reinforcement Learning Elicits Process Reasoning for Robotic Manipulation",
+    venue: "arXiv 2026, Under Review",
+    year: 2026,
+    links: [
+      { text: "Paper", url: "https://arxiv.org/abs/2603.15600" },
+      { text: "Model/Dataset", url: "https://huggingface.co/collections/LeonOverload/primo-r1" },
+    ],
+  },
+  {
+    id: 2,
     authors: "Ganlin Yang, Tianyi Zhang, Haoran Hao, Weiyun Wang, Yibin Liu, Dehui Wang, Guanzhou Chen, Zijian Cai, Junting Chen, Weijie Su, Wengang Zhou, Yu Qiao, Jifeng Dai, Jiangmiao Pang, Gen Luo, Wenhai Wang, Yao Mu†, Zhi Hou†",
     title: "Vlaser: Vision-Language-Action Model with Synergistic Embodied Reasoning",
     venue: "ICLR 2026",
@@ -118,7 +129,7 @@ export const publications = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     authors: "Tianxing Chen*, Zanxin Chen*, Baijun Chen*, Zijian Cai*, Yibin Liu*, Zixuan Li* ... Ping Luo†, Yao Mu†",
     title: "RoboTwin 2.0: A Scalable Data Generator and Benchmark with Strong Domain Randomization for Robust Bimanual Robotic Manipulation",
     venue: "arXiv 2025, Under Review",
@@ -131,7 +142,7 @@ export const publications = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     authors: "Xin Tang*, Yibin Liu*, Ruiwen Zhang, Ran Xu, Yanyan Liu, Yuntao Wang, Yuanchun Shi, Haining Zhang, Chun Yu, Nan Gao†",
     title: "EduHome: Leveraging LLMs for Human Behavioural Insights and Strategy Development through Parent–Child Homework Conversations",
     venue: "Under Review",
@@ -141,7 +152,7 @@ export const publications = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     authors: "Nan Gao†, Yibin Liu, Xin Tang, Yanyan Liu, Chun Yu, Yun Huang, Yuntao Wang, Flora D. Salim, Xuhai Orson Xu, Jun Wei, Yuanchun Shi",
     title: "The Homework Wars: Exploring Emotions, Behaviours, and Conflicts in Parent-Child Homework Interactions",
     venue: "ACM IMWUT/UbiComp 2025 [Rank A*, CCF A]",
@@ -151,7 +162,7 @@ export const publications = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     authors: "Yibin Liu*, Zhixuan Liang*, Zanxing Chen*, Tianxing Chen, Mengkang Hu, Wanxi Dong, Congsheng Xu, Zhaoming Han, Yusen Qin, Yao Mu†",
     title: "HyCodePolicy: Hybrid Language Controllers for Multimodal Monitoring and Decision in Embodied Agents",
     venue: "ICCV 2025 Workshop on Multi-Modal Reasoning for Agentic Intelligence",
@@ -162,7 +173,7 @@ export const publications = [
     ],
   },
   {
-    id: 6,
+    id: 7,
     authors: "Yibin Liu, Zhenghao Liu†, Yukun Yan, Shi Yu, Shuo Wang, Liner Yang, Yu Gu, Ge Yu, Huimin Chen",
     title: "Self-Guide: A LLM Reasoning Enhancement Method Based on Self-Guided Planning",
     venue: "CCL 2024 / Journal of Chinese Information Processing [CCF B]",
