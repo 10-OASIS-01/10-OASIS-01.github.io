@@ -15,8 +15,8 @@ export const personalInfo = {
   pronouns: "he/him",
   title: "Incoming PhD Student",
   university: "University of Utah / Northeastern University",
-  location: "Shenyang, China",
-  email: "kevin.lau.stu@gmail.com",
+  location: "Shanghai, China",
+  email: "yibin.liu@utah.edu",
   
   // Hero Section
   heroQuote: "Live, travel, adventure, bless, and don't be sorry.",
