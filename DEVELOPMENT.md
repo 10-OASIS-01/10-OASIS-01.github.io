@@ -424,7 +424,7 @@ The workflow runs on pushes to `main` and `master` (for site/build-related files
 
 To enable deployment after GitHub Pages was disabled:
 
-1. Go to `https://github.com/10-OASIS-01/10-OASIS-01.github.io/settings/pages`
+1. Go to your repository's Pages settings at `https://github.com/<owner>/<repo>/settings/pages`
 2. In **Build and deployment** → **Source**, select **GitHub Actions**
 3. Save settings and trigger the deploy workflow (push a change or run it manually from the **Actions** tab)
 
