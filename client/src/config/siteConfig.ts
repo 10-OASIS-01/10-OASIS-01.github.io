@@ -132,23 +132,13 @@ export const publications = [
     id: 3,
     authors: "Tianxing Chen*, Zanxin Chen*, Baijun Chen*, Zijian Cai*, Yibin Liu*, Zixuan Li* ... Ping Luo†, Yao Mu†",
     title: "RoboTwin 2.0: A Scalable Data Generator and Benchmark with Strong Domain Randomization for Robust Bimanual Robotic Manipulation",
-    venue: "arXiv 2025, Under Review",
+    venue: "ICML 2026",
     year: 2025,
     githubStars: "https://img.shields.io/github/stars/RoboTwin-Platform/RoboTwin",
     links: [
       { text: "Paper", url: "https://arxiv.org/pdf/2506.18088" },
       { text: "Webpage", url: "https://robotwin-platform.github.io" },
       { text: "Repo", url: "https://github.com/RoboTwin-Platform/RoboTwin" },
-    ],
-  },
-  {
-    id: 4,
-    authors: "Xin Tang*, Yibin Liu*, Ruiwen Zhang, Ran Xu, Yanyan Liu, Yuntao Wang, Yuanchun Shi, Haining Zhang, Chun Yu, Nan Gao†",
-    title: "EduHome: Leveraging LLMs for Human Behavioural Insights and Strategy Development through Parent–Child Homework Conversations",
-    venue: "Under Review",
-    year: 2025,
-    links: [
-      { text: "Paper", url: "https://github.com/10-OASIS-01/10-OASIS-01.github.io/blob/master/client/public/assets/Family_educantion_strategy_CHI_2026-4.pdf" },
     ],
   },
   {
@@ -170,18 +160,6 @@ export const publications = [
     links: [
       { text: "Paper", url: "https://arxiv.org/abs/2508.02629" },
       { text: "Code", url: "https://robotwin-platform.github.io/doc/usage/expert-code-gen.html" },
-    ],
-  },
-  {
-    id: 7,
-    authors: "Yibin Liu, Zhenghao Liu†, Yukun Yan, Shi Yu, Shuo Wang, Liner Yang, Yu Gu, Ge Yu, Huimin Chen",
-    title: "Self-Guide: A LLM Reasoning Enhancement Method Based on Self-Guided Planning",
-    venue: "CCL 2024 / Journal of Chinese Information Processing [CCF B]",
-    year: 2024,
-    links: [
-      { text: "Paper EN", url: "https://github.com/10-OASIS-01/10-OASIS-01.github.io/blob/master/assets/_CCL2024__Self_Guide__A_LLM_Reasoning_Enhancement_Method_Based_on_Self_Guided_Planning_EN_-4.pdf" },
-      { text: "Paper CN", url: "https://aclanthology.org/2024.ccl-1.67/" },
-      { text: "Code", url: "https://github.com/NEUIR/Self-Guide" },
     ],
   },
 ];
