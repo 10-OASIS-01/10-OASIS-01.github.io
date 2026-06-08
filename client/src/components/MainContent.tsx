@@ -12,6 +12,8 @@ import {
 } from "@/config/siteConfig";
 
 export default function MainContent() {
+  const [introBeforeAdvisor, introAfterAdvisor] = personalInfo.aboutMe.intro.split("Weiyu Liu");
+
   return (
     <div className="w-full space-y-12">
       {/* About Me Section */}
@@ -20,7 +22,24 @@ export default function MainContent() {
           About Me
         </h2>
         <div className="text-gray-700 dark:text-gray-300 leading-relaxed space-y-4">
-          <p>{personalInfo.aboutMe.intro}</p>
+          <p>
+            {introAfterAdvisor !== undefined ? (
+              <>
+                {introBeforeAdvisor}
+                <a
+                  href={personalInfo.advisors[0].url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-900 dark:text-blue-300 hover:underline"
+                >
+                  {personalInfo.advisors[0].name}
+                </a>
+                {introAfterAdvisor}
+              </>
+            ) : (
+              personalInfo.aboutMe.intro
+            )}
+          </p>
 
           <p>{personalInfo.aboutMe.researchFocus}</p>
 
