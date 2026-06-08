@@ -100,7 +100,7 @@ Edit `client/src/config/blogConfig.ts` to:
 
 ## Deployment
 
-The site automatically deploys to GitHub Pages when changes are pushed to the `master` branch via GitHub Actions.
+The site automatically deploys to GitHub Pages via GitHub Actions when changes are pushed to the `main` or `master` branch.
 
 For manual deployment and advanced configuration, see the [Deployment section in DEVELOPMENT.md](DEVELOPMENT.md#deployment).
 
