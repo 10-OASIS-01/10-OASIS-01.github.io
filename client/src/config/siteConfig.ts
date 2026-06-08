@@ -45,7 +45,7 @@ export const personalInfo = {
     
     goal: `Guided by the principle of creating technology with everyone, for everyone, my research aims to advance accessible, human-centered AI that enhances daily life and broadens equitable access to intelligent systems.`,
     
-    lookingFor: "✨ I will be joining the Kahlert School of Computing at the University of Utah as a PhD student in Fall 2026. Please feel free to reach out!"
+    lookingFor: "I recognize that the academic journey can be particularly challenging for students from underrepresented backgrounds—whether due to gender, sexual orientation, socioeconomic status, race, or other factors. I'm committed to providing support in any way I can, whether it's discussing research directions, navigating the application process, planning your career path, or simply having a conversation about the ups and downs of this journey. Feel free to reach out anytime—drop me an email or schedule a quick 15-minute chat!"
   },
   
   advisors: [
@@ -117,7 +117,7 @@ export const publications = [
   },
   {
     id: 2,
-    authors: "Ganlin Yang, Tianyi Zhang, Haoran Hao, Weiyun Wang, Yibin Liu, Dehui Wang, Guanzhou Chen, Zijian Cai, Junting Chen, Weijie Su, Wengang Zhou, Yu Qiao, Jifeng Dai, Jiangmiao Pang, Gen Luo, Wenhai Wang, Yao Mu†, Zhi Hou†",
+    authors: "Ganlin Yang, Tianyi Zhang, Haoran Hao, Weiyun Wang, Yibin Liu, Dehui Wang, Guanzhou Chen, Zijian Cai, Junting Chen, Weijie Su, Wengang Zhou, Yu Qiao, Jifeng Dai, Jiangmiao Pang, Gen...",
     title: "Vlaser: Vision-Language-Action Model with Synergistic Embodied Reasoning",
     venue: "ICLR 2026",
     year: 2025,
@@ -320,7 +320,7 @@ export const projects = [
   {
     id: 1,
     title: "RDK Copilot: LLM-powered Development Copilot for Robotics at Horizon Robotics",
-    description: "Developed and deployed a VSCode plugin that assists robotic system development using LLMs. Supported features include automatic coding, environment setup, code completion, test generation, code explanation, and manipulation data acquisition.",
+    description: "Developed and deployed a VSCode plugin that assists robotic system development using LLMs. Supported features include automatic coding, environment setup, code completion, test ...",
     link: "https://zhuanlan.zhihu.com/p/967513363"
   },
   {
@@ -333,7 +333,7 @@ export const projects = [
   {
     id: 3,
     title: "Bencao RAG Medical Intelligent Assistant",
-    description: "Developed a medical knowledge question-answering system that integrates context awareness, internet access, knowledge graphs, and RAG method to provide accurate and personalized medical information.",
+    description: "Developed a medical knowledge question-answering system that integrates context awareness, internet access, knowledge graphs, and RAG method to provide accurate and personalized...",
     githubStars: "https://img.shields.io/github/stars/10-OASIS-01/BenCao_RAG",
     link: "https://github.com/10-OASIS-01/BenCao_RAG"
   },
