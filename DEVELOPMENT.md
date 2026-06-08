@@ -418,33 +418,20 @@ import { Component } from "@/components/Component";
 
 ### GitHub Pages Deployment
 
-The site automatically deploys to GitHub Pages when changes are pushed to the `master` branch.
+This repository uses the custom GitHub Actions workflow at `.github/workflows/deploy.yml` to build and deploy GitHub Pages.
 
-**GitHub Actions Workflow (`.github/workflows/deploy.yml`):**
+The workflow runs on pushes to `main` and `master` (for site/build-related files) and also supports manual runs via `workflow_dispatch`.
 
-```yaml
-name: Deploy to GitHub Pages
+To enable deployment after GitHub Pages was disabled:
 
-on:
-  push:
-    branches: [master]
+1. Go to `https://github.com/10-OASIS-01/10-OASIS-01.github.io/settings/pages`
+2. In **Build and deployment** → **Source**, select **GitHub Actions**
+3. Save settings and trigger the deploy workflow (push a change or run it manually from the **Actions** tab)
 
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 18
-      - run: npm install -g pnpm
-      - run: pnpm install
-      - run: pnpm build
-      - uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist/public
-```
+The workflow already includes the required Pages deployment actions:
+- `actions/configure-pages@v5`
+- `actions/upload-pages-artifact@v3` (artifact path: `dist/public`)
+- `actions/deploy-pages@v4`
 
 ### Manual Deployment
 
