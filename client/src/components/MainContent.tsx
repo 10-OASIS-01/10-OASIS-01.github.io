@@ -20,65 +20,7 @@ export default function MainContent() {
           About Me
         </h2>
         <div className="text-gray-700 dark:text-gray-300 leading-relaxed space-y-4">
-          <p>
-            {personalInfo.aboutMe.intro.split('Robbyant (part of Ant Group)')[0]}
-            {'companyLink' in industryExperiences[0] && (
-              <>
-                <a
-                  href={industryExperiences[0].companyLink}
-                  target="_blank"
-                  rel="noopener"
-                  className="text-blue-900 dark:text-blue-300 hover:text-blue-700 dark:hover:text-blue-200 font-semibold underline decoration-2 underline-offset-2"
-                >
-                  {industryExperiences[0].companyName}
-                </a>
-                {'parentCompanyLink' in industryExperiences[0] && (
-                  <>
-                    {' (part of '}
-                    <a
-                      href={industryExperiences[0].parentCompanyLink}
-                      target="_blank"
-                      rel="noopener"
-                      className="text-blue-900 dark:text-blue-300 hover:text-blue-700 dark:hover:text-blue-200 font-semibold underline decoration-2 underline-offset-2"
-                    >
-                      {industryExperiences[0].parentCompanyName}
-                    </a>
-                    {')'}
-                  </>
-                )}
-              </>
-            )}
-            {personalInfo.aboutMe.intro
-              .split('Robbyant (part of Ant Group)')[1]
-              .split('Kahlert School of Computing at the University of Utah')[0]}
-            <a
-              href="https://www.cs.utah.edu/"
-              target="_blank"
-              rel="noopener"
-              className="text-blue-900 dark:text-blue-300 hover:text-blue-700 dark:hover:text-blue-200 font-semibold underline decoration-2 underline-offset-2"
-            >
-              Kahlert School of Computing at the University of Utah
-            </a>
-            {', where I will be advised by '}
-            <a
-              href={personalInfo.advisors[0].url}
-              target="_blank"
-              rel="noopener"
-              className="text-blue-900 dark:text-blue-300 hover:text-blue-700 dark:hover:text-blue-200 font-semibold underline decoration-2 underline-offset-2"
-            >
-              {personalInfo.advisors[0].name}
-            </a>
-            {' and collaborate closely with '}
-            <a
-              href={personalInfo.advisors[1].url}
-              target="_blank"
-              rel="noopener"
-              className="text-blue-900 dark:text-blue-300 hover:text-blue-700 dark:hover:text-blue-200 font-semibold underline decoration-2 underline-offset-2"
-            >
-              {personalInfo.advisors[1].name}
-            </a>
-            {'.'}
-          </p>
+          <p>{personalInfo.aboutMe.intro}</p>
 
           <p>{personalInfo.aboutMe.researchFocus}</p>
 
