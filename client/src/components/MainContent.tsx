@@ -11,7 +11,29 @@ import {
   technologies 
 } from "@/config/siteConfig";
 
+const ADVISOR_TITLE_PREFIX_PATTERN =
+  /^(Prof(?:essor)?|Dr|Assoc\.?\s*Prof(?:essor)?|Asst\.?\s*Prof(?:essor)?)\.?\s+/i;
+
 export default function MainContent() {
+  const primaryAdvisor = personalInfo.advisors?.[0];
+  const introText = personalInfo.aboutMe.intro;
+  const advisorIntroName = primaryAdvisor?.name
+    .replace(ADVISOR_TITLE_PREFIX_PATTERN, "")
+    .trim();
+  const advisorNameIndex = advisorIntroName
+    ? introText.toLowerCase().indexOf(advisorIntroName.toLowerCase())
+    : -1;
+  const advisorNameMentionedOnce =
+    advisorIntroName !== undefined &&
+    advisorNameIndex >= 0 &&
+    introText
+      .toLowerCase()
+      .indexOf(advisorIntroName.toLowerCase(), advisorNameIndex + advisorIntroName.length) === -1;
+  const introBeforeAdvisor = advisorNameMentionedOnce ? introText.slice(0, advisorNameIndex) : "";
+  const introAfterAdvisor = advisorNameMentionedOnce
+    ? introText.slice(advisorNameIndex + advisorIntroName.length)
+    : "";
+
   return (
     <div className="w-full space-y-12">
       {/* About Me Section */}
@@ -20,7 +42,24 @@ export default function MainContent() {
           About Me
         </h2>
         <div className="text-gray-700 dark:text-gray-300 leading-relaxed space-y-4">
-          <p>{personalInfo.aboutMe.intro}</p>
+          <p>
+            {primaryAdvisor && advisorNameMentionedOnce ? (
+              <>
+                {introBeforeAdvisor}
+                <a
+                  href={primaryAdvisor.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-900 dark:text-blue-300 hover:underline"
+                >
+                  {primaryAdvisor.name}
+                </a>
+                {introAfterAdvisor}
+              </>
+            ) : (
+              introText
+            )}
+          </p>
 
           <p>{personalInfo.aboutMe.researchFocus}</p>
 
