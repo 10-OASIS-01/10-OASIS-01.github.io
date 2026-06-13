@@ -14,9 +14,9 @@ export const personalInfo = {
   chineseName: "刘艺彬",
   pronouns: "he/him",
   title: "Incoming PhD Student",
-  university: "Northeastern University",
+  university: "TODO",
   location: "Shanghai, China",
-  email: "yibin.liu@utah.edu",
+  email: "yibin.leon.liu@outlook.com",
   
   // Hero Section
   heroQuote: "Live, travel, adventure, bless, and don't be sorry.",
