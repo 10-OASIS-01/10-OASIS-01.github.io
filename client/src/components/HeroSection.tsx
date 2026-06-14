@@ -2,12 +2,12 @@ import { personalInfo, images } from "@/config/siteConfig";
 
 export default function HeroSection() {
   return (
-    <div className="relative w-full h-[50vh] bg-cover bg-center flex items-center justify-center overflow-hidden pt-16" style={{
-      backgroundImage: `url('${images.heroBackground}')`,
-      backgroundAttachment: 'fixed',
-      backgroundSize: '100% auto',
-      backgroundPosition: 'center top',
-    }}>
+    <div
+      className="relative w-full h-[50vh] flex items-center justify-center overflow-hidden pt-16
+        bg-no-repeat bg-scroll bg-cover bg-center
+        md:bg-fixed md:bg-top md:[background-size:100%_auto]"
+      style={{ backgroundImage: `url('${images.heroBackground}')` }}
+    >
       {/* Subtle dark overlay for text contrast */}
       <div className="absolute inset-0 bg-black/20" />
 

@@ -38,10 +38,12 @@ This is a **single-page application (SPA)** deployed as a static website:
 ├── client/                 # Frontend application
 │   ├── src/               # Source code
 │   │   ├── components/    # React components
-│   │   ├── config/        # Configuration files
+│   │   ├── content/       # Site content, one file per section (edit here)
+│   │   ├── config/        # siteConfig.ts shim (re-exports content/)
 │   │   ├── pages/         # Page components
 │   │   └── styles/        # Global styles
-│   ├── public/            # Static assets
+│   ├── public/
+│   │   └── assets/        # Uploaded files: avatar, backgrounds, CV, PDFs
 │   └── index.html         # HTML template
 ├── .github/workflows/     # GitHub Actions
 └── package.json           # Dependencies and scripts
@@ -83,14 +85,46 @@ For detailed development documentation, including architecture, configuration, a
 
 ## Customization
 
-### Personal Information
-Edit `client/src/config/siteConfig.ts` to update:
-- Personal details and bio
-- Research interests  
-- Social media links
-- Academic affiliations
+### Editing content
+All site content lives in `client/src/content/`, **one file per section** — edit
+the file you care about, nothing else:
 
-> **Note:** When you add new link fields (e.g. `companyLink`, `mentorLink`) to entries in `siteConfig.ts`, you must also update `client/src/components/MainContent.tsx` to render those links. The config file holds the data; the component controls how it is displayed.
+| File | Controls |
+|------|----------|
+| `personal.ts` | Name, title, affiliation, hero quote, email |
+| `about.ts` | About-me intro, research focus & interests, advisors |
+| `news.ts` | News / updates (newest first, collapses past 5) |
+| `publications.ts` | Publications list |
+| `experience.ts` | Research & industry experience |
+| `activities.ts` | Talks, academic service, awards |
+| `projects.ts` | Projects and the skills list |
+| `site.ts` | Asset paths, social links, navigation menu |
+| `types.ts` | Field definitions (the safety net — see below) |
+
+Every file is typed, so a bad edit (a dropped field, a truncated string) is
+caught by `pnpm check`, which **runs in CI before each deploy** — a broken edit
+fails the check instead of breaking the live site. You can edit these files
+directly in the GitHub web UI and the site auto-deploys on commit.
+
+Inline links inside a paragraph (e.g. an advisor's name in the intro, or a
+linked phrase in an academic-service entry) are declared as data: a list of
+plain strings and `{ text, url }` segments. No need to touch component code to
+add or move a link.
+
+> `client/src/config/siteConfig.ts` still works as an import path — it simply
+> re-exports everything from `content/`.
+
+### Uploaded files (avatar, backgrounds, CV, PDFs)
+Put files in `client/public/assets/` and reference them by the absolute path
+`/assets/<filename>`. The key paths (avatar, hero background, CV) are centralized
+in **`client/src/content/site.ts`** under `assets` — to swap one, drop in the new
+file and update that single line. The CV menu item reuses `assets.cv`
+automatically.
+
+### "Last updated" date
+Shown in the footer and set **automatically** to the date of the last git commit
+at build time (injected via `vite.config.ts`). It updates on every push/deploy —
+no manual editing needed.
 
 ### Blog Posts
 Edit `client/src/config/blogConfig.ts` to:
@@ -100,7 +134,7 @@ Edit `client/src/config/blogConfig.ts` to:
 
 ## Deployment
 
-The site automatically deploys to GitHub Pages via GitHub Actions when changes are pushed to the `main` or `master` branch.
+The site automatically deploys to GitHub Pages via GitHub Actions when changes are pushed to the `main` or `master` branch. The workflow runs a **type check (`pnpm check`) before building**, so a malformed content edit (a dropped field, a truncated string) fails the check instead of breaking the live site — safe to edit content directly in the GitHub web UI.
 
 For manual deployment and advanced configuration, see the [Deployment section in DEVELOPMENT.md](DEVELOPMENT.md#deployment).
 

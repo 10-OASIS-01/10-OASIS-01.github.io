@@ -11,7 +11,15 @@ export default function Navigation() {
         <div className="flex justify-between items-center h-16">
           {/* Left side - Name (single line) */}
           <div className="flex-shrink-0">
-            <h1 className="text-lg font-semibold text-gray-900 whitespace-nowrap">
+            <h1
+              className="text-xl text-gray-900 whitespace-nowrap"
+              style={{
+                // 华文行楷 (macOS/iOS). Falls back to other 行楷/cursive fonts
+                // on platforms that don't ship it (Windows/Android/Linux).
+                fontFamily:
+                  "'STXingkai', 'STXinwei', 'Xingkai SC', 'KaiTi', 'Kaiti SC', 'cursive'",
+              }}
+            >
               {personalInfo.name} | {personalInfo.chineseName}
             </h1>
           </div>

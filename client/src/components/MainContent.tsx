@@ -1,64 +1,49 @@
-import { ExternalLink } from "lucide-react";
-import { 
-  personalInfo, 
-  publications, 
-  researchExperiences, 
-  industryExperiences, 
-  talks, 
-  academicService, 
-  awards, 
-  projects, 
-  technologies 
+import { useState } from "react";
+import { ChevronDown, ChevronUp, ExternalLink } from "lucide-react";
+import {
+  personalInfo,
+  news,
+  publications,
+  researchExperiences,
+  industryExperiences,
+  talks,
+  academicService,
+  awards,
+  projects,
+  technologies,
 } from "@/config/siteConfig";
+import RichText from "./RichText";
 
-const ADVISOR_TITLE_PREFIX_PATTERN =
-  /^(Prof(?:essor)?|Dr|Assoc\.?\s*Prof(?:essor)?|Asst\.?\s*Prof(?:essor)?)\.?\s+/i;
+const NEWS_VISIBLE_COUNT = 5;
+
+// Shared styles
+const SECTION_HEADING =
+  "text-2xl font-bold text-blue-900 dark:text-blue-300 mb-6 border-b border-gray-300 dark:border-gray-700 pb-2";
+// Entry titles: one step above body text (text-sm) and bold — keeps lists compact.
+const ENTRY_TITLE = "text-base font-bold text-gray-900 dark:text-gray-100";
+const ENTRY_LINK =
+  "inline-flex items-center gap-1 text-sm text-blue-900 dark:text-blue-300 hover:text-blue-700 dark:hover:text-blue-200 font-medium";
+const INLINE_LINK = "text-blue-900 dark:text-blue-300 hover:underline";
 
 export default function MainContent() {
-  const primaryAdvisor = personalInfo.advisors?.[0];
-  const introText = personalInfo.aboutMe.intro;
-  const advisorIntroName = primaryAdvisor?.name
-    .replace(ADVISOR_TITLE_PREFIX_PATTERN, "")
-    .trim();
-  const advisorNameIndex = advisorIntroName
-    ? introText.toLowerCase().indexOf(advisorIntroName.toLowerCase())
-    : -1;
-  const advisorNameMentionedOnce =
-    advisorIntroName !== undefined &&
-    advisorNameIndex >= 0 &&
-    introText
-      .toLowerCase()
-      .indexOf(advisorIntroName.toLowerCase(), advisorNameIndex + advisorIntroName.length) === -1;
-  const introBeforeAdvisor = advisorNameMentionedOnce ? introText.slice(0, advisorNameIndex) : "";
-  const introAfterAdvisor = advisorNameMentionedOnce
-    ? introText.slice(advisorNameIndex + advisorIntroName.length)
-    : "";
+  const [newsExpanded, setNewsExpanded] = useState(false);
+
+  // Newest first, by date string (YYYY-MM[-DD] sorts lexicographically).
+  const sortedNews = [...news].sort((a, b) => b.date.localeCompare(a.date));
+  const hasHiddenNews = sortedNews.length > NEWS_VISIBLE_COUNT;
+  const visibleNews =
+    hasHiddenNews && !newsExpanded
+      ? sortedNews.slice(0, NEWS_VISIBLE_COUNT)
+      : sortedNews;
 
   return (
     <div className="w-full space-y-12">
       {/* About Me Section */}
       <section id="about">
-        <h2 className="text-2xl font-bold text-blue-900 dark:text-blue-300 mb-6 border-b border-gray-300 dark:border-gray-700 pb-2">
-          About Me
-        </h2>
+        <h2 className={SECTION_HEADING}>About Me</h2>
         <div className="text-gray-700 dark:text-gray-300 leading-relaxed space-y-4">
           <p>
-            {primaryAdvisor && advisorNameMentionedOnce ? (
-              <>
-                {introBeforeAdvisor}
-                <a
-                  href={primaryAdvisor.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-900 dark:text-blue-300 hover:underline"
-                >
-                  {primaryAdvisor.name}
-                </a>
-                {introAfterAdvisor}
-              </>
-            ) : (
-              introText
-            )}
+            <RichText content={personalInfo.aboutMe.intro} />
           </p>
 
           <p>{personalInfo.aboutMe.researchFocus}</p>
@@ -75,10 +60,44 @@ export default function MainContent() {
           </div>
 
           <p>{personalInfo.aboutMe.goal}</p>
-
-          <p>{personalInfo.aboutMe.lookingFor}</p>
         </div>
       </section>
+
+      {/* News Section */}
+      {sortedNews.length > 0 && (
+        <section id="news">
+          <h2 className={SECTION_HEADING}>News</h2>
+          <ul className="space-y-3">
+            {visibleNews.map((item) => (
+              <li key={item.id} className="flex gap-3 text-gray-700 dark:text-gray-300">
+                <span className="text-sm font-semibold text-blue-900 dark:text-blue-300 whitespace-nowrap min-w-[4.5rem]">
+                  {item.date}
+                </span>
+                <span className="text-sm leading-relaxed">
+                  <RichText content={item.content} />
+                </span>
+              </li>
+            ))}
+          </ul>
+          {hasHiddenNews && (
+            <button
+              type="button"
+              onClick={() => setNewsExpanded((v) => !v)}
+              className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-blue-900 dark:text-blue-300 hover:text-blue-700 dark:hover:text-blue-200"
+            >
+              {newsExpanded ? (
+                <>
+                  Show less <ChevronUp className="w-4 h-4" />
+                </>
+              ) : (
+                <>
+                  Show all {sortedNews.length} <ChevronDown className="w-4 h-4" />
+                </>
+              )}
+            </button>
+          )}
+        </section>
+      )}
 
       {/* Publications Section */}
       <section id="publications">
@@ -91,11 +110,9 @@ export default function MainContent() {
         <div className="space-y-6">
           {publications.map((pub) => (
             <div key={pub.id} className="space-y-2">
-              <h3 className="font-semibold text-gray-900 dark:text-gray-100">
-                {pub.title}
-              </h3>
+              <h3 className={ENTRY_TITLE}>{pub.title}</h3>
               <p className="text-sm text-gray-600 dark:text-gray-400">
-                {pub.authors.split('Yibin Liu').map((part, index, array) => (
+                {pub.authors.split("Yibin Liu").map((part, index, array) => (
                   <span key={index}>
                     {part}
                     {index < array.length - 1 && <strong>Yibin Liu</strong>}
@@ -113,17 +130,13 @@ export default function MainContent() {
                     href={link.url}
                     target="_blank"
                     rel="noopener"
-                    className="inline-flex items-center gap-1 text-sm text-blue-900 dark:text-blue-300 hover:text-blue-700 dark:hover:text-blue-200 font-medium"
+                    className={ENTRY_LINK}
                   >
                     {link.text} <ExternalLink className="w-3 h-3" />
                   </a>
                 ))}
-                {'githubStars' in pub && pub.githubStars && (
-                  <img
-                    alt="GitHub repo stars"
-                    src={pub.githubStars}
-                    className="h-5"
-                  />
+                {pub.githubStars && (
+                  <img alt="GitHub repo stars" src={pub.githubStars} className="h-5" />
                 )}
               </div>
             </div>
@@ -133,38 +146,49 @@ export default function MainContent() {
 
       {/* Research Experiences Section */}
       <section id="research">
-        <h2 className="text-2xl font-bold text-blue-900 dark:text-blue-300 mb-6 border-b border-gray-300 dark:border-gray-700 pb-2">
-          Research Experiences
-        </h2>
+        <h2 className={SECTION_HEADING}>Research Experiences</h2>
         <div className="space-y-4">
           {researchExperiences.map((exp) => (
             <div key={exp.id} className="space-y-1">
-              <h3 className="font-semibold text-gray-900 dark:text-gray-100">
+              <h3 className={ENTRY_TITLE}>
                 {exp.titleLink ? (
-                  <a href={exp.titleLink} target="_blank" rel="noopener noreferrer" className="text-blue-900 dark:text-blue-300 hover:text-blue-700 dark:hover:text-blue-200 transition-colors">
+                  <a
+                    href={exp.titleLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-900 dark:text-blue-300 hover:text-blue-700 dark:hover:text-blue-200 transition-colors"
+                  >
                     {exp.title}
                   </a>
                 ) : (
                   exp.title
                 )}
               </h3>
-              <p className="text-sm text-gray-600 dark:text-gray-400">
-                {exp.advisorLinks && exp.advisorLinks.length > 0 ? (
-                  <>
-                    Advisor: {exp.advisorLinks.map((advisor, idx) => (
-                      <span key={idx}>
-                        {idx > 0 && ', '}
-                        <a href={advisor.url} target="_blank" rel="noopener noreferrer" className="text-blue-900 dark:text-blue-300 hover:underline">
+              {exp.advisors && exp.advisors.length > 0 && (
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  Advisor:{" "}
+                  {exp.advisors.map((advisor, idx) => (
+                    <span key={idx}>
+                      {idx > 0 && ", "}
+                      {advisor.url ? (
+                        <a
+                          href={advisor.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={INLINE_LINK}
+                        >
                           {advisor.name}
                         </a>
-                      </span>
-                    ))}
-                  </>
-                ) : (
-                  exp.period
-                )}
+                      ) : (
+                        advisor.name
+                      )}
+                    </span>
+                  ))}
+                </p>
+              )}
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                {exp.location} • {exp.duration}
               </p>
-              <p className="text-sm text-gray-600 dark:text-gray-400">{exp.location} • {exp.duration}</p>
             </div>
           ))}
         </div>
@@ -172,43 +196,76 @@ export default function MainContent() {
 
       {/* Industry Experiences Section */}
       <section id="industry">
-        <h2 className="text-2xl font-bold text-blue-900 dark:text-blue-300 mb-6 border-b border-gray-300 dark:border-gray-700 pb-2">
-          Industry Experiences
-        </h2>
+        <h2 className={SECTION_HEADING}>Industry Experiences</h2>
         <div className="space-y-4">
           {industryExperiences.map((exp) => (
             <div key={exp.id} className="space-y-1">
-              <h3 className="font-semibold text-gray-900 dark:text-gray-100">
-                {'companyLink' in exp ? (
+              <h3 className={ENTRY_TITLE}>
+                {exp.org.url ? (
+                  <a
+                    href={exp.org.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={INLINE_LINK}
+                  >
+                    {exp.org.name}
+                  </a>
+                ) : (
+                  exp.org.name
+                )}
+                {exp.parentOrg && (
                   <>
-                    <a href={exp.companyLink} target="_blank" rel="noopener noreferrer" className="text-blue-900 dark:text-blue-300 hover:underline">
-                      {exp.companyName}
-                    </a>
-                    {'parentCompanyLink' in exp && (
-                      <>
-                        {' (part of '}
-                        <a href={exp.parentCompanyLink} target="_blank" rel="noopener noreferrer" className="text-blue-900 dark:text-blue-300 hover:underline">
-                          {exp.parentCompanyName}
-                        </a>
-                        {')'}
-                      </>
+                    {" (part of "}
+                    {exp.parentOrg.url ? (
+                      <a
+                        href={exp.parentOrg.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={INLINE_LINK}
+                      >
+                        {exp.parentOrg.name}
+                      </a>
+                    ) : (
+                      exp.parentOrg.name
                     )}
-                    {exp.title.slice(exp.title.indexOf(' \u2013 '))}
+                    {")"}
                   </>
-                ) : (
-                  exp.title
                 )}
+                {" – "}
+                {exp.role}
               </h3>
+              {exp.mentor && (
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  Mentor:{" "}
+                  {exp.mentor.url ? (
+                    <a
+                      href={exp.mentor.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={INLINE_LINK}
+                    >
+                      {exp.mentor.name}
+                    </a>
+                  ) : (
+                    exp.mentor.name
+                  )}
+                </p>
+              )}
+              {exp.focus && (
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  Focus: {exp.focus}
+                </p>
+              )}
               <p className="text-sm text-gray-600 dark:text-gray-400">
-                {exp.mentorLink ? (
-                  <>
-                    <a href={exp.mentorLink} target="_blank" rel="noopener noreferrer" className="text-blue-900 dark:text-blue-300 hover:underline">Mentor: {exp.period.replace('Mentor: ', '')}</a>
-                  </>
-                ) : (
-                  exp.period
-                )}
+                {exp.location} • {exp.duration}
               </p>
-              <p className="text-sm text-gray-600 dark:text-gray-400">{exp.location} • {exp.duration}</p>
+              {exp.highlights && exp.highlights.length > 0 && (
+                <ul className="list-disc list-outside ml-5 mt-1 space-y-1 text-sm text-gray-600 dark:text-gray-400">
+                  {exp.highlights.map((item, idx) => (
+                    <li key={idx}>{item}</li>
+                  ))}
+                </ul>
+              )}
             </div>
           ))}
         </div>
@@ -216,9 +273,7 @@ export default function MainContent() {
 
       {/* Talks Section */}
       <section id="talks">
-        <h2 className="text-2xl font-bold text-blue-900 dark:text-blue-300 mb-6 border-b border-gray-300 dark:border-gray-700 pb-2">
-          Talks
-        </h2>
+        <h2 className={SECTION_HEADING}>Talks</h2>
         <div className="space-y-3">
           {talks.map((talk) => (
             <div key={talk.id} className="space-y-1">
@@ -235,27 +290,22 @@ export default function MainContent() {
 
       {/* Academic Service Section */}
       <section id="service">
-        <h2 className="text-2xl font-bold text-blue-900 dark:text-blue-300 mb-6 border-b border-gray-300 dark:border-gray-700 pb-2">
-          Academic Service
-        </h2>
+        <h2 className={SECTION_HEADING}>Academic Service</h2>
         <div className="space-y-3">
           {academicService.map((service) => (
             <div key={service.id} className="space-y-1">
               <p className="text-gray-900 dark:text-gray-100">
-                <span className="font-semibold">{service.role}</span>{' '}
-                {service.descriptionLink && service.linkText ? (
-                  <>
-                    {service.description.split(service.linkText)[0]}
-                    <a href={service.descriptionLink} target="_blank" rel="noopener noreferrer" className="text-blue-900 dark:text-blue-300 hover:underline">
-                      {service.linkText}
-                    </a>
-                    {service.description.split(service.linkText)[1]}
-                  </>
-                ) : (
-                  service.description
-                )}
+                <span className="font-semibold">{service.role}</span>{" "}
+                <RichText content={service.description} />
                 {service.githubBadge && (
-                  <> <img src={service.githubBadge} alt="GitHub stars" className="inline-block ml-2" /></>
+                  <>
+                    {" "}
+                    <img
+                      src={service.githubBadge}
+                      alt="GitHub stars"
+                      className="inline-block ml-2"
+                    />
+                  </>
                 )}
               </p>
             </div>
@@ -265,9 +315,7 @@ export default function MainContent() {
 
       {/* Awards Section */}
       <section id="awards">
-        <h2 className="text-2xl font-bold text-blue-900 dark:text-blue-300 mb-6 border-b border-gray-300 dark:border-gray-700 pb-2">
-          Awards
-        </h2>
+        <h2 className={SECTION_HEADING}>Awards</h2>
         <div className="space-y-4">
           {awards.map((award) => (
             <div key={award.id} className="space-y-1">
@@ -279,7 +327,6 @@ export default function MainContent() {
                   {award.title}
                 </span>
               </div>
-
             </div>
           ))}
         </div>
@@ -287,15 +334,11 @@ export default function MainContent() {
 
       {/* Projects Section */}
       <section id="projects">
-        <h2 className="text-2xl font-bold text-blue-900 dark:text-blue-300 mb-6 border-b border-gray-300 dark:border-gray-700 pb-2">
-          Projects
-        </h2>
+        <h2 className={SECTION_HEADING}>Projects</h2>
         <div className="space-y-4">
           {projects.map((project) => (
             <div key={project.id} className="space-y-2">
-              <h3 className="font-semibold text-gray-900 dark:text-gray-100">
-                {project.title}
-              </h3>
+              <h3 className={ENTRY_TITLE}>{project.title}</h3>
               <p className="text-sm text-gray-700 dark:text-gray-300">
                 {project.description}
               </p>
@@ -305,12 +348,12 @@ export default function MainContent() {
                     href={project.link}
                     target="_blank"
                     rel="noopener"
-                    className="inline-flex items-center gap-1 text-sm text-blue-900 dark:text-blue-300 hover:text-blue-700 dark:hover:text-blue-200 font-medium"
+                    className={ENTRY_LINK}
                   >
                     View Project <ExternalLink className="w-3 h-3" />
                   </a>
                 )}
-                {'githubStars' in project && project.githubStars && (
+                {project.githubStars && (
                   <img
                     alt="GitHub repo stars"
                     src={project.githubStars}
@@ -325,18 +368,16 @@ export default function MainContent() {
 
       {/* Technologies Section */}
       <section id="technologies">
-        <h2 className="text-2xl font-bold text-blue-900 dark:text-blue-300 mb-6 border-b border-gray-300 dark:border-gray-700 pb-2">
-          Technologies
-        </h2>
+        <h2 className={SECTION_HEADING}>Technologies</h2>
         <div className="space-y-4">
           <div>
-            <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">Languages</h3>
+            <h3 className={`${ENTRY_TITLE} mb-2`}>Languages</h3>
             <p className="text-sm text-gray-700 dark:text-gray-300">
               {technologies.languages}
             </p>
           </div>
           <div>
-            <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">Technologies</h3>
+            <h3 className={`${ENTRY_TITLE} mb-2`}>Technologies</h3>
             <p className="text-sm text-gray-700 dark:text-gray-300">
               {technologies.technologies}
             </p>

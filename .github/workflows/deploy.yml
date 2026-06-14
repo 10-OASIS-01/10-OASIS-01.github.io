@@ -60,6 +60,11 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      # Catch type errors (missing fields, truncated strings, bad edits made in
+      # the GitHub web UI) BEFORE building/deploying.
+      - name: Type check
+        run: pnpm check
+
       - name: Build project
         run: pnpm build
         env:

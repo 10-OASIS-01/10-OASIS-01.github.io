@@ -156,10 +156,20 @@ VITE_APP_LOGO=/favicon.ico
 │   │   │   ├── HeroSection.tsx     # Hero banner
 │   │   │   ├── SidebarProfile.tsx  # Profile sidebar
 │   │   │   └── ...
+│   │   ├── content/                # Site content (one file per section)
+│   │   │   ├── types.ts            # Content type definitions
+│   │   │   ├── personal.ts         # Name, title, affiliation, hero
+│   │   │   ├── about.ts            # About-me, research, advisors
+│   │   │   ├── news.ts             # News / updates (newest first)
+│   │   │   ├── publications.ts     # Publications list
+│   │   │   ├── experience.ts       # Research & industry experience
+│   │   │   ├── activities.ts       # Talks, service, awards
+│   │   │   ├── projects.ts         # Projects & skills
+│   │   │   ├── site.ts             # Assets, social, nav, metadata
+│   │   │   └── index.ts            # Barrel re-export
 │   │   ├── config/                 # Configuration files
-│   │   │   ├── siteConfig.ts       # Main site configuration
-│   │   │   ├── blogConfig.ts       # Blog posts data
-│   │   │   └── themeConfig.ts      # Theme settings
+│   │   │   ├── siteConfig.ts       # Shim re-exporting content/
+│   │   │   └── blogConfig.ts       # Blog posts data
 │   │   ├── contexts/               # React contexts
 │   │   ├── hooks/                  # Custom React hooks
 │   │   ├── lib/                    # Utility functions
@@ -184,72 +194,137 @@ VITE_APP_LOGO=/favicon.ico
 
 ## Configuration System
 
-### Site Configuration (`client/src/config/siteConfig.ts`)
+### Site content (`client/src/content/`)
 
-This is the main configuration file that controls all content on the website.
+All content lives under `client/src/content/`, split into one typed file per
+section (`personal.ts`, `about.ts`, `news.ts`, `publications.ts`,
+`experience.ts`, `activities.ts`, `projects.ts`, `site.ts`), with shared
+interfaces in `types.ts`. `client/src/config/siteConfig.ts` is a thin shim that
+re-exports this folder, so existing `@/config/siteConfig` imports keep working.
 
-**Personal Information:**
+Because every export is typed, malformed edits fail `pnpm check`, which runs in
+CI **before** the build/deploy step — broken edits can't reach production.
+
+Inline links within prose use the `RichText` type (an array of plain strings and
+`{ text, url }` segments) so links are declared in data and rendered by the
+shared `RichText` component — no runtime string parsing in the views.
+
+Uploaded assets go in `client/public/assets/` and are referenced via
+`/assets/<file>`; the avatar / hero background / CV paths are centralized in
+`content/site.ts` under `assets`. The footer's "last updated" date is injected
+at build time from the last git commit (`vite.config.ts`).
+
+The examples below show the field shapes.
+
+All shapes below are enforced by the interfaces in `content/types.ts`; a bad
+edit fails `pnpm check`.
+
+**Personal Information (`personal.ts` + `about.ts`):**
 ```typescript
-export const personalInfo = {
+export const personalInfo: PersonalInfo = {
   name: "Your Name",
   chineseName: "中文名",
   pronouns: "he/him",
   title: "Your Title",
   university: "Your University",
   location: "City, Country",
-  email: "your.email@example.com",
-  // ... more fields
+  email: "your.email@example.com", // rendered with @→😊 anti-crawler trick
+  heroQuote: "…",
+  heroAttribution: "…",
+  aboutMe,   // from about.ts
+  advisors,  // from about.ts
 };
 ```
 
-**Social Links:**
+**Inline links — the `RichText` type.** Anywhere prose needs links (the intro
+paragraph, news items, academic-service entries), the value is an array of
+plain strings and `{ text, url }` segments, rendered by `components/RichText`.
+No runtime string-splitting:
 ```typescript
-export const socialLinks = {
-  googleScholar: "https://scholar.google.com/...",
-  github: "https://github.com/...",
-  linkedin: "https://linkedin.com/in/...",
-  bluesky: "https://bsky.app/...",
-  email: "mailto:...",
-};
+intro: [
+  "I will begin my Ph.D. under the supervision of ",
+  { text: "Prof. Weiyu Liu", url: "https://www.weiyuliu.com/" },
+  ".",
+],
 ```
 
-**Navigation:**
+**News (`news.ts`)** — listed newest-first (sorted by `date`), collapses past 5:
 ```typescript
-export const navigationMenu = [
-  { label: "Home", href: "/" },
-  { label: "Publications", href: "/#publications" },
-  { label: "CV", href: "/cv.pdf", external: true },
+export const news: NewsItem[] = [
+  {
+    id: 1,
+    date: "2026-04", // YYYY-MM or YYYY-MM-DD; sort/display key
+    content: [
+      { text: "RoboTwin 2.0", url: "https://robotwin-platform.github.io" },
+      " was accepted to ICML 2026.",
+    ],
+  },
 ];
 ```
 
-**Publications:**
+**Publications (`publications.ts`):** `links` is an **array** of `{ text, url }`.
 ```typescript
-export const publications = [
+export const publications: Publication[] = [
   {
     id: 1,
     title: "Paper Title",
-    authors: "Author 1, Author 2, Author 3",
+    authors: "Author 1, Yibin Liu, Author 3", // "Yibin Liu" is auto-bolded
     venue: "Conference/Journal Name",
-    year: 2024,
-    links: {
-      paper: "https://arxiv.org/...",
-      project: "https://project-page.com",
-      code: "https://github.com/...",
-    },
-    note: "Best Paper Award",  // Optional
+    year: 2026,
+    links: [
+      { text: "Paper", url: "https://arxiv.org/..." },
+      { text: "Code", url: "https://github.com/..." },
+    ],
+    githubStars: "https://img.shields.io/github/stars/org/repo", // optional badge
   },
 ];
 ```
 
-**Awards:**
+**Experience (`experience.ts`):** industry entries use structured `org` /
+`parentOrg` / `mentor` and optional `highlights` bullets:
 ```typescript
-export const awards = [
+export const industryExperiences: IndustryExperience[] = [
   {
     id: 1,
-    title: "Award Name",
-    year: "2024",
-    description: "Description of the award and its significance.",
+    role: "Research Intern",
+    org: { name: "Robbyant", url: "https://technology.robbyant.com/" },
+    parentOrg: { name: "Ant Group", url: "https://www.antgroup.com/..." },
+    highlights: ["Focus: Large-scale Foundation Models for mobile manipulation…"],
+    location: "Shanghai, China",
+    duration: "March 2026 – Present",
   },
+];
+```
+
+**Social Links (`site.ts`):**
+```typescript
+export const socialLinks: SocialLinks = {
+  googleScholar: "https://scholar.google.com/...",
+  github: "https://github.com/...",
+  // …
+};
+```
+
+**Navigation & assets (`site.ts`):** the CV path lives in `assets` and is
+reused by the menu.
+```typescript
+export const assets = {
+  heroBackground: "/assets/tebet3.jpg",
+  profileAvatar: "/assets/avatar.jpg",
+  cv: "/assets/Leon_s_CV.pdf",
+} as const;
+
+export const navigationMenu: NavItem[] = [
+  { label: "Home", href: "/" },
+  { label: "News", href: "/#news" },
+  { label: "CV", href: assets.cv, external: true },
+];
+```
+
+**Awards (`activities.ts`):**
+```typescript
+export const awards: Award[] = [
+  { id: 1, year: "2025-07", title: "Award name and details." },
 ];
 ```
 
@@ -352,6 +427,13 @@ Customize colors, fonts, and other design tokens in `tailwind.config.js`.
 
 ## Build System
 
+### "Last updated" date
+
+`vite.config.ts` injects a build-time constant `__LAST_UPDATED__` from the last
+git commit date (`git log -1 --format=%cI`), exposed via `siteMetadata.lastUpdated`
+and shown in the footer. It updates automatically on every push/deploy — do not
+hard-code it. Falls back to the build date if git is unavailable.
+
 ### Vite Configuration
 
 The build system is configured in `vite.config.ts`:
@@ -420,7 +502,7 @@ import { Component } from "@/components/Component";
 
 This repository uses the custom GitHub Actions workflow at `.github/workflows/deploy.yml` to build and deploy GitHub Pages.
 
-The workflow runs on pushes to `main` and `master` (for site/build-related files) and also supports manual runs via `workflow_dispatch`.
+The workflow runs on pushes to `main` and `master` (for site/build-related files) and also supports manual runs via `workflow_dispatch`. It runs `pnpm check` (TypeScript) **before** the build, so a content edit that breaks the types fails the check and is never deployed — making web-UI edits safe.
 
 To enable deployment after GitHub Pages was disabled:
 
