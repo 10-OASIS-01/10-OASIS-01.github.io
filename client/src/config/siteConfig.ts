@@ -24,9 +24,9 @@ export const personalInfo = {
   
   // About Me
   aboutMe: {
-    intro: `I received my B.Eng. in Artificial Intelligence from Northeastern University, China. I am currently a Research Intern at Robbyant (part of Ant Group), where I work on large-scale foundation models for mobile manipulation. Starting in Fall 2026, I will begin my Ph.D. under the supervision of Weiyu Liu.`,
+    intro: `I received my B.Eng. in Artificial Intelligence from Northeastern University, China. I am currently a Research Intern at Robbyant (part of Ant Group), where I work on large-scale foundatio[...]
     
-    researchFocus: `My research lies at the intersection of Language Grounding, Multimodal Reasoning and Planning, and Human-Robot Interaction. I am particularly interested in developing foundation models that ground language and perception in real-world physical understanding, enabling robots to reason, plan, and act effectively in complex environments. Ultimately, my goal is to build embodied agents that learn from real-world interactions, developing causal reasoning and compositional skills for generalizable mobile manipulation.`,
+    researchFocus: `My research lies at the intersection of Language Grounding, Multimodal Reasoning and Planning, and Human-Robot Interaction. I am particularly interested in developing foundation mo[...]
     
     researchInterests: [
       {
@@ -43,9 +43,9 @@ export const personalInfo = {
       }
     ],
     
-    goal: `Guided by the principle of creating technology with everyone, for everyone, my research aims to advance accessible, human-centered AI that enhances daily life and broadens equitable access to intelligent systems.`,
+    goal: `Guided by the principle of creating technology with everyone, for everyone, my research aims to advance accessible, human-centered AI that enhances daily life and broadens equitable access [...]
     
-    lookingFor: "I recognize that the academic journey can be particularly challenging for students from underrepresented backgrounds—whether due to gender, sexual orientation, socioeconomic status, or other factors. Throughout my academic path, I've been fortunate to receive mentorship and support that made a difference. I want to pay it forward by helping others navigate similar challenges. Please feel free to reach out if you'd like to chat, seek advice, or explore potential collaborations!"
+    // lookingFor: "I recognize that the academic journey can be particularly challenging for students from underrepresented backgrounds—whether due to gender, sexual orientation, socioeconomic status, or other factors. Throughout my academic path, I've been fortunate to receive mentorship and support that made a difference. I want to pay it forward by helping others navigate similar challenges. Please feel free to reach out if you'd like to chat, seek advice, or explore potential collaborations!"
   },
   
   advisors: [
@@ -117,7 +117,7 @@ export const publications = [
   },
   {
     id: 2,
-    authors: "Ganlin Yang, Tianyi Zhang, Haoran Hao, Weiyun Wang, Yibin Liu, Dehui Wang, Guanzhou Chen, Zijian Cai, Junting Chen, Weijie Su, Wengang Zhou, Yu Qiao, Jifeng Dai, Jiangmiao Pang, Geng Zhang†",
+    authors: "Ganlin Yang, Tianyi Zhang, Haoran Hao, Weiyun Wang, Yibin Liu, Dehui Wang, Guanzhou Chen, Zijian Cai, Junting Chen, Weijie Su, Wengang Zhou, Yu Qiao, Jifeng Dai, Jiangmiao Pang, Geng Zha[...]
     title: "Vlaser: Vision-Language-Action Model with Synergistic Embodied Reasoning",
     venue: "ICLR 2026",
     year: 2025,
@@ -320,7 +320,7 @@ export const projects = [
   {
     id: 1,
     title: "RDK Copilot: LLM-powered Development Copilot for Robotics at Horizon Robotics",
-    description: "Developed and deployed a VSCode plugin that assists robotic system development using LLMs. Supported features include automatic coding, environment setup, code completion, test generation, and documentation assistance.",
+    description: "Developed and deployed a VSCode plugin that assists robotic system development using LLMs. Supported features include automatic coding, environment setup, code completion, test gener[...]
     link: "https://zhuanlan.zhihu.com/p/967513363"
   },
   {
@@ -333,7 +333,7 @@ export const projects = [
   {
     id: 3,
     title: "Bencao RAG Medical Intelligent Assistant",
-    description: "Developed a medical knowledge question-answering system that integrates context awareness, internet access, knowledge graphs, and RAG method to provide accurate and personalized medical knowledge.",
+    description: "Developed a medical knowledge question-answering system that integrates context awareness, internet access, knowledge graphs, and RAG method to provide accurate and personalized medi[...]
     githubStars: "https://img.shields.io/github/stars/10-OASIS-01/BenCao_RAG",
     link: "https://github.com/10-OASIS-01/BenCao_RAG"
   },
