@@ -16,11 +16,20 @@ import RichText from "./RichText";
 
 const NEWS_VISIBLE_COUNT = 5;
 
-// Shared styles
+// ── Typography scale ──────────────────────────────────────────────
+// Hierarchy comes from size + weight + color, not a grab-bag of sizes.
+//   24px bold  section headings
+//   16px bold  entry titles (one step above body)
+//   15px       lead prose (About Me)
+//   14px       body / list content  (muted gray for secondary meta)
+//   12px       footnotes
 const SECTION_HEADING =
   "text-2xl font-bold text-blue-900 dark:text-blue-300 mb-6 border-b border-gray-300 dark:border-gray-700 pb-2";
-// Entry titles: one step above body text (text-sm) and bold — keeps lists compact.
 const ENTRY_TITLE = "text-base font-bold text-gray-900 dark:text-gray-100";
+// Primary body / list content (descriptions, news, talks, service).
+const BODY_TEXT = "text-sm leading-relaxed text-gray-700 dark:text-gray-300";
+// Secondary metadata (authors, venue, dates, advisor, location) — recedes.
+const META_TEXT = "text-sm text-gray-600 dark:text-gray-400";
 const ENTRY_LINK =
   "inline-flex items-center gap-1 text-sm text-blue-900 dark:text-blue-300 hover:text-blue-700 dark:hover:text-blue-200 font-medium";
 const INLINE_LINK = "text-blue-900 dark:text-blue-300 hover:underline";
@@ -41,7 +50,7 @@ export default function MainContent() {
       {/* About Me Section */}
       <section id="about">
         <h2 className={SECTION_HEADING}>About Me</h2>
-        <div className="text-gray-700 dark:text-gray-300 leading-relaxed space-y-4">
+        <div className="text-[15px] text-gray-700 dark:text-gray-300 leading-relaxed space-y-4">
           <p>
             <RichText content={personalInfo.aboutMe.intro} />
           </p>
@@ -111,15 +120,17 @@ export default function MainContent() {
           {publications.map((pub) => (
             <div key={pub.id} className="space-y-2">
               <h3 className={ENTRY_TITLE}>{pub.title}</h3>
-              <p className="text-sm text-gray-600 dark:text-gray-400">
+              <p className={META_TEXT}>
                 {pub.authors.split("Yibin Liu").map((part, index, array) => (
                   <span key={index}>
                     {part}
-                    {index < array.length - 1 && <strong>Yibin Liu</strong>}
+                    {index < array.length - 1 && (
+                      <strong className="text-gray-800 dark:text-gray-200">Yibin Liu</strong>
+                    )}
                   </span>
                 ))}
               </p>
-              <p className="text-sm text-gray-600 dark:text-gray-400 italic">
+              <p className={`${META_TEXT} italic`}>
                 {pub.venue}, {pub.year}
               </p>
 
@@ -165,7 +176,7 @@ export default function MainContent() {
                 )}
               </h3>
               {exp.advisors && exp.advisors.length > 0 && (
-                <p className="text-sm text-gray-600 dark:text-gray-400">
+                <p className={META_TEXT}>
                   Advisor:{" "}
                   {exp.advisors.map((advisor, idx) => (
                     <span key={idx}>
@@ -186,7 +197,7 @@ export default function MainContent() {
                   ))}
                 </p>
               )}
-              <p className="text-sm text-gray-600 dark:text-gray-400">
+              <p className={META_TEXT}>
                 {exp.location} • {exp.duration}
               </p>
             </div>
@@ -235,7 +246,7 @@ export default function MainContent() {
                 {exp.role}
               </h3>
               {exp.mentor && (
-                <p className="text-sm text-gray-600 dark:text-gray-400">
+                <p className={META_TEXT}>
                   Mentor:{" "}
                   {exp.mentor.url ? (
                     <a
@@ -252,15 +263,15 @@ export default function MainContent() {
                 </p>
               )}
               {exp.focus && (
-                <p className="text-sm text-gray-600 dark:text-gray-400">
+                <p className={META_TEXT}>
                   Focus: {exp.focus}
                 </p>
               )}
-              <p className="text-sm text-gray-600 dark:text-gray-400">
+              <p className={META_TEXT}>
                 {exp.location} • {exp.duration}
               </p>
               {exp.highlights && exp.highlights.length > 0 && (
-                <ul className="list-disc list-outside ml-5 mt-1 space-y-1 text-sm text-gray-600 dark:text-gray-400">
+                <ul className={`list-disc list-outside ml-5 mt-1 space-y-1 ${META_TEXT}`}>
                   {exp.highlights.map((item, idx) => (
                     <li key={idx}>{item}</li>
                   ))}
@@ -277,8 +288,10 @@ export default function MainContent() {
         <div className="space-y-3">
           {talks.map((talk) => (
             <div key={talk.id} className="space-y-1">
-              <p className="text-gray-900 dark:text-gray-100">
-                <span className="font-semibold">{talk.title}</span>
+              <p className={BODY_TEXT}>
+                <span className="font-semibold text-gray-900 dark:text-gray-100">
+                  {talk.title}
+                </span>
                 {talk.event && `, ${talk.event}`}
                 {talk.location && `, ${talk.location}`}
                 {talk.date && ` • ${talk.date}`}
@@ -294,8 +307,10 @@ export default function MainContent() {
         <div className="space-y-3">
           {academicService.map((service) => (
             <div key={service.id} className="space-y-1">
-              <p className="text-gray-900 dark:text-gray-100">
-                <span className="font-semibold">{service.role}</span>{" "}
+              <p className={BODY_TEXT}>
+                <span className="font-semibold text-gray-900 dark:text-gray-100">
+                  {service.role}
+                </span>{" "}
                 <RichText content={service.description} />
                 {service.githubBadge && (
                   <>
@@ -319,11 +334,11 @@ export default function MainContent() {
         <div className="space-y-4">
           {awards.map((award) => (
             <div key={award.id} className="space-y-1">
-              <div className="flex items-baseline gap-2">
-                <span className="text-sm font-semibold text-blue-900 dark:text-blue-300 min-w-[3rem]">
+              <div className="flex items-baseline gap-3">
+                <span className="text-sm font-semibold text-blue-900 dark:text-blue-300 whitespace-nowrap min-w-[4rem]">
                   {award.year}
                 </span>
-                <span className="font-semibold text-gray-900 dark:text-gray-100">
+                <span className={BODY_TEXT}>
                   {award.title}
                 </span>
               </div>
@@ -339,7 +354,7 @@ export default function MainContent() {
           {projects.map((project) => (
             <div key={project.id} className="space-y-2">
               <h3 className={ENTRY_TITLE}>{project.title}</h3>
-              <p className="text-sm text-gray-700 dark:text-gray-300">
+              <p className={BODY_TEXT}>
                 {project.description}
               </p>
               <div className="flex flex-wrap gap-2 items-center">
@@ -372,13 +387,13 @@ export default function MainContent() {
         <div className="space-y-4">
           <div>
             <h3 className={`${ENTRY_TITLE} mb-2`}>Languages</h3>
-            <p className="text-sm text-gray-700 dark:text-gray-300">
+            <p className={BODY_TEXT}>
               {technologies.languages}
             </p>
           </div>
           <div>
             <h3 className={`${ENTRY_TITLE} mb-2`}>Technologies</h3>
-            <p className="text-sm text-gray-700 dark:text-gray-300">
+            <p className={BODY_TEXT}>
               {technologies.technologies}
             </p>
           </div>
