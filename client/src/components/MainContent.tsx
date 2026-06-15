@@ -6,11 +6,11 @@ import {
   publications,
   researchExperiences,
   industryExperiences,
-  talks,
+  // talks,        // hidden — re-add with the Talks section below
   academicService,
   awards,
   projects,
-  technologies,
+  // technologies, // hidden — re-add with the Technologies section below
 } from "@/config/siteConfig";
 import RichText from "./RichText";
 
@@ -282,7 +282,7 @@ export default function MainContent() {
         </div>
       </section>
 
-      {/* Talks Section */}
+      {/* Talks Section (hidden — uncomment to show)
       <section id="talks">
         <h2 className={SECTION_HEADING}>Talks</h2>
         <div className="space-y-3">
@@ -300,6 +300,7 @@ export default function MainContent() {
           ))}
         </div>
       </section>
+      */}
 
       {/* Academic Service Section */}
       <section id="service">
@@ -381,7 +382,7 @@ export default function MainContent() {
         </div>
       </section>
 
-      {/* Technologies Section */}
+      {/* Technologies Section (hidden — uncomment to show)
       <section id="technologies">
         <h2 className={SECTION_HEADING}>Technologies</h2>
         <div className="space-y-4">
@@ -399,6 +400,7 @@ export default function MainContent() {
           </div>
         </div>
       </section>
+      */}
     </div>
   );
 }
