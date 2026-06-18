@@ -54,10 +54,16 @@ export const academicService: AcademicService[] = [
 
 export const awards: Award[] = [
   {
-    id: 1,
-    year: "2025-07",
+    id: 8,
+    year: "2025-10",
     title:
-      "Outstanding Poster at ChinaSI 2025 (Ranking 1st among 61 posters, RoboTwin 2.0).",
+      "Best Poster Award at IROS 2025 RoDGE Workshop (RoboTwin 2.0).",
+  },
+  {
+    id: 9,
+    year: "2025-10",
+    title:
+      "Best Paper Finalist at IROS 2025 RoboGen Workshop (RoboTwin 2.0).",
   },
   {
     id: 2,

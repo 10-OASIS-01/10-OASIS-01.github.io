@@ -42,4 +42,20 @@ export const news: NewsItem[] = [
       " were accepted to ECCV 2026.",
     ],
   },
+  {
+    id: 5,
+    date: "2025-10",
+    content: [
+      { text: "RoboTwin 2.0", url: "https://robotwin-platform.github.io" },
+      " received the Best Poster Award at the IROS 2025 RoDGE Workshop!",
+    ],
+  },
+  {
+    id: 6,
+    date: "2025-10",
+    content: [
+      { text: "RoboTwin 2.0", url: "https://robotwin-platform.github.io" },
+      " was selected as a Best Paper Finalist at the IROS 2025 RoboGen Workshop!",
+    ],
+  },
 ];
