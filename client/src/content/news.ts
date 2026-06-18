@@ -32,4 +32,14 @@ export const news: NewsItem[] = [
       " was accepted to ICML 2026.",
     ],
   },
+  {
+    id: 4,
+    date: "2026-06",
+    content: [
+      { text: "PRIMO R1", url: "https://arxiv.org/abs/2603.15600" },
+      " and ",
+      { text: "R3DP", url: "https://arxiv.org/abs/2603.14498" },
+      " were accepted to ECCV 2026.",
+    ],
+  },
 ];

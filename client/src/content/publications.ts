@@ -10,8 +10,8 @@ export const publications: Publication[] = [
     authors:
       "Yibin Liu*, Yaxing Lyu*, Daqi Gao*, Zhixuan Liang, Weiliang Tang, Shilong Mu, Xiaokang Yang, Yao Mu†",
     title:
-      "From Passive Observer to Active Critic: Reinforcement Learning Elicits Process Reasoning for Robotic Manipulation",
-    venue: "arXiv 2026, Under Review",
+      "From Passive Observer to Active Critic: Reinforcement Learning Elicits Process Reasoning for Robotic Manipulation (PRIMO R1)",
+    venue: "ECCV 2026",
     year: 2026,
     links: [
       { text: "Paper", url: "https://arxiv.org/abs/2603.15600" },
@@ -19,6 +19,18 @@ export const publications: Publication[] = [
         text: "Model/Dataset",
         url: "https://huggingface.co/collections/LeonOverload/primo-r1",
       },
+    ],
+  },
+  {
+    id: 4,
+    authors:
+      "Yuhao Zhang, Wanxi Dong, Yue Shi, Yi Liang, Jingnan Gao, Qiaochu Yang, Yaxing Lyu, Zhixuan Liang, Yibin Liu, Congsheng Xu, Xianda Guo, Wei Sui, Yaohui Jin, Xiaokang Yang, Yanyan Xu, Yao Mu",
+    title: "R3DP: Real-Time 3D-Aware Policy for Embodied Manipulation",
+    venue: "ECCV 2026",
+    year: 2026,
+    links: [
+      { text: "Paper", url: "https://arxiv.org/abs/2603.14498" },
+      { text: "Webpage", url: "https://dazazh.github.io/r3dp-project-page/" },
     ],
   },
   {
@@ -42,7 +54,7 @@ export const publications: Publication[] = [
     title:
       "RoboTwin 2.0: A Scalable Data Generator and Benchmark with Strong Domain Randomization for Robust Bimanual Robotic Manipulation",
     venue: "ICML 2026",
-    year: 2025,
+    year: 2026,
     githubStars: "https://img.shields.io/github/stars/RoboTwin-Platform/RoboTwin",
     links: [
       { text: "Paper", url: "https://arxiv.org/pdf/2506.18088" },
