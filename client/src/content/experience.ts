@@ -12,7 +12,7 @@ export const researchExperiences: ResearchExperience[] = [
     id: 1,
     title: "University of North Carolina at Chapel Hill – Research Intern",
     location: "Remote / Chapel Hill, NC, USA",
-    duration: "June 2025 – Present",
+    duration: "June 2025 – March 2026",
     advisors: [{ name: "Prof. Mingyu Ding", url: "https://dingmyu.github.io/" }],
   },
   {

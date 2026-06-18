@@ -131,7 +131,7 @@ export default function MainContent() {
                 ))}
               </p>
               <p className={`${META_TEXT} italic`}>
-                {pub.venue}, {pub.year}
+                {pub.venue}
               </p>
 
               <div className="flex flex-wrap gap-2 mt-2 items-center">
