@@ -15,6 +15,7 @@ export const publications: Publication[] = [
     year: 2026,
     links: [
       { text: "Paper", url: "https://arxiv.org/abs/2603.15600" },
+      { text: "Project Page", url: "https://10-oasis-01.github.io/primo-r1-website/" },
       {
         text: "Model/Dataset",
         url: "https://huggingface.co/collections/LeonOverload/primo-r1",
@@ -30,7 +31,7 @@ export const publications: Publication[] = [
     year: 2026,
     links: [
       { text: "Paper", url: "https://arxiv.org/abs/2603.14498" },
-      { text: "Webpage", url: "https://dazazh.github.io/r3dp-project-page/" },
+      { text: "Project Page", url: "https://dazazh.github.io/r3dp-project-page/" },
     ],
   },
   {
