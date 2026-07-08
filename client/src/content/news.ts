@@ -8,6 +8,15 @@ import type { NewsItem } from "./types";
 
 export const news: NewsItem[] = [
   {
+    id: 6,
+    date: "2026-07",
+    content: [
+      "We released ",
+      { text: "LingBot-VLA 2.0", url: "https://technology.robbyant.com/lingbot-vla-v2" },
+      ", an open-source generalist VLA model for full-body robotic control across diverse embodiments.",
+    ],
+  },
+  {
     id: 1,
     date: "2026-01",
     content: [

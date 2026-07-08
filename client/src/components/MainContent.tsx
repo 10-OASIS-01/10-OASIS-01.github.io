@@ -133,6 +133,11 @@ export default function MainContent() {
               <p className={`${META_TEXT} italic`}>
                 {pub.venue}
               </p>
+              {pub.contribution && (
+                <p className={META_TEXT}>
+                  Contribution: {pub.contribution}
+                </p>
+              )}
 
               <div className="flex flex-wrap gap-2 mt-2 items-center">
                 {pub.links.map((link, idx) => (

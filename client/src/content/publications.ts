@@ -6,6 +6,24 @@ import type { Publication } from "./types";
 
 export const publications: Publication[] = [
   {
+    id: 7,
+    authors: "Robbyant Team",
+    title:
+      "LingBot-VLA 2.0: From Foundation to Application, Improving VLA Models in Practice",
+    venue: "Technical Report",
+    year: 2026,
+    contribution:
+      "Contribute to integrating mobile manipulation ability into Lingbot-VLA",
+    links: [
+      { text: "Project Page", url: "https://technology.robbyant.com/lingbot-vla-v2" },
+      { text: "Paper", url: "https://arxiv.org/abs/2607.06403" },
+      {
+        text: "Model",
+        url: "https://huggingface.co/collections/robbyant/lingbot-vla-v2",
+      },
+    ],
+  },
+  {
     id: 1,
     authors:
       "Yibin Liu*, Yaxing Lyu*, Daqi Gao*, Zhixuan Liang, Weiliang Tang, Shilong Mu, Xiaokang Yang, Yao Mu†",

@@ -83,6 +83,8 @@ export interface Publication {
   venue: string;
   year: number;
   links: Link[];
+  /** Optional one-line description of personal/project contribution. */
+  contribution?: string;
   /** Optional shields.io badge URL for repo stars. */
   githubStars?: string;
 }
