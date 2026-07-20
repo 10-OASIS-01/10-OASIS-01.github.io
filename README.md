@@ -9,7 +9,6 @@ Also check out these incredible researchers' homepages based on Yibin's version:
 
 [Buqiang Xu, Zhejiang University](https://xubqpanda.github.io/),
 
-[Jingqi Fan, UMass Amherst](https://jingqi-fan.github.io),
 
 
 > **For detailed development information, see [DEVELOPMENT.md](DEVELOPMENT.md)**
