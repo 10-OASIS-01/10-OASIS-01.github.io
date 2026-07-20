@@ -231,7 +231,8 @@ export default function MainContent() {
                 )}
                 {exp.parentOrg && (
                   <>
-                    {" (part of "}
+                    {exp.parentOrgOpen ?? " ("}
+                    {exp.parentOrgPrefix ?? "part of "}
                     {exp.parentOrg.url ? (
                       <a
                         href={exp.parentOrg.url}
@@ -244,10 +245,10 @@ export default function MainContent() {
                     ) : (
                       exp.parentOrg.name
                     )}
-                    {")"}
+                    {exp.parentOrgClose ?? ")"}
                   </>
                 )}
-                {" – "}
+                {exp.titleSeparator ?? " – "}
                 {exp.role}
               </h3>
               {exp.mentor && (

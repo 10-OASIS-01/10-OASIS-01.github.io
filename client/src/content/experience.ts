@@ -52,12 +52,13 @@ export const industryExperiences: IndustryExperience[] = [
   },
   {
     id: 2,
-    role: "Cloud Platform Intern",
-    org: { name: "Horizon Robotics" },
-    mentor: {
-      name: "Yusen Qin (VP of Technology, D-Robotics)",
-      url: "https://www.linkedin.com/in/yusen-qin-5b23345b/?originalSubdomain=cn",
-    },
+    role: "Robotics Agent intern",
+    org: { name: "Horizon Robotics", url: "https://www.horizon.auto/" },
+    parentOrg: { name: "D-Robotics", url: "https://en.d-robotics.cc/" },
+    parentOrgOpen: "（",
+    parentOrgPrefix: "",
+    parentOrgClose: "）",
+    titleSeparator: "- ",
     highlights: [
       "Developing the RDK-agent, building an LLM-powered Copilot for robotics development.",
     ],

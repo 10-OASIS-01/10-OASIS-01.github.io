@@ -108,8 +108,14 @@ export interface IndustryExperience {
   role: string;
   /** Employing organization. */
   org: Org;
-  /** Optional parent company, rendered as "(part of …)". */
+  /** Optional parent company / related brand, rendered after the org. */
   parentOrg?: Org;
+  /** Optional parent org wrapper / label overrides. */
+  parentOrgOpen?: string;
+  parentOrgPrefix?: string;
+  parentOrgClose?: string;
+  /** Optional separator between organization and role. */
+  titleSeparator?: string;
   /** Optional mentor, rendered as "Mentor: …". */
   mentor?: Org;
   /** Optional one-line focus summary, rendered as "Focus: …". */
