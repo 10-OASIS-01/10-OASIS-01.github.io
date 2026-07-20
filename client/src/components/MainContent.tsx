@@ -68,7 +68,7 @@ export default function MainContent() {
             </ul>
           </div>
 
-          <p>{personalInfo.aboutMe.goal}</p>
+          {personalInfo.aboutMe.goal && <p>{personalInfo.aboutMe.goal}</p>}
         </div>
       </section>
 

@@ -44,7 +44,7 @@ export interface AboutMe {
   intro: RichText;
   researchFocus: string;
   researchInterests: ResearchInterest[];
-  goal: string;
+  goal?: string;
 }
 
 export interface PersonalInfo {

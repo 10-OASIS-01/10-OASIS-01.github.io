@@ -24,23 +24,22 @@ export const aboutMe: AboutMe = {
     { text: "Prof. Weiyu Liu", url: "https://www.weiyuliu.com/" },
     ".",
   ],
-  researchFocus: `My research lies at the intersection of Language Grounding, Multimodal Reasoning and Planning, and Human-Robot Interaction. I am particularly interested in developing foundation models that ground language and perception in real-world physical understanding, enabling robots to reason, plan, and act effectively in complex environments. Ultimately, my goal is to build embodied agents that learn from real-world interactions, developing causal reasoning and compositional skills for generalizable mobile manipulation.`,
+  researchFocus: `My research focuses on lifelong and compositional robot learning, uncertainty-aware multimodal reasoning and planning, and grounded program synthesis for open-world mobile manipulation. My long-term goal is to build agentic robots that learn from real-world interaction and reliably transfer their knowledge across novel tasks, objects, and environments.`,
   researchInterests: [
     {
-      title: "Language Grounding and Spatial Manipulation",
+      title: "Lifelong and Compositional Robot Learning",
       description:
-        "Connecting structured representations with spatial reasoning and physically grounded robotic actions.",
+        "Developing embodied agents that continually acquire reusable skills, abstractions, and world knowledge, and compositionally recombine prior experience to solve novel tasks without retraining from scratch.",
     },
     {
-      title: "Multimodal Reasoning and Planning",
+      title: "Uncertainty-Aware Multimodal Reasoning and Planning",
       description:
-        "Enabling embodied agents to integrate vision, language, and action for structured decision-making and open-world generalization.",
+        "Integrating vision, language, memory, and action to support physical reasoning, active information gathering, long-horizon planning, replanning, and failure recovery in partially observed open-world environments.",
     },
     {
-      title: "Human–Robot Collaborative Intelligence",
+      title: "Grounded Program Synthesis for Embodied Agents",
       description:
-        "Designing interactive systems that support safe and adaptive collaboration between humans and robots in real–simulation hybrid environments.",
+        "Learning structured and interpretable task and action programs from language, visual observations, demonstrations, and interaction, and grounding these programs into executable robot behaviors.",
     },
   ],
-  goal: `Guided by the principle of creating technology with everyone, for everyone, my research aims to advance accessible, human-centered AI that enhances daily life and broadens equitable access to intelligent systems.`,
 };
