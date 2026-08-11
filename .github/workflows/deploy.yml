@@ -9,6 +9,7 @@ on:
       - 'client/**'
       - 'package.json'
       - 'pnpm-lock.yaml'
+      - 'pnpm-workspace.yaml'
       - 'vite.config.ts'
       - 'scripts/**'
       - '.github/workflows/deploy.yml'

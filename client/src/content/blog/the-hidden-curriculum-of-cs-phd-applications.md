@@ -119,6 +119,8 @@ GRE policies, English-language requirements, minimum scores, waiver rules, and t
 
 AI tools can help outline, compare versions, identify unclear sentences, or check whether a paragraph answers a prompt. They should not invent experiences, research claims, faculty fit, or a generic voice that no longer sounds like you. Follow each program’s current policy. You remain responsible for every fact, citation, and sentence you submit.
 
+If you would like a structured companion for this work, try my [CS PhD Application Coach](/skills/cs-phd-application-coach/). The open skill can help you verify requirements against current official pages, organize a complete application workspace, review materials, and decide what to do next in Codex or Claude Code. It does not replace program websites or your judgment: you remain responsible for every requirement, fact, and document you submit.
+
 ## Cold email is an access question, not a magic admissions trick
 
 Advice about contacting faculty conflicts because programs and faculty work differently. Some faculty explicitly invite prospective students to email. Some say that emailing does not affect centralized admissions. Some receive so many generic messages that they cannot respond.

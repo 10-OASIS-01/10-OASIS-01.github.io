@@ -7,6 +7,7 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import Blog from "./pages/Blog";
 import BlogPostPage from "./pages/BlogPost";
+import PhDApplicationCoach from "./pages/PhDApplicationCoach";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -17,6 +18,7 @@ function Router() {
       <Route path={"/blog/:slug"}>
         {(params) => <BlogPostPage slug={params.slug} />}
       </Route>
+      <Route path={"/skills/cs-phd-application-coach"} component={PhDApplicationCoach} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />

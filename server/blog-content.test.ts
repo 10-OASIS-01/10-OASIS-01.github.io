@@ -30,6 +30,7 @@ describe("blog content", () => {
     expect(article).toContain("### Admission is a noisy matching process, not a leaderboard");
     expect(article).toContain("Queer in AI");
     expect(article).toContain("discussing research with him");
+    expect(article).toContain("[CS PhD Application Coach](/skills/cs-phd-application-coach/)");
     expect(article).not.toMatch(/substack|pdfdrive|expires=/i);
   });
 });

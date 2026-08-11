@@ -109,4 +109,31 @@ for (const post of posts) {
   );
 }
 
-console.log(`Generated static HTML for /blog/ and ${posts.length} blog post(s).`);
+const skillPath = "/skills/cs-phd-application-coach/";
+const skillCanonical = `${siteUrl}${skillPath}`;
+const skillDescription = "An open, access-conscious skill for planning, writing, tracking, and evaluating global CS and AI PhD applications in Codex and Claude Code.";
+await writeRoute(
+  skillPath,
+  renderPage({
+    title: "CS PhD Application Coach | Yibin (Leon) Liu",
+    description: skillDescription,
+    canonical: skillCanonical,
+    image: `${siteUrl}/assets/long-journey.jpg`,
+    type: "website",
+    keywords: "CS PhD applications, AI PhD applications, Agent Skills, Codex, Claude Code, application dashboard",
+    structuredData: {
+      "@context": "https://schema.org",
+      "@type": "SoftwareSourceCode",
+      name: "CS PhD Application Coach",
+      description: skillDescription,
+      codeRepository: "https://github.com/10-OASIS-01/10-OASIS-01.github.io",
+      url: skillCanonical,
+      author: { "@type": "Person", name: "Yibin (Leon) Liu", url: siteUrl },
+      programmingLanguage: ["Markdown", "Python", "JavaScript"],
+      license: "https://opensource.org/license/mit",
+      runtimePlatform: ["Codex", "Claude Code"],
+    },
+  }),
+);
+
+console.log(`Generated static HTML for /blog/, ${posts.length} blog post(s), and ${skillPath}.`);
