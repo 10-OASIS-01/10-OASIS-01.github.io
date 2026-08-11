@@ -126,7 +126,7 @@ await writeRoute(
       "@type": "SoftwareSourceCode",
       name: "CS PhD Application Coach",
       description: skillDescription,
-      codeRepository: "https://github.com/10-OASIS-01/10-OASIS-01.github.io",
+      codeRepository: "https://github.com/10-OASIS-01/cs-phd-application-coach",
       url: skillCanonical,
       author: { "@type": "Person", name: "Yibin (Leon) Liu", url: siteUrl },
       programmingLanguage: ["Markdown", "Python", "JavaScript"],

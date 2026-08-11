@@ -21,8 +21,8 @@ import { usePageMetadata } from "@/lib/usePageMetadata";
 
 const SITE_URL = "https://10-oasis-01.github.io";
 const PAGE_PATH = "/skills/cs-phd-application-coach/";
-const REPOSITORY_URL = "https://github.com/10-OASIS-01/10-OASIS-01.github.io";
-const SOURCE_URL = `${REPOSITORY_URL}/tree/master/skills/cs-phd-application-coach`;
+const REPOSITORY_URL = "https://github.com/10-OASIS-01/cs-phd-application-coach";
+const SOURCE_URL = REPOSITORY_URL;
 const DESCRIPTION =
   "An open, access-conscious skill for planning, writing, tracking, and evaluating global CS and AI PhD applications in Codex and Claude Code.";
 
@@ -98,10 +98,10 @@ function GitHubStar() {
         <Star className="h-4 w-4" aria-hidden="true" /> Star on GitHub
       </a>
       <iframe
-        src="https://ghbtns.com/github-btn.html?user=10-OASIS-01&repo=10-OASIS-01.github.io&type=star&count=true&size=large"
+        src="https://ghbtns.com/github-btn.html?user=10-OASIS-01&repo=cs-phd-application-coach&type=star&count=true&size=large"
         width="170"
         height="30"
-        title="Star 10-OASIS-01.github.io on GitHub"
+        title="Star cs-phd-application-coach on GitHub"
         className="overflow-hidden border-0"
         loading="lazy"
       />
@@ -309,7 +309,7 @@ export default function PhDApplicationCoach() {
               <h2 className="article-serif mt-3 text-4xl font-semibold text-slate-950">Codex or Claude Code</h2>
               <p className="mt-4 leading-7 text-slate-600">Clone the repository, then copy the skill folder into the personal skills directory for your tool. The core package follows the open Agent Skills structure; Codex-specific UI metadata is optional.</p>
               <div className="mt-6 space-y-4">
-                <div className="rounded-xl border border-slate-200 bg-white p-5"><strong className="text-slate-950">1. Clone once</strong><pre className="mt-3 overflow-x-auto rounded-lg bg-slate-950 p-4 text-xs leading-5 text-slate-100"><code>{`git clone --depth 1 https://github.com/10-OASIS-01/10-OASIS-01.github.io.git\ncd 10-OASIS-01.github.io`}</code></pre></div>
+                <div className="rounded-xl border border-slate-200 bg-white p-5"><strong className="text-slate-950">1. Clone once</strong><pre className="mt-3 overflow-x-auto rounded-lg bg-slate-950 p-4 text-xs leading-5 text-slate-100"><code>{`git clone --depth 1 https://github.com/10-OASIS-01/cs-phd-application-coach.git`}</code></pre></div>
                 <div className="rounded-xl border border-slate-200 bg-white p-5"><strong className="text-slate-950">2A. Install for Codex</strong><pre className="mt-3 overflow-x-auto rounded-lg bg-slate-950 p-4 text-xs leading-5 text-slate-100"><code>{`mkdir -p ~/.agents/skills\ncp -R skills/cs-phd-application-coach ~/.agents/skills/`}</code></pre></div>
                 <div className="rounded-xl border border-slate-200 bg-white p-5"><strong className="text-slate-950">2B. Install for Claude Code</strong><pre className="mt-3 overflow-x-auto rounded-lg bg-slate-950 p-4 text-xs leading-5 text-slate-100"><code>{`mkdir -p ~/.claude/skills\ncp -R skills/cs-phd-application-coach ~/.claude/skills/`}</code></pre></div>
               </div>
