@@ -131,6 +131,8 @@ Yonatan Bisk’s [discussion of emailing professors](https://talkingtorobots.com
 
 Application fees, tests, transcripts, and travel can make “apply broadly” impossible. Requesting a fee waiver is normal and should not be treated as an admission weakness. Search both the graduate-school and department sites, check the application itself, and email the admissions office when the procedure is unclear. The community-maintained [CS PhD fee-waiver collection](https://github.com/KaiserWhoLearns/CS-PhD-Application-fee-waivers) is a useful starting point, but entries can become stale and citizenship restrictions vary.
 
+On a personal note, I am deeply grateful to the [Queer in AI](https://www.queerinai.com/) community for the support I received during application season. I am trying, in turn, to pass that generosity forward wherever I can. If you see part of your identity reflected in this community and are looking for a place where questions about applications and belonging can be met with care, I found it genuinely supportive.
+
 You also do not have to navigate the process alone. Availability and eligibility change, so check the current cycle early:
 
 - [UW’s Pre-Application Mentorship Service](https://www.cs.washington.edu/academics/graduate/phd-program/phd-admissions/pams/) and [UCSB’s PhD Application Support Program](https://cs.ucsb.edu/education/graduate/phd-application-support-program) offer forms of applicant guidance and materials feedback.
@@ -197,6 +199,8 @@ Applicants naturally spend enormous energy asking, “Would this professor want 
 Talk with potential advisors and, whenever possible, with several students from their groups. Learn how the advisor collaborates, what problems actually excite them now, how much direction they give, how they respond when a project fails, and what they expect from students. Ask students whether the public description of the lab resembles daily life. Research match is essential, but compatibility in communication, pace, feedback, independence, and conflict resolution matters just as much.
 
 You are not selecting only a topic. You are selecting people with whom you may navigate years of uncertainty. Again, remove the title and ranking from the thought experiment: would you still want to solve hard problems with this person for five years?
+
+For me, this question became concrete in my conversations with [Weiyu Liu](https://www.weiyuliu.com/). I genuinely enjoy discussing research with him. I admire how deliberately he plans research while continuing to bring fresh ways of thinking to a problem, and I especially value the support and respect he gives his students. Those qualities are a large part of why our research conversations feel so energizing to me.
 
 ### You are already doing something brave
 

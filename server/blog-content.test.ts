@@ -16,6 +16,7 @@ describe("blog content", () => {
     expect(manifest.posts[0]).toMatchObject({
       slug: "the-hidden-curriculum-of-cs-phd-applications",
       publishedAt: "2026-08-11",
+      updatedAt: "2026-08-12",
       lastChecked: "August 2026",
       ogImage: "/assets/long-journey.jpg",
     });
@@ -27,6 +28,8 @@ describe("blog content", () => {
     expect(article).toContain("PhD Application OS Notion template");
     expect(article).toContain("## A few things I learned while applying");
     expect(article).toContain("### Admission is a noisy matching process, not a leaderboard");
+    expect(article).toContain("Queer in AI");
+    expect(article).toContain("discussing research with him");
     expect(article).not.toMatch(/substack|pdfdrive|expires=/i);
   });
 });
