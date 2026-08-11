@@ -118,7 +118,7 @@ await writeRoute(
     title: "CS PhD Application Coach | Yibin (Leon) Liu",
     description: skillDescription,
     canonical: skillCanonical,
-    image: `${siteUrl}/assets/long-journey.jpg`,
+    image: `${siteUrl}/assets/cs-phd-application-coach-card.png`,
     type: "website",
     keywords: "CS PhD applications, AI PhD applications, Agent Skills, Codex, Claude Code, application dashboard",
     structuredData: {

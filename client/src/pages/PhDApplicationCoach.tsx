@@ -164,7 +164,7 @@ function DashboardPreview() {
 
 export default function PhDApplicationCoach() {
   const canonical = `${SITE_URL}${PAGE_PATH}`;
-  const image = `${SITE_URL}/assets/long-journey.jpg`;
+  const image = `${SITE_URL}/assets/cs-phd-application-coach-card.png`;
 
   usePageMetadata({
     title: "CS PhD Application Coach | Yibin (Leon) Liu",
