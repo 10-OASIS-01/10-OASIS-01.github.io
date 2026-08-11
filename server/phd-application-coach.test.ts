@@ -4,20 +4,21 @@ import path from "node:path";
 
 const root = process.cwd();
 
-describe("CS PhD Application Coach project page", () => {
-  it("links the public page to the source, dashboard model, and GitHub star action", async () => {
-    const page = await readFile(path.join(root, "client/src/pages/PhDApplicationCoach.tsx"), "utf8");
-    expect(page).toContain("ghbtns.com/github-btn.html");
-    expect(page).toContain("10-OASIS-01/cs-phd-application-coach");
-    expect(page).toContain("phd-applications-2027/");
-    expect(page).toContain("~/.agents/skills");
-    expect(page).toContain("~/.claude/skills");
-  });
-
+describe("CS PhD Application Coach promotion", () => {
   it("promotes the standalone Skill from the blog index", async () => {
     const blogPage = await readFile(path.join(root, "client/src/pages/Blog.tsx"), "utf8");
-    expect(blogPage).toContain('href="/skills/cs-phd-application-coach/"');
+    expect(blogPage).toContain('const APPLICATION_COACH_URL = "https://10-oasis-01.github.io/cs-phd-application-coach/"');
+    expect(blogPage).toContain("href={APPLICATION_COACH_URL}");
     expect(blogPage).toContain("NEW PROJECT");
     expect(blogPage).toContain("Open project");
+  });
+
+  it("does not expose the Skill as a personal-site navigation route", async () => {
+    const [app, site] = await Promise.all([
+      readFile(path.join(root, "client/src/App.tsx"), "utf8"),
+      readFile(path.join(root, "client/src/content/site.ts"), "utf8"),
+    ]);
+    expect(app).not.toContain("PhDApplicationCoach");
+    expect(site).not.toContain('{ label: "Skills"');
   });
 });

@@ -39,7 +39,6 @@ export const navigationMenu: NavItem[] = [
   { label: "Publications", href: "/#publications" },
   { label: "Awards", href: "/#awards" },
   { label: "Misc", href: "/#misc" },
-  { label: "Skills", href: "/skills/cs-phd-application-coach/" },
   { label: "Blog", href: "/blog/" },
   { label: "CV", href: assets.cv, external: true },
 ];

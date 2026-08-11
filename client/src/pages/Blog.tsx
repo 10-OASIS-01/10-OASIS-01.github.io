@@ -7,6 +7,7 @@ import { formatBlogDate } from "@/lib/blog";
 import { usePageMetadata } from "@/lib/usePageMetadata";
 
 const SITE_URL = "https://10-oasis-01.github.io";
+const APPLICATION_COACH_URL = "https://10-oasis-01.github.io/cs-phd-application-coach/";
 
 export default function Blog() {
   usePageMetadata({
@@ -44,7 +45,9 @@ export default function Blog() {
               <div className="space-y-8">
                 <article>
                   <a
-                    href="/skills/cs-phd-application-coach/"
+                    href={APPLICATION_COACH_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="group block overflow-hidden rounded-2xl border border-blue-200 bg-white shadow-[0_14px_40px_-28px_rgba(15,23,42,0.45)] transition duration-300 hover:-translate-y-1 hover:border-blue-300 hover:shadow-[0_22px_55px_-30px_rgba(30,64,175,0.38)]"
                   >
                     <div className="relative overflow-hidden border-b border-blue-100 bg-[#102342] px-6 py-10 text-white sm:px-8 sm:py-12">
