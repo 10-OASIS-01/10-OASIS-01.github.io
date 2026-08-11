@@ -11,7 +11,9 @@ export default function Navigation() {
         <div className="flex justify-between items-center h-16">
           {/* Left side - Name (single line) */}
           <div className="flex-shrink-0">
-            <h1
+            <a
+              href="/"
+              aria-label="Yibin (Leon) Liu — home"
               className="text-xl text-gray-900 whitespace-nowrap"
               style={{
                 // 华文行楷 (macOS/iOS). Falls back to other 行楷/cursive fonts
@@ -21,7 +23,7 @@ export default function Navigation() {
               }}
             >
               {personalInfo.name} | {personalInfo.chineseName}
-            </h1>
+            </a>
           </div>
 
           {/* Desktop Navigation */}

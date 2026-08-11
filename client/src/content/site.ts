@@ -39,7 +39,7 @@ export const navigationMenu: NavItem[] = [
   { label: "Publications", href: "/#publications" },
   { label: "Awards", href: "/#awards" },
   { label: "Misc", href: "/#misc" },
-  { label: "Blog", href: "https://yibinleonliu.substack.com", external: true },
+  { label: "Blog", href: "/blog/" },
   { label: "CV", href: assets.cv, external: true },
 ];
 

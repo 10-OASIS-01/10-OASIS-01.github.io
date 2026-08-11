@@ -1,0 +1,19 @@
+{
+  "posts": [
+    {
+      "id": "hidden-curriculum-cs-phd-applications",
+      "slug": "the-hidden-curriculum-of-cs-phd-applications",
+      "title": "The Hidden Curriculum of CS PhD Applications",
+      "subtitle": "A practical, access-conscious guide to research experience, statements, letters, fees, interviews, and finding support.",
+      "excerpt": "Academia often assumes applicants already know its unwritten rules. This guide makes the CS PhD application process more legible—especially for people without established academic networks.",
+      "publishedAt": "2026-08-11",
+      "updatedAt": "2026-08-11",
+      "lastChecked": "August 2026",
+      "readTime": "22 min read",
+      "tags": ["PhD Applications", "Academic Access", "CS & AI"],
+      "ogImage": "/assets/long-journey.jpg",
+      "featured": true,
+      "author": "Yibin (Leon) Liu"
+    }
+  ]
+}

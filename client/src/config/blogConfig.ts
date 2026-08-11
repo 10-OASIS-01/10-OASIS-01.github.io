@@ -1,43 +1,46 @@
-/**
- * Blog Configuration File
- * 
- * This file contains all the blog posts data.
- * Update this file to add new blog posts or modify existing ones.
- */
+import postsManifest from "@/content/blog/posts.json";
+import hiddenCurriculum from "@/content/blog/the-hidden-curriculum-of-cs-phd-applications.md?raw";
 
 export interface BlogPost {
-  id: number;
+  id: string;
+  slug: string;
   title: string;
+  subtitle: string;
   excerpt: string;
-  date: string;
+  publishedAt: string;
+  updatedAt: string;
+  lastChecked: string;
   readTime: string;
   tags: string[];
-  slug?: string;
+  ogImage: string;
+  featured: boolean;
+  author: string;
+  content: string;
 }
 
-export const blogPosts: BlogPost[] = [
-  {
-    id: 1,
-    title: "My Journey into Embodied AI Research",
-    excerpt: "Exploring the intersection of language grounding, multimodal reasoning, and robotics. This post discusses my research journey and the challenges I've encountered in building foundation models for embodied agents.",
-    date: "2025-01-15",
-    readTime: "5 min read",
-    tags: ["Embodied AI", "Robotics"],
-    slug: "journey-into-embodied-ai",
-  },
-  {
-    id: 2,
-    title: "Building Scalable Data Pipelines for Robotics",
-    excerpt: "Lessons learned from developing real-time edge-to-cloud data pipelines at Horizon Robotics. This post covers the technical challenges and solutions for building scalable data infrastructure for autonomous vehicles.",
-    date: "2024-12-20",
-    readTime: "8 min read",
-    tags: ["Data Engineering", "Robotics", "Cloud Computing"],
-    slug: "scalable-data-pipelines-robotics",
-  },
-];
+const contentBySlug: Record<string, string> = {
+  "the-hidden-curriculum-of-cs-phd-applications": hiddenCurriculum,
+};
+
+export const blogPosts: BlogPost[] = postsManifest.posts.map((post) => ({
+  ...post,
+  content: contentBySlug[post.slug] ?? "",
+}));
 
 export const blogConfig = {
-  title: "📝 Blog",
-  description: "Thoughts, insights, and stories from my research and development journey.",
-  comingSoonMessage: "More blog posts coming soon...",
+  title: "Blog",
+  eyebrow: "NOTES & FIELD GUIDES",
+  description:
+    "Practical guides, research notes, and reflections on building a life in AI and robotics.",
 };
+
+export const giscusConfig = {
+  repo: "10-OASIS-01/10-OASIS-01.github.io",
+  repoId: "R_kgDOK77EmA",
+  category: "Announcements",
+  categoryId: "DIC_kwDOK77EmM4DDJb2",
+} as const;
+
+export function getBlogPost(slug: string): BlogPost | undefined {
+  return blogPosts.find((post) => post.slug === slug);
+}

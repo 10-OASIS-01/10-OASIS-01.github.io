@@ -2,7 +2,15 @@
   "name": "yibin-liu-academic-homepage",
   "version": "1.0.0",
   "description": "Academic personal website for Yibin (Leon) Liu - AI Research Student specializing in Language Grounding and Multimodal Reasoning",
-  "keywords": ["academic-website", "personal-homepage", "react", "vite", "static-site", "ai-research", "portfolio"],
+  "keywords": [
+    "academic-website",
+    "personal-homepage",
+    "react",
+    "vite",
+    "static-site",
+    "ai-research",
+    "portfolio"
+  ],
   "homepage": "https://10-oasis-01.github.io",
   "repository": {
     "type": "git",
@@ -15,7 +23,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node scripts/generate-static-blog-pages.mjs",
     "preview": "vite preview",
     "check": "tsc --noEmit",
     "format": "prettier --write .",
@@ -63,8 +71,10 @@
     "react-day-picker": "^9.11.1",
     "react-dom": "^19.1.1",
     "react-hook-form": "^7.64.0",
+    "react-markdown": "^10.1.0",
     "react-resizable-panels": "^3.0.6",
     "recharts": "^2.15.2",
+    "remark-gfm": "^4.0.1",
     "sonner": "^2.0.7",
     "tailwind-merge": "^3.3.1",
     "tailwindcss-animate": "^1.0.7",

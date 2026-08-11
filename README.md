@@ -126,10 +126,16 @@ at build time (injected via `vite.config.ts`). It updates on every push/deploy â
 no manual editing needed.
 
 ### Blog Posts
-Edit `client/src/config/blogConfig.ts` to:
-- Add new blog posts
-- Modify existing content
-- Update blog metadata
+Blog articles live in `client/src/content/blog/` as Markdown. To add one:
+
+1. Add the article metadata to `posts.json`.
+2. Add the matching `.md` file and register its import in
+   `client/src/config/blogConfig.ts`.
+3. Add the new permalink to `client/public/sitemap.xml`.
+
+The build generates a real `index.html` for the blog and every registered post,
+so direct links have article-specific Open Graph, Twitter Card, canonical, and
+JSON-LD metadata on GitHub Pages.
 
 ## Deployment
 
