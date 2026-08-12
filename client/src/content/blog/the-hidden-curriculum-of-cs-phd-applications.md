@@ -93,25 +93,17 @@ A personal website is optional. It helps when it gives readers a stable place to
 
 ## Recommendation letters: build the evidence before you choose the writer
 
-A recommendation letter is a two-hop relay. First, a mentor must see enough of your work to form a meaningful assessment. Then, the committee must be able to understand and calibrate that assessment. A recognizable name can provide context, but recognition cannot substitute for firsthand evidence. Conversely, someone who knows your work closely may provide rich detail, while the committee may have less context for interpreting that person’s comparisons. Most applicants are therefore choosing from a trade-off curve, not from a menu with one obviously perfect recommender.
+A strong letter needs firsthand evidence that a committee can interpret. A recognizable name may provide context, but it cannot replace close knowledge of your work.
 
-By application season, much of that menu has already been created. Recommendation planning should begin when you choose a research project, not only when application portals open. Alongside the topic, mentoring quality, and reputation of the lab, ask: **Who will actually watch me do research?** Who will see how I respond when an idea fails, how independently I identify problems, how I use feedback, and what I contribute beyond the final paper? In a large group, find out whether the professor will know your work firsthand or whether a postdoc, research scientist, or graduate student will supervise you day to day—and how those observations normally become part of a future letter.
+Planning can begin when you choose a project. Ask: **Who will actually watch me do research?** Who will see your decisions, failed ideas, independence, and response to feedback—and can those observations inform a future letter? The goal is not transactional networking; it is to work where your contributions can be evaluated closely.
 
-The goal is not to chase famous researchers or treat mentorship transactionally. It is to choose environments where substantive work is visible to people who can evaluate it. Over time, mentors who genuinely know your work may also introduce you to collaborators or help more senior researchers understand your contributions. These relationships can expand the set of people able to write specific and interpretable letters, but they should grow from real collaboration rather than networking for its own sake.
+If you are already applying, choose a complementary set from people who genuinely know your work. A direct mentor may provide detail, while a senior collaborator may add context. Limited access to famous recommenders is not limited research potential.
 
-If you are already applying, work with the set of recommenders you actually have. Compare possible writers along two dimensions: how closely they observed your research and how well a committee can interpret their evaluation. When possible, choose a complementary set instead of optimizing every letter for the same property. A detailed letter from a direct mentor may provide the evidence, while a more senior collaborator who genuinely knows the project may add broader comparison or context. Do not replace firsthand knowledge with ceremonial prestige, and do not interpret limited access to famous recommenders as evidence of limited research potential.
+Ask directly: **“Would you feel comfortable writing me a strong recommendation letter for CS PhD programs?”** This gives them room to decline or warn you that the letter would be limited.
 
-Ask directly: **“Would you feel comfortable writing me a strong recommendation letter for CS PhD programs?”** This gives the person room to decline or warn you that the letter would be limited.
+Send a compact packet with your CV, SOP draft, project summary and contributions, research direction, program list, and deadlines.
 
-Once they agree, send a compact packet:
-
-- your CV and current SOP draft;
-- a reminder of the work you did together, including dates and outcomes;
-- two or three specific moments or contributions they may have forgotten;
-- your program list, deadlines, and submission instructions;
-- a brief explanation of your research direction and any relevant context.
-
-Ask well in advance and send polite reminders. Keep the deadline tracker accurate. Shriram Krishnamurthi’s [advice to recommendation writers](https://cs.brown.edu/people/sk/Memos/Grad-School-Recos/) is useful for understanding why comparison, evidence, and firsthand detail make letters informative.
+Ask early and send polite reminders. Shriram Krishnamurthi’s [advice to recommendation writers](https://cs.brown.edu/people/sk/Memos/Grad-School-Recos/) explains why comparison, evidence, and firsthand detail matter.
 
 ## Personal-history statements are not requests for trauma
 
@@ -262,3 +254,7 @@ The most harmful part of the hidden curriculum is that it makes structural advan
 Sharing the rules does not make admissions perfectly fair, but it can reduce needless exclusion. Ask questions that feel embarrassingly basic. Request the waiver. Seek feedback outside your immediate institution. Contact people thoughtfully. Apply when the evidence says a program could support your growth, even if you do not resemble the applicants whose CVs are easiest to find online.
 
 You are not supposed to know everything before a PhD. Learning how to turn uncertainty into better questions is part of the qualification.
+
+## Acknowledgments
+
+I am grateful to Po-Chen Ko for his thoughtful feedback while I was writing this guide.

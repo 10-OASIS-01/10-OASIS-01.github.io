@@ -29,10 +29,12 @@ describe("blog content", () => {
     expect(article).toContain("## A few things I learned while applying");
     expect(article).toContain("### Admission is a noisy matching process, not a leaderboard");
     expect(article).toContain("## Recommendation letters: build the evidence before you choose the writer");
-    expect(article).toContain("A recommendation letter is a two-hop relay.");
+    expect(article).toContain("A strong letter needs firsthand evidence");
     expect(article).toContain("Who will actually watch me do research?");
     expect(article).toContain("Would you feel comfortable writing me a strong recommendation letter");
     expect(article).toContain("Shriram Krishnamurthi’s [advice to recommendation writers]");
+    expect(article).toContain("## Acknowledgments");
+    expect(article).toContain("I am grateful to Po-Chen Ko for his thoughtful feedback");
     expect(article).toContain("Queer in AI");
     expect(article).toContain("discussing research with him");
     expect(article).toContain("[CS PhD Application Coach](https://10-oasis-01.github.io/cs-phd-application-coach/)");
