@@ -133,8 +133,6 @@ Yonatan Bisk’s [discussion of emailing professors](https://talkingtorobots.com
 
 Application fees, tests, transcripts, and travel can make “apply broadly” impossible. Requesting a fee waiver is normal and should not be treated as an admission weakness. Search both the graduate-school and department sites, check the application itself, and email the admissions office when the procedure is unclear. The community-maintained [CS PhD fee-waiver collection](https://github.com/KaiserWhoLearns/CS-PhD-Application-fee-waivers) is a useful starting point, but entries can become stale and citizenship restrictions vary.
 
-On a personal note, I am deeply grateful to the [Queer in AI](https://www.queerinai.com/) community for the support I received during application season. I am trying, in turn, to pass that generosity forward wherever I can. If you see part of your identity reflected in this community and are looking for a place where questions about applications and belonging can be met with care, I found it genuinely supportive.
-
 You also do not have to navigate the process alone. Availability and eligibility change, so check the current cycle early:
 
 - [UW’s Pre-Application Mentorship Service](https://www.cs.washington.edu/academics/graduate/phd-program/phd-admissions/pams/) and [UCSB’s PhD Application Support Program](https://cs.ucsb.edu/education/graduate/phd-application-support-program) offer forms of applicant guidance and materials feedback.
