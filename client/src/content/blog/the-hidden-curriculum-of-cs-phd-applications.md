@@ -57,7 +57,7 @@ Deadlines differ, but the following rhythm is a reasonable starting point for pr
 
 **March–May:** Decide whether research training fits your goals. Talk with graduate students and researchers at different career stages. Review your finances and identify gaps in research experience, coursework, or relationships with potential recommenders.
 
-**May–August:** Build a broad faculty and program list. Read enough recent work to distinguish genuine fit from keyword overlap. Update your CV and research materials. If you are doing a project, agree with your mentor on a concrete output you can discuss even if the paper is not accepted.
+**May–August:** Build a broad faculty and program list. Read enough recent work to distinguish genuine fit from keyword overlap. Update your CV and research materials. If you are choosing a project, clarify who will supervise you closely enough to observe your research process and how that work may eventually be represented in a recommendation letter. Agree with your mentor on a concrete output you can discuss even if the paper is not accepted.
 
 **August–September:** Narrow the list, verify which faculty expect to recruit, and ask recommenders. Start the common core of your statement of purpose. Check language-test and transcript logistics early; administrative delays are a bad use of application season.
 
@@ -91,9 +91,15 @@ An academic CV should make your contributions easy to find. Put research experie
 
 A personal website is optional. It helps when it gives readers a stable place to find papers, posters, code, demos, or a concise research description. A polished site cannot compensate for weak substance, and nobody should delay an application to perfect CSS. If templates reduce the cost, here is an [academic CV template](https://www.overleaf.com/read/zmbjkwtfgpzf#9c9e77) and an [academic homepage template](https://github.com/10-OASIS-01/10-OASIS-01.github.io).
 
-## Recommendation letters: choose specific knowledge over ceremonial prestige
+## Recommendation letters: build the evidence before you choose the writer
 
-For many research programs, letters are crucial because they let another researcher describe how you behave during actual research. A famous professor who barely knows you may produce a weaker letter than a less famous mentor who can explain your independence, creativity, technical judgment, persistence, and growth through detailed examples.
+A recommendation letter is a two-hop relay. First, a mentor must see enough of your work to form a meaningful assessment. Then, the committee must be able to understand and calibrate that assessment. A recognizable name can provide context, but recognition cannot substitute for firsthand evidence. Conversely, someone who knows your work closely may provide rich detail, while the committee may have less context for interpreting that person’s comparisons. Most applicants are therefore choosing from a trade-off curve, not from a menu with one obviously perfect recommender.
+
+By application season, much of that menu has already been created. Recommendation planning should begin when you choose a research project, not only when application portals open. Alongside the topic, mentoring quality, and reputation of the lab, ask: **Who will actually watch me do research?** Who will see how I respond when an idea fails, how independently I identify problems, how I use feedback, and what I contribute beyond the final paper? In a large group, find out whether the professor will know your work firsthand or whether a postdoc, research scientist, or graduate student will supervise you day to day—and how those observations normally become part of a future letter.
+
+The goal is not to chase famous researchers or treat mentorship transactionally. It is to choose environments where substantive work is visible to people who can evaluate it. Over time, mentors who genuinely know your work may also introduce you to collaborators or help more senior researchers understand your contributions. These relationships can expand the set of people able to write specific and interpretable letters, but they should grow from real collaboration rather than networking for its own sake.
+
+If you are already applying, work with the set of recommenders you actually have. Compare possible writers along two dimensions: how closely they observed your research and how well a committee can interpret their evaluation. When possible, choose a complementary set instead of optimizing every letter for the same property. A detailed letter from a direct mentor may provide the evidence, while a more senior collaborator who genuinely knows the project may add broader comparison or context. Do not replace firsthand knowledge with ceremonial prestige, and do not interpret limited access to famous recommenders as evidence of limited research potential.
 
 Ask directly: **“Would you feel comfortable writing me a strong recommendation letter for CS PhD programs?”** This gives the person room to decline or warn you that the letter would be limited.
 
