@@ -16,11 +16,9 @@ export const advisors: Org[] = [
 
 export const aboutMe: AboutMe = {
   intro: [
-    "I received my B.Eng. in Artificial Intelligence from Northeastern University, China. I am currently a Research Intern at ",
-    { text: "Robbyant", url: "https://technology.robbyant.com/" },
-    " (part of ",
-    { text: "Ant Group", url: "https://www.antgroup.com/en/technology/" },
-    "), where I work on large-scale foundation models for mobile manipulation. Starting in Fall 2026, I will begin my Ph.D. under the supervision of ",
+    "I received my B.Eng. in Artificial Intelligence from Northeastern University, China. I am a Tech Genius Team Intern (TGT) at ",
+    { text: "Joy Future Academy", url: "https://research.joyai.com/career" },
+    ", JD. Working on compositional generation for long-horizon manipulation and mobile manipulation. Starting in Fall 2026, I will begin my Ph.D. under the supervision of ",
     { text: "Prof. Weiyu Liu", url: "https://www.weiyuliu.com/" },
     ".",
   ],
