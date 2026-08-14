@@ -41,6 +41,17 @@ export const researchExperiences: ResearchExperience[] = [
 export const industryExperiences: IndustryExperience[] = [
   {
     id: 1,
+    role: "TGT Intern",
+    org: { name: "Joy Future Academy", url: "https://research.joyai.com/career" },
+    parentOrg: { name: "JD.COM" },
+    highlights: [
+      "I am a Tech Genius Team Intern (TGT) at Joy Future Academy, JD. Working on compositional generation for long-horizon manipulation and mobile manipulation.",
+    ],
+    location: "Shenzhen, Guangdong, China · On-site",
+    duration: "Aug 2026 – Present",
+  },
+  {
+    id: 2,
     role: "Research Intern",
     org: { name: "Robbyant", url: "https://technology.robbyant.com/" },
     parentOrg: { name: "Ant Group", url: "https://www.antgroup.com/en/technology/" },
@@ -48,10 +59,10 @@ export const industryExperiences: IndustryExperience[] = [
       "Focus: Large-scale Foundation Models for mobile manipulation, including VLA pre-training, post-training, real-robot deployment, and automated benchmark verification.",
     ],
     location: "Shanghai, China",
-    duration: "March 2026 – Present",
+    duration: "March 2026 – August 2026",
   },
   {
-    id: 2,
+    id: 3,
     role: "Robotics Agent intern",
     org: { name: "Horizon Robotics", url: "https://www.horizon.auto/" },
     parentOrg: { name: "D-Robotics", url: "https://en.d-robotics.cc/" },
