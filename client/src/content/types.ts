@@ -171,6 +171,27 @@ export interface Award {
 }
 
 // ===========================
+// Misc / Personal Journey
+// ===========================
+export type JourneyMilestoneIcon = "plateau" | "run" | "hike" | "summit";
+
+export interface JourneyMilestone {
+  year: number;
+  title: string;
+  description: string;
+  location: string;
+  metrics: string[];
+  icon: JourneyMilestoneIcon;
+}
+
+export interface MiscContent {
+  intro: string;
+  journeyHeading: string;
+  journeyHint: string;
+  milestones: JourneyMilestone[];
+}
+
+// ===========================
 // Projects / Skills
 // ===========================
 export interface Project {
