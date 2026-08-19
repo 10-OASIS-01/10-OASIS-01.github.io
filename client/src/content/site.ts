@@ -6,17 +6,12 @@
  * avatar / background / CV, drop the new file in that folder and update the one
  * path below — nothing else needs to change.
  */
-import type {
-  NavItem,
-  SiteImages,
-  SiteMetadata,
-  SocialLinks,
-} from "./types";
+import type { NavItem, SiteImages, SiteMetadata, SocialLinks } from "./types";
 
 /** Single source of truth for uploaded asset paths. */
 export const assets = {
-  heroBackground: "/assets/tebet3.jpg",
-  profileAvatar: "/assets/avatar.jpg",
+  heroBackground: "/assets/hero-2026.jpg",
+  profileAvatar: "/assets/head-2026.jpg",
   cv: "/assets/Leon_s_CV.pdf",
 } as const;
 
