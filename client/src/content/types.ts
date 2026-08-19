@@ -82,6 +82,11 @@ export interface Publication {
   title: string;
   venue: string;
   year: number;
+  /** Representative figure displayed to the left of the publication details. */
+  thumbnail: {
+    src: string;
+    alt: string;
+  };
   links: Link[];
   /** Optional one-line description of personal/project contribution. */
   contribution?: string;
@@ -92,9 +97,18 @@ export interface Publication {
 // ===========================
 // Experience
 // ===========================
+export interface ExperienceLogo {
+  src: string;
+  alt: string;
+  /** Optional background for white or transparent wordmarks. */
+  background?: string;
+}
+
 export interface ResearchExperience {
   id: number;
   title: string;
+  /** Institution or lab logo displayed beside the experience. */
+  logo: ExperienceLogo;
   /** Optional link wrapping the whole title (e.g. a lab homepage). */
   titleLink?: string;
   location: string;
@@ -104,6 +118,8 @@ export interface ResearchExperience {
 
 export interface IndustryExperience {
   id: number;
+  /** Organization logo displayed beside the experience. */
+  logo: ExperienceLogo;
   /** Role only, e.g. "Research Intern" (the org is rendered separately). */
   role: string;
   /** Employing organization. */
@@ -122,6 +138,8 @@ export interface IndustryExperience {
   focus?: string;
   /** Optional bullet points describing the work done. */
   highlights?: string[];
+  /** Optional employment classification, e.g. "Internship". */
+  employmentType?: string;
   location: string;
   duration: string;
 }

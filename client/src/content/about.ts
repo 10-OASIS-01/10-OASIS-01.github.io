@@ -18,7 +18,7 @@ export const aboutMe: AboutMe = {
   intro: [
     "I received my B.Eng. in Artificial Intelligence from Northeastern University, China. I am a Tech Genius Team Intern (TGT) at ",
     { text: "Joy Future Academy", url: "https://research.joyai.com/career" },
-    ", JD. Working on compositional generation for long-horizon manipulation and mobile manipulation. Starting in Fall 2026, I will begin my Ph.D. under the supervision of ",
+    ", JD.COM. I work on compositional generation for long-horizon manipulation and mobile manipulation. Starting in Fall 2026, I will begin my Ph.D. under the supervision of ",
     { text: "Prof. Weiyu Liu", url: "https://www.weiyuliu.com/" },
     ".",
   ],
