@@ -237,13 +237,11 @@ These contain useful experience but are not neutral rulebooks. In particular, as
 
 These resources are not admissions requirements. They are possible on-ramps if they match the questions you actually want to study.
 
-**Language models and planning:** the official [AAAI tutorial on the role of LLMs in planning](https://yochan-lab.github.io/tutorial/AAAI-2024/index.html), Nathan Lambert’s [RLHF book chapter on reward models](https://rlhfbook.com/c/05-reward-models), [Alisa’s Book of LLMs](https://alisawuffles.notion.site/alisa-s-book-of-llms), [Alisa’s math notes](https://alisawuffles.notion.site/math-notes), and Maarten Grootendorst’s visual [Exploring Language Models](https://newsletter.maartengrootendorst.com/). The Notion pages may require additional access.
+**Language models:** the official [AAAI tutorial on the role of LLMs in planning](https://yochan-lab.github.io/tutorial/AAAI-2024/index.html), Nathan Lambert’s [RLHF book chapter on reward models](https://rlhfbook.com/c/05-reward-models), [Alisa’s Book of LLMs](https://alisawuffles.notion.site/alisa-s-book-of-llms), [Alisa’s math notes](https://alisawuffles.notion.site/math-notes), and Maarten Grootendorst’s visual [Exploring Language Models](https://newsletter.maartengrootendorst.com/). The Notion pages may require additional access.
 
 **Robotics and planning:** the canonical survey on [Integrated Task and Motion Planning](https://www.annualreviews.org/content/journals/10.1146/annurev-control-091420-084139), MIT LIS’s illustrated [Bilevel Planning for Robots](https://lis.csail.mit.edu/bilevel-planning-for-robots-an-illustrated-introduction/), and NVIDIA’s [Physical AI learning path](https://www.nvidia.com/en-us/learn/learning-path/robotics/).
 
 **Graphics and spatial mathematics:** the official publisher page for [Fundamentals of Computer Graphics](https://www.routledge.com/Fundamentals-of-Computer-Graphics/Shirley-Marschner/p/book/9781003050339), the free online [3D Math Primer](https://gamemath.com/book/intro.html), and the interactive [RCFS](https://rcfs.ch/) resource.
-
-**Research methods and cognition:** Delve’s practical introduction to [grounded theory](https://delvetool.com/blog/groundedtheory) and Lawrence Barsalou’s review of [grounded cognition](https://www.barsaloulab.org/Online_Articles/2008-Barsalou-ARP-grounded_cognition.pdf).
 
 Do not interpret a long reading list as a list of prerequisites. Nobody arrives knowing everything. Pick resources that help you ask a sharper question or complete a real project; ignore the rest until they become relevant.
 
