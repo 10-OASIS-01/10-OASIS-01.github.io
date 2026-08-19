@@ -13,5 +13,12 @@ export { news } from "./news";
 export { publications } from "./publications";
 export { researchExperiences, industryExperiences } from "./experience";
 export { talks, academicService, awards } from "./activities";
+export { misc } from "./misc";
 export { projects, technologies } from "./projects";
-export { assets, images, socialLinks, navigationMenu, siteMetadata } from "./site";
+export {
+  assets,
+  images,
+  socialLinks,
+  navigationMenu,
+  siteMetadata,
+} from "./site";

@@ -9,9 +9,11 @@ import {
   // talks,        // hidden — re-add with the Talks section below
   academicService,
   awards,
+  misc,
   // technologies, // hidden — re-add with the Technologies section below
 } from "@/config/siteConfig";
 import RichText from "./RichText";
+import JourneyTrail from "./JourneyTrail";
 
 const NEWS_VISIBLE_COUNT = 5;
 
@@ -421,11 +423,8 @@ export default function MainContent() {
       {/* Misc Section */}
       <section id="misc">
         <h2 className={SECTION_HEADING}>Misc</h2>
-        <p className={BODY_TEXT}>
-          In my free time, I enjoy hiking, running, and playing tennis. I also
-          love exploring great food, coffee, and drinks. Beyond that, I
-          genuinely enjoy spending time with animals — well, most of them :)
-        </p>
+        <p className={BODY_TEXT}>{misc.intro}</p>
+        <JourneyTrail content={misc} />
       </section>
 
       {/* Technologies Section (hidden — uncomment to show)
