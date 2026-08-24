@@ -14,13 +14,7 @@ export default function Navigation() {
             <a
               href="/"
               aria-label="Yibin (Leon) Liu — home"
-              className="text-xl text-gray-900 whitespace-nowrap"
-              style={{
-                // 华文行楷 (macOS/iOS). Falls back to other 行楷/cursive fonts
-                // on platforms that don't ship it (Windows/Android/Linux).
-                fontFamily:
-                  "'STXingkai', 'STXinwei', 'Xingkai SC', 'KaiTi', 'Kaiti SC', 'cursive'",
-              }}
+              className="font-sans text-xl text-gray-900 whitespace-nowrap"
             >
               {personalInfo.name} | {personalInfo.chineseName}
             </a>
