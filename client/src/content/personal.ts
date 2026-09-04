@@ -10,8 +10,7 @@ export const personalInfo: PersonalInfo = {
   chineseName: "刘艺彬",
   pronouns: "he/him",
   title: "Incoming PhD Student",
-  // intentional: NUS 尚未官宣，保留悬念，勿改为具体学校
-  university: "TODO",
+  university: "National University of Singapore",
   location: "Shenzhen, China",
   // Rendered with an anti-crawler trick (@ → 😊) in SidebarProfile — keep as-is.
   email: "yibin.leon.liu@outlook.com",

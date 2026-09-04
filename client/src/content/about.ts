@@ -16,11 +16,18 @@ export const advisors: Org[] = [
 
 export const aboutMe: AboutMe = {
   intro: [
-    "Currently I am a Tech Genius Team Intern (TGT) at ",
-    { text: "Joy Future Academy", url: "https://research.joyai.com/career" },
-    ", JD.COM. I work on compositional generation for long-horizon manipulation and mobile manipulation. I received my B.Eng. in Artificial Intelligence from Northeastern University, China. Starting in Spring 2027, I will begin my Ph.D. under the supervision of ",
+    "I am an incoming Ph.D. student at the ",
+    { text: "School of Computing", url: "https://www.comp.nus.edu.sg/" },
+    ", ",
+    {
+      text: "National University of Singapore",
+      url: "https://www.nus.edu.sg/",
+    },
+    ", starting in Spring 2027 under the supervision of Presidential Young Professor ",
     { text: "Prof. Weiyu Liu", url: "https://www.weiyuliu.com/" },
-    ".",
+    ". Currently I am a Tech Genius Team Intern (TGT) at ",
+    { text: "Joy Future Academy", url: "https://research.joyai.com/career" },
+    ", JD.COM. I work on compositional generation for long-horizon manipulation and mobile manipulation. I received my B.Eng. in Artificial Intelligence from Northeastern University, China.",
   ],
   researchFocus: `My research focuses on lifelong and compositional robot learning, uncertainty-aware multimodal reasoning and planning, and grounded program synthesis for open-world mobile manipulation. My long-term goal is to build agentic robots that learn from real-world interaction and reliably transfer their knowledge across novel tasks, objects, and environments.`,
   researchInterests: [
