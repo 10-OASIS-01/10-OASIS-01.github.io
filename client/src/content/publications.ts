@@ -13,7 +13,7 @@ export const publications: Publication[] = [
     venue: "Technical Report",
     year: 2026,
     thumbnail: {
-      src: "/assets/publications/lingbot-vla-2.png",
+      src: "/assets/optimized/lingbot-vla-2.webp",
       alt: "LingBot-VLA 2.0 mobile manipulation robot platforms",
     },
     contribution:
@@ -39,7 +39,7 @@ export const publications: Publication[] = [
     venue: "ECCV 2026",
     year: 2026,
     thumbnail: {
-      src: "/assets/publications/primo-r1.png",
+      src: "/assets/optimized/primo-r1.webp",
       alt: "PRIMO R1 framework and evaluation overview",
     },
     links: [
@@ -63,7 +63,7 @@ export const publications: Publication[] = [
     venue: "ICLR 2026",
     year: 2025,
     thumbnail: {
-      src: "/assets/publications/vlaser.png",
+      src: "/assets/optimized/vlaser.webp",
       alt: "Vlaser dataset, reasoning, and robot evaluation overview",
     },
     githubStars: "https://img.shields.io/github/stars/OpenGVLab/Vlaser",
@@ -88,7 +88,7 @@ export const publications: Publication[] = [
     venue: "ICML 2026",
     year: 2026,
     thumbnail: {
-      src: "/assets/publications/robotwin-2.png",
+      src: "/assets/optimized/robotwin-2.webp",
       alt: "RoboTwin 2.0 domain randomization examples",
     },
     githubStars:
@@ -109,7 +109,7 @@ export const publications: Publication[] = [
       "ICCV 2025 Workshop on Multi-Modal Reasoning for Agentic Intelligence",
     year: 2025,
     thumbnail: {
-      src: "/assets/publications/hycodepolicy.png",
+      src: "/assets/optimized/hycodepolicy.webp",
       alt: "HyCodePolicy closed-loop program monitoring and repair framework",
     },
     links: [

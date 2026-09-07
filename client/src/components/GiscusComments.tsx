@@ -1,54 +1,72 @@
 import { useEffect, useRef } from "react";
-import { MessageCircle } from "lucide-react";
+import { useTheme } from "@/contexts/ThemeContext";
 import { giscusConfig } from "@/config/blogConfig";
 
 export default function GiscusComments() {
+  const { theme } = useTheme();
+  const currentTheme = useRef(theme);
+  currentTheme.current = theme;
   const containerRef = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
     const container = containerRef.current;
     if (!container || !giscusConfig.categoryId) return;
-
-    container.replaceChildren();
     const script = document.createElement("script");
     script.src = "https://giscus.app/client.js";
     script.async = true;
     script.crossOrigin = "anonymous";
-    script.dataset.repo = giscusConfig.repo;
-    script.dataset.repoId = giscusConfig.repoId;
-    script.dataset.category = giscusConfig.category;
-    script.dataset.categoryId = giscusConfig.categoryId;
-    script.dataset.mapping = "pathname";
-    script.dataset.strict = "0";
-    script.dataset.reactionsEnabled = "1";
-    script.dataset.emitMetadata = "0";
-    script.dataset.inputPosition = "bottom";
-    script.dataset.theme = "light";
-    script.dataset.lang = "en";
-    script.dataset.loading = "lazy";
+    Object.assign(script.dataset, {
+      repo: giscusConfig.repo,
+      repoId: giscusConfig.repoId,
+      category: giscusConfig.category,
+      categoryId: giscusConfig.categoryId,
+      mapping: "pathname",
+      strict: "0",
+      reactionsEnabled: "1",
+      emitMetadata: "0",
+      inputPosition: "bottom",
+      theme: currentTheme.current,
+      lang: "en",
+      loading: "lazy",
+    });
+    const syncTheme = () =>
+      container
+        .querySelector<HTMLIFrameElement>("iframe.giscus-frame")
+        ?.contentWindow?.postMessage(
+          { giscus: { setConfig: { theme: currentTheme.current } } },
+          "https://giscus.app",
+        );
+    container.addEventListener("load", syncTheme, true);
     container.appendChild(script);
-
-    return () => container.replaceChildren();
+    return () => {
+      container.removeEventListener("load", syncTheme, true);
+      container.replaceChildren();
+    };
   }, []);
-
+  useEffect(() => {
+    containerRef.current
+      ?.querySelector<HTMLIFrameElement>("iframe.giscus-frame")
+      ?.contentWindow?.postMessage(
+        { giscus: { setConfig: { theme } } },
+        "https://giscus.app",
+      );
+  }, [theme]);
   return (
-    <section aria-labelledby="comments-title" className="mt-20 border-t border-slate-200 pt-10">
-      <div className="mb-7 flex items-center gap-3">
-        <span className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-50 text-blue-900">
-          <MessageCircle className="h-5 w-5" aria-hidden="true" />
-        </span>
-        <div>
-          <h2 id="comments-title" className="text-2xl font-semibold text-slate-950">Comments</h2>
-          <p className="mt-1 text-sm text-slate-600">Join the conversation with a GitHub account.</p>
-        </div>
-      </div>
-      {giscusConfig.categoryId ? (
-        <div ref={containerRef} className="min-h-24" />
-      ) : (
-        <p className="rounded-xl border border-slate-200 bg-white p-5 text-sm text-slate-600">
-          Comments are being connected and will be available shortly.
-        </p>
-      )}
+    <section aria-labelledby="comments-title" className="comments-section">
+      <h2 id="comments-title">Comments</h2>
+      <p>Join the conversation with a GitHub account.</p>
+      <div ref={containerRef} className="comments-embed" />
+      <p className="comments-fallback">
+        You can also{" "}
+        <a
+          className="text-link"
+          href={`https://github.com/${giscusConfig.repo}/discussions`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          read and discuss on GitHub
+        </a>
+        .
+      </p>
     </section>
   );
 }

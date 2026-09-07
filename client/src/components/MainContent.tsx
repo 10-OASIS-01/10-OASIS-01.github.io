@@ -1,451 +1,405 @@
-import { useState } from "react";
-import { ChevronDown, ChevronUp, ExternalLink } from "lucide-react";
+import { useState, type ReactNode } from "react";
+import { ArrowUpRight, ChevronDown, ChevronUp } from "lucide-react";
 import {
   personalInfo,
   news,
   publications,
   researchExperiences,
   industryExperiences,
-  // talks,        // hidden — re-add with the Talks section below
   academicService,
   awards,
   misc,
-  // technologies, // hidden — re-add with the Technologies section below
+  socialLinks,
 } from "@/config/siteConfig";
+import { blogMetadata as blogPosts } from "@/config/blogMetadata";
+import { formatBlogDate } from "@/lib/blog";
+import type { Org, ExperienceLogo } from "@/content/types";
 import RichText from "./RichText";
 import JourneyTrail from "./JourneyTrail";
 
-const NEWS_VISIBLE_COUNT = 5;
-
-// ── Typography scale ──────────────────────────────────────────────
-// Hierarchy comes from size + weight + color, not a grab-bag of sizes.
-//   24px bold  section headings
-//   16px bold  entry titles (one step above body)
-//   15px       lead prose (About Me)
-//   14px       body / list content  (muted gray for secondary meta)
-//   12px       footnotes
-const SECTION_HEADING =
-  "text-2xl font-bold text-blue-900 dark:text-blue-300 mb-6 border-b border-gray-300 dark:border-gray-700 pb-2";
-const ENTRY_TITLE = "text-base font-bold text-gray-900 dark:text-gray-100";
-// Primary body / list content (descriptions, news, talks, service).
-const BODY_TEXT = "text-sm leading-relaxed text-gray-700 dark:text-gray-300";
-// Secondary metadata (authors, venue, dates, advisor, location) — recedes.
-const META_TEXT = "text-sm text-gray-600 dark:text-gray-400";
-const ENTRY_LINK =
-  "inline-flex items-center gap-1 text-sm text-blue-900 dark:text-blue-300 hover:text-blue-700 dark:hover:text-blue-200 font-medium";
-const INLINE_LINK = "text-blue-900 dark:text-blue-300 hover:underline";
-
+const NEWS_VISIBLE_COUNT = 3;
+function Section({
+  id,
+  title,
+  children,
+  note,
+  noteBeforeTitle = false,
+}: {
+  id: string;
+  title: string;
+  children: ReactNode;
+  note?: ReactNode;
+  noteBeforeTitle?: boolean;
+}) {
+  return (
+    <section
+      id={id}
+      className="content-section"
+      aria-labelledby={`${id}-title`}
+    >
+      <header
+        className={`section-label${noteBeforeTitle ? " section-label-inline" : ""}`}
+      >
+        {noteBeforeTitle && note}
+        <h2 id={`${id}-title`}>{title}</h2>
+        {!noteBeforeTitle && note}
+      </header>
+      <div className="section-body">{children}</div>
+    </section>
+  );
+}
+function Organization({ org }: { org: Org }) {
+  return org.url ? (
+    <a
+      className="text-link"
+      href={org.url}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      {org.name}
+    </a>
+  ) : (
+    <>{org.name}</>
+  );
+}
+function Logo({ logo }: { logo: ExperienceLogo }) {
+  return (
+    <div
+      className="experience-logo"
+      style={{ backgroundColor: logo.background ?? "#fff" }}
+    >
+      <img
+        src={logo.src}
+        alt={logo.alt}
+        width="64"
+        height="48"
+        loading="lazy"
+        decoding="async"
+      />
+    </div>
+  );
+}
 export default function MainContent() {
   const [newsExpanded, setNewsExpanded] = useState(false);
-
-  // Newest first, by date string (YYYY-MM[-DD] sorts lexicographically).
   const sortedNews = [...news].sort((a, b) => b.date.localeCompare(a.date));
-  const hasHiddenNews = sortedNews.length > NEWS_VISIBLE_COUNT;
-  const visibleNews =
-    hasHiddenNews && !newsExpanded
-      ? sortedNews.slice(0, NEWS_VISIBLE_COUNT)
-      : sortedNews;
-
+  const shownNews = newsExpanded
+    ? sortedNews
+    : sortedNews.slice(0, NEWS_VISIBLE_COUNT);
+  const awardYears = Array.from(
+    new Set(awards.map((award) => award.year.slice(0, 4))),
+  ).sort((a, b) => b.localeCompare(a));
+  const latestPosts = [...blogPosts]
+    .sort((a, b) => b.publishedAt.localeCompare(a.publishedAt))
+    .slice(0, 2);
   return (
-    <div className="w-full space-y-12">
-      {/* About Me Section */}
-      <section id="about">
-        <h2 className={SECTION_HEADING}>About Me</h2>
-        <div className="text-[15px] text-gray-700 dark:text-gray-300 leading-relaxed space-y-4">
+    <div className="home-content">
+      <Section id="about" title="About me">
+        <div className="about-prose">
           <p>
             <RichText content={personalInfo.aboutMe.intro} />
           </p>
-
+          <p>
+            <RichText content={personalInfo.currentRole} />
+          </p>
           <p>{personalInfo.aboutMe.researchFocus}</p>
-
-          <div className="pl-6 border-l-4 border-blue-900 dark:border-blue-300 bg-blue-50 dark:bg-blue-900/20 py-4 pr-4 rounded-r-lg">
-            <p className="font-bold mb-3 text-blue-900 dark:text-blue-300">
-              Research Interests:
-            </p>
-            <ul className="list-disc list-inside space-y-2 text-sm">
-              {personalInfo.aboutMe.researchInterests.map((interest, idx) => (
-                <li key={idx}>
-                  <span className="font-semibold">{interest.title}:</span>{" "}
-                  {interest.description}
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {personalInfo.aboutMe.goal && <p>{personalInfo.aboutMe.goal}</p>}
         </div>
-      </section>
-
-      {/* News Section */}
+        <dl className="research-interests">
+          {personalInfo.aboutMe.researchInterests.map((interest) => (
+            <div key={interest.title}>
+              <dt>{interest.title}</dt>
+              <dd>{interest.description}</dd>
+            </div>
+          ))}
+        </dl>
+        {personalInfo.aboutMe.goal && <p>{personalInfo.aboutMe.goal}</p>}
+      </Section>
       {sortedNews.length > 0 && (
-        <section id="news">
-          <h2 className={SECTION_HEADING}>News</h2>
-          <ul className="space-y-3">
-            {visibleNews.map((item) => (
-              <li
-                key={item.id}
-                className="flex gap-3 text-gray-700 dark:text-gray-300"
-              >
-                <span className="text-sm font-semibold text-blue-900 dark:text-blue-300 whitespace-nowrap min-w-[4.5rem]">
-                  {item.date}
-                </span>
-                <span className="text-sm leading-relaxed">
+        <Section id="news" title="News">
+          <ul className="news-list" id="news-list">
+            {shownNews.map((item) => (
+              <li key={item.id}>
+                <time dateTime={item.date}>{item.date}</time>
+                <div>
                   <RichText content={item.content} />
-                </span>
+                </div>
               </li>
             ))}
           </ul>
-          {hasHiddenNews && (
+          {sortedNews.length > NEWS_VISIBLE_COUNT && (
             <button
-              type="button"
-              onClick={() => setNewsExpanded((v) => !v)}
-              className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-blue-900 dark:text-blue-300 hover:text-blue-700 dark:hover:text-blue-200"
+              className="disclosure-button"
+              aria-expanded={newsExpanded}
+              aria-controls="news-list"
+              onClick={() => setNewsExpanded(!newsExpanded)}
             >
               {newsExpanded ? (
                 <>
-                  Show less <ChevronUp className="w-4 h-4" />
+                  Show less <ChevronUp size={15} />
                 </>
               ) : (
                 <>
-                  Show all {sortedNews.length}{" "}
-                  <ChevronDown className="w-4 h-4" />
+                  All {sortedNews.length} updates <ChevronDown size={15} />
                 </>
               )}
             </button>
           )}
-        </section>
+        </Section>
       )}
-
-      {/* Publications Section */}
-      <section id="publications">
-        <h2 className="text-2xl font-bold text-blue-900 dark:text-blue-300 mb-2 border-b border-gray-300 dark:border-gray-700 pb-2">
-          Selected Publications
-        </h2>
-        <p className="text-xs text-gray-500 dark:text-gray-400 mb-6 italic">
-          (*: equal contribution; †: corresponding author) ·{" "}
+      <Section
+        id="publications"
+        noteBeforeTitle
+        title="Selected publications"
+        note={
           <a
-            href="https://scholar.google.com/citations?user=WbnbTWoAAAAJ"
+            className="section-more"
+            href={socialLinks.googleScholar}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-900 dark:text-blue-300 hover:underline not-italic"
           >
-            Show all publications
+            All publications <ArrowUpRight size={14} />
           </a>
+        }
+      >
+        <p className="publication-note">
+          * Equal contribution &nbsp; † Corresponding author
         </p>
-        <div className="space-y-6">
+        <div className="publication-list">
           {publications.map((pub) => (
-            <div
-              key={pub.id}
-              className="grid grid-cols-[7rem_minmax(0,1fr)] gap-4 sm:grid-cols-[11rem_minmax(0,1fr)] sm:gap-5"
-            >
+            <article className="publication" key={pub.id}>
               <a
+                className="publication-image"
                 href={pub.links[0]?.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group block"
                 aria-label={`Open ${pub.title}`}
               >
-                <div className="flex h-24 items-center justify-center overflow-hidden rounded-lg border border-gray-200 bg-white p-1.5 shadow-sm dark:border-gray-700 sm:h-32">
-                  <img
-                    src={pub.thumbnail.src}
-                    alt={pub.thumbnail.alt}
-                    loading="lazy"
-                    decoding="async"
-                    className="h-full w-full object-contain transition-transform duration-200 group-hover:scale-[1.02]"
-                  />
-                </div>
+                <img
+                  src={pub.thumbnail.src}
+                  alt={pub.thumbnail.alt}
+                  width="720"
+                  height="480"
+                  loading="lazy"
+                  decoding="async"
+                />
               </a>
-              <div className="min-w-0 space-y-2">
-                <h3 className={ENTRY_TITLE}>{pub.title}</h3>
-                <p className={META_TEXT}>
+              <div className="publication-details">
+                <p className="publication-venue">{pub.venue}</p>
+                <h3>
+                  <a
+                    href={pub.links[0]?.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {pub.title}
+                  </a>
+                </h3>
+                <p className="publication-authors">
                   {pub.authors.split("Yibin Liu").map((part, index, array) => (
                     <span key={index}>
                       {part}
-                      {index < array.length - 1 && (
-                        <strong className="text-gray-800 dark:text-gray-200">
-                          Yibin Liu
-                        </strong>
-                      )}
+                      {index < array.length - 1 && <strong>Yibin Liu</strong>}
                     </span>
                   ))}
                 </p>
-                <p className={`${META_TEXT} italic`}>{pub.venue}</p>
                 {pub.contribution && (
-                  <p className={META_TEXT}>Contribution: {pub.contribution}</p>
+                  <p className="publication-contribution">
+                    Contribution: {pub.contribution}
+                  </p>
                 )}
-
-                <div className="flex flex-wrap gap-2 mt-2 items-center">
-                  {pub.links.map((link, idx) => (
+                <div className="publication-links">
+                  {pub.links.map((link) => (
                     <a
-                      key={idx}
+                      key={link.url}
                       href={link.url}
                       target="_blank"
-                      rel="noopener"
-                      className={ENTRY_LINK}
+                      rel="noopener noreferrer"
                     >
-                      {link.text} <ExternalLink className="w-3 h-3" />
+                      {link.text}
+                      <ArrowUpRight size={13} aria-hidden="true" />
                     </a>
                   ))}
                   {pub.githubStars && (
                     <img
-                      alt="GitHub repo stars"
+                      className="stars-badge"
                       src={pub.githubStars}
-                      className="h-5"
+                      alt="GitHub repository stars"
+                      width="90"
+                      height="20"
+                      loading="lazy"
                     />
                   )}
                 </div>
               </div>
-            </div>
+            </article>
           ))}
         </div>
-      </section>
-
-      {/* Research Experiences Section */}
-      <section id="research">
-        <h2 className={SECTION_HEADING}>Research Experiences</h2>
-        <div className="space-y-4">
+      </Section>
+      <Section id="research" title="Research experience">
+        <div className="experience-list">
           {researchExperiences.map((exp) => (
-            <div key={exp.id} className="flex items-start gap-4">
-              <div
-                className="flex h-16 w-20 shrink-0 items-center justify-center rounded-lg border border-gray-200 p-2 shadow-sm dark:border-gray-700"
-                style={{ backgroundColor: exp.logo.background ?? "white" }}
-              >
-                <img
-                  src={exp.logo.src}
-                  alt={exp.logo.alt}
-                  loading="lazy"
-                  decoding="async"
-                  className="h-full w-full object-contain"
-                />
-              </div>
-              <div className="min-w-0 flex-1 space-y-1">
-                <h3 className={ENTRY_TITLE}>
-                  {exp.titleLink ? (
-                    <a
-                      href={exp.titleLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-blue-900 dark:text-blue-300 hover:text-blue-700 dark:hover:text-blue-200 transition-colors"
-                    >
-                      {exp.title}
-                    </a>
-                  ) : (
-                    exp.title
-                  )}
-                </h3>
-                {exp.advisors && exp.advisors.length > 0 && (
-                  <p className={META_TEXT}>
-                    Advisor:{" "}
-                    {exp.advisors.map((advisor, idx) => (
-                      <span key={idx}>
-                        {idx > 0 && ", "}
-                        {advisor.url ? (
-                          <a
-                            href={advisor.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className={INLINE_LINK}
-                          >
-                            {advisor.name}
-                          </a>
-                        ) : (
-                          advisor.name
-                        )}
-                      </span>
-                    ))}
-                  </p>
-                )}
-                <p className={META_TEXT}>
-                  {exp.location} • {exp.duration}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Industry Experiences Section */}
-      <section id="industry">
-        <h2 className={SECTION_HEADING}>Industry Experiences</h2>
-        <div className="space-y-4">
-          {industryExperiences.map((exp) => (
-            <div key={exp.id} className="flex items-start gap-4">
-              <div
-                className="flex h-16 w-20 shrink-0 items-center justify-center rounded-lg border border-gray-200 p-2 shadow-sm dark:border-gray-700"
-                style={{ backgroundColor: exp.logo.background ?? "white" }}
-              >
-                <img
-                  src={exp.logo.src}
-                  alt={exp.logo.alt}
-                  loading="lazy"
-                  decoding="async"
-                  className="h-full w-full object-contain"
-                />
-              </div>
-              <div className="min-w-0 flex-1 space-y-1">
-                <h3 className={ENTRY_TITLE}>
-                  {exp.org.url ? (
-                    <a
-                      href={exp.org.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={INLINE_LINK}
-                    >
-                      {exp.org.name}
-                    </a>
-                  ) : (
-                    exp.org.name
-                  )}
-                  {exp.parentOrg && (
-                    <>
-                      {exp.parentOrgOpen ?? " ("}
-                      {exp.parentOrgPrefix ?? "part of "}
-                      {exp.parentOrg.url ? (
-                        <a
-                          href={exp.parentOrg.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className={INLINE_LINK}
-                        >
-                          {exp.parentOrg.name}
-                        </a>
-                      ) : (
-                        exp.parentOrg.name
-                      )}
-                      {exp.parentOrgClose ?? ")"}
-                    </>
-                  )}
-                  {exp.titleSeparator ?? " – "}
-                  {exp.role}
-                </h3>
-                {exp.mentor && (
-                  <p className={META_TEXT}>
-                    Mentor:{" "}
-                    {exp.mentor.url ? (
+            <article className="experience" key={exp.id}>
+              <Logo logo={exp.logo} />
+              <div className="experience-body">
+                <div className="experience-summary">
+                  <h3>
+                    {exp.titleLink ? (
                       <a
-                        href={exp.mentor.url}
+                        href={exp.titleLink}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={INLINE_LINK}
                       >
-                        {exp.mentor.name}
+                        {exp.title}
                       </a>
                     ) : (
-                      exp.mentor.name
+                      exp.title
                     )}
+                  </h3>
+                  <p className="experience-date">{exp.duration}</p>
+                  {exp.advisors && exp.advisors.length > 0 && (
+                    <p className="experience-advisors">
+                      Advisor:{" "}
+                      {exp.advisors.map((advisor, index) => (
+                        <span key={advisor.name}>
+                          {index > 0 && ", "}
+                          <Organization org={advisor} />
+                        </span>
+                      ))}
+                    </p>
+                  )}
+                  <p className="meta-text experience-location">
+                    {exp.location}
+                  </p>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </Section>
+      <Section id="industry" title="Industry experience">
+        <div className="experience-list">
+          {industryExperiences.map((exp) => (
+            <article className="experience" key={exp.id}>
+              <Logo logo={exp.logo} />
+              <div className="experience-body">
+                <div className="experience-summary">
+                  <h3>
+                    <Organization org={exp.org} />
+                    {exp.parentOrg && (
+                      <span className="parent-org">
+                        {exp.parentOrgOpen ?? " ("}
+                        {exp.parentOrgPrefix ?? "part of "}
+                        <Organization org={exp.parentOrg} />
+                        {exp.parentOrgClose ?? ")"}
+                      </span>
+                    )}
+                  </h3>
+                  <p className="experience-role">{exp.role}</p>
+                  <p className="experience-date">
+                    {exp.employmentType && `${exp.employmentType} · `}
+                    {exp.duration}
+                  </p>
+                  <p className="meta-text experience-location">
+                    {exp.location}
+                  </p>
+                </div>
+                {exp.mentor && (
+                  <p>
+                    Mentor: <Organization org={exp.mentor} />
                   </p>
                 )}
-                {exp.focus && <p className={META_TEXT}>Focus: {exp.focus}</p>}
-                <p className={META_TEXT}>
-                  {exp.employmentType && `${exp.employmentType} · `}
-                  {exp.duration}
-                </p>
-                <p className={META_TEXT}>{exp.location}</p>
+                {exp.focus && <p>Focus: {exp.focus}</p>}
                 {exp.highlights && exp.highlights.length > 0 && (
-                  <ul
-                    className={`list-disc list-outside ml-5 mt-1 space-y-1 ${META_TEXT}`}
-                  >
-                    {exp.highlights.map((item, idx) => (
-                      <li key={idx}>{item}</li>
+                  <ul className="experience-highlights">
+                    {exp.highlights.map((item) => (
+                      <li key={item}>{item}</li>
                     ))}
                   </ul>
                 )}
               </div>
-            </div>
+            </article>
           ))}
         </div>
-      </section>
-
-      {/* Talks Section (hidden — uncomment to show)
-      <section id="talks">
-        <h2 className={SECTION_HEADING}>Talks</h2>
-        <div className="space-y-3">
-          {talks.map((talk) => (
-            <div key={talk.id} className="space-y-1">
-              <p className={BODY_TEXT}>
-                <span className="font-semibold text-gray-900 dark:text-gray-100">
-                  {talk.title}
-                </span>
-                {talk.event && `, ${talk.event}`}
-                {talk.location && `, ${talk.location}`}
-                {talk.date && ` • ${talk.date}`}
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
-      */}
-
-      {/* Academic Service Section */}
-      <section id="service">
-        <h2 className={SECTION_HEADING}>Academic Service</h2>
-        <div className="space-y-3">
+      </Section>
+      <Section id="service" title="Academic service">
+        <ul className="service-list">
           {academicService.map((service) => (
-            <div key={service.id} className="space-y-1">
-              <p className={BODY_TEXT}>
-                <span className="font-semibold text-gray-900 dark:text-gray-100">
-                  {service.role}
-                </span>{" "}
-                <RichText content={service.description} />
-                {service.githubBadge && (
-                  <>
-                    {" "}
-                    <img
-                      src={service.githubBadge}
-                      alt="GitHub stars"
-                      className="inline-block ml-2"
-                    />
-                  </>
-                )}
-              </p>
+            <li key={service.id}>
+              <strong>{service.role}</strong>{" "}
+              <RichText content={service.description} />
+              {service.githubBadge && (
+                <img
+                  className="stars-badge"
+                  src={service.githubBadge}
+                  alt="GitHub repository stars"
+                  width="90"
+                  height="20"
+                  loading="lazy"
+                />
+              )}
+            </li>
+          ))}
+        </ul>
+      </Section>
+      <Section id="awards" title="Awards">
+        <div className="awards-list">
+          {awardYears.map((year) => (
+            <div className="award-year" key={year}>
+              <h3>{year}</h3>
+              <ul>
+                {awards
+                  .filter((award) => award.year.startsWith(year))
+                  .map((award) => (
+                    <li key={award.id}>
+                      <time dateTime={award.year}>
+                        {award.year.length > 4
+                          ? new Date(
+                              `${award.year}-01T00:00:00Z`,
+                            ).toLocaleDateString("en-US", {
+                              month: "short",
+                              timeZone: "UTC",
+                            })
+                          : award.year}
+                      </time>
+                      <span>{award.title}</span>
+                    </li>
+                  ))}
+              </ul>
             </div>
           ))}
         </div>
-      </section>
-
-      {/* Awards Section */}
-      <section id="awards">
-        <h2 className={SECTION_HEADING}>Awards</h2>
-        <div className="space-y-4">
-          {awards.map((award) => (
-            <div key={award.id} className="space-y-1">
-              <div className="flex items-baseline gap-3">
-                <span className="text-sm font-semibold text-blue-900 dark:text-blue-300 whitespace-nowrap min-w-[4rem]">
-                  {award.year}
-                </span>
-                <span className={BODY_TEXT}>{award.title}</span>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Misc Section */}
-      <section id="misc">
-        <h2 className={SECTION_HEADING}>Misc</h2>
-        <p className={BODY_TEXT}>{misc.intro}</p>
+      </Section>
+      {latestPosts.length > 0 && (
+        <Section
+          id="writing"
+          title="Latest writing"
+          note={
+            <a className="section-more" href="/blog/">
+              Visit the blog <ArrowUpRight size={14} />
+            </a>
+          }
+        >
+          <div className="writing-list">
+            {latestPosts.map((post) => (
+              <article key={post.id}>
+                <time dateTime={post.publishedAt}>
+                  {formatBlogDate(post.publishedAt)}
+                </time>
+                <h3>
+                  <a href={`/blog/${post.slug}/`}>
+                    {post.title}
+                    <ArrowUpRight size={18} aria-hidden="true" />
+                  </a>
+                </h3>
+                <p>{post.excerpt}</p>
+              </article>
+            ))}
+          </div>
+        </Section>
+      )}
+      <Section id="misc" title="Beyond research">
+        <p className="misc-intro">{misc.intro}</p>
         <JourneyTrail content={misc} />
-      </section>
-
-      {/* Technologies Section (hidden — uncomment to show)
-      <section id="technologies">
-        <h2 className={SECTION_HEADING}>Technologies</h2>
-        <div className="space-y-4">
-          <div>
-            <h3 className={`${ENTRY_TITLE} mb-2`}>Languages</h3>
-            <p className={BODY_TEXT}>
-              {technologies.languages}
-            </p>
-          </div>
-          <div>
-            <h3 className={`${ENTRY_TITLE} mb-2`}>Technologies</h3>
-            <p className={BODY_TEXT}>
-              {technologies.technologies}
-            </p>
-          </div>
-        </div>
-      </section>
-      */}
+      </Section>
     </div>
   );
 }

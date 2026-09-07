@@ -1,4 +1,5 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo } from "react";
+import { motion, useScroll } from "framer-motion";
 import ReactMarkdown, { type Components } from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { ArrowLeft, CalendarDays, Clock3, RefreshCw } from "lucide-react";
@@ -8,7 +9,12 @@ import GiscusComments from "@/components/GiscusComments";
 import ShareButtons from "@/components/ShareButtons";
 import TableOfContents from "@/components/TableOfContents";
 import { getBlogPost } from "@/config/blogConfig";
-import { extractTableOfContents, formatBlogDate, headingToId, reactNodeToText } from "@/lib/blog";
+import {
+  extractTableOfContents,
+  formatBlogDate,
+  headingToId,
+  reactNodeToText,
+} from "@/lib/blog";
 import { usePageMetadata } from "@/lib/usePageMetadata";
 import NotFound from "@/pages/NotFound";
 
@@ -16,15 +22,23 @@ const SITE_URL = "https://10-oasis-01.github.io";
 
 const markdownComponents: Components = {
   h2: ({ node: _node, children, ...props }) => (
-    <h2 id={headingToId(reactNodeToText(children))} {...props}>{children}</h2>
+    <h2 id={headingToId(reactNodeToText(children))} {...props}>
+      {children}
+    </h2>
   ),
   h3: ({ node: _node, children, ...props }) => (
-    <h3 id={headingToId(reactNodeToText(children))} {...props}>{children}</h3>
+    <h3 id={headingToId(reactNodeToText(children))} {...props}>
+      {children}
+    </h3>
   ),
   a: ({ node: _node, href = "", children, ...props }) => {
     const external = href.startsWith("http://") || href.startsWith("https://");
     return (
-      <a href={href} {...props} {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}>
+      <a
+        href={href}
+        {...props}
+        {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+      >
         {children}
       </a>
     );
@@ -42,13 +56,18 @@ interface BlogPostPageProps {
 
 export default function BlogPostPage({ slug }: BlogPostPageProps) {
   const post = getBlogPost(slug);
-  const [progress, setProgress] = useState(0);
+  const { scrollYProgress } = useScroll();
   const canonical = `${SITE_URL}/blog/${slug}/`;
   const absoluteImage = post ? `${SITE_URL}${post.ogImage}` : undefined;
-  const tableOfContents = useMemo(() => extractTableOfContents(post?.content ?? ""), [post?.content]);
+  const tableOfContents = useMemo(
+    () => extractTableOfContents(post?.content ?? ""),
+    [post?.content],
+  );
 
   usePageMetadata({
-    title: post ? `${post.title} | Yibin (Leon) Liu` : "Article not found | Yibin (Leon) Liu",
+    title: post
+      ? `${post.title} | Yibin (Leon) Liu`
+      : "Article not found | Yibin (Leon) Liu",
     description: post?.excerpt ?? "The requested article could not be found.",
     canonical,
     image: absoluteImage,
@@ -57,14 +76,9 @@ export default function BlogPostPage({ slug }: BlogPostPageProps) {
 
   useEffect(() => {
     if (!post) return;
-
-    const updateProgress = () => {
-      const total = document.documentElement.scrollHeight - window.innerHeight;
-      setProgress(total > 0 ? Math.min(100, (window.scrollY / total) * 100) : 0);
-    };
-    updateProgress();
-    window.addEventListener("scroll", updateProgress, { passive: true });
-    return () => window.removeEventListener("scroll", updateProgress);
+    const id = window.location.hash.slice(1);
+    if (id)
+      document.getElementById(id)?.scrollIntoView({ behavior: "instant" });
   }, [post]);
 
   useEffect(() => {
@@ -91,84 +105,97 @@ export default function BlogPostPage({ slug }: BlogPostPageProps) {
   if (!post) return <NotFound />;
 
   return (
-    <div className="min-h-screen bg-[#fbfaf7] text-slate-900">
-      <div className="fixed inset-x-0 top-0 z-[60] h-1 bg-transparent" aria-hidden="true">
-        <div className="h-full bg-blue-800 transition-[width] duration-100" style={{ width: `${progress}%` }} />
+    <div className="site-page">
+      <div className="reading-progress" aria-hidden="true">
+        <motion.div style={{ scaleX: scrollYProgress }} />
       </div>
       <Navigation />
-
-      <main className="pt-16">
-        <header className="border-b border-slate-200 bg-white">
-          <div className="mx-auto max-w-5xl px-4 py-10 sm:px-6 sm:py-14 lg:px-8 lg:py-16">
-            <a href="/blog/" className="mb-8 inline-flex items-center gap-2 text-sm font-semibold text-blue-900 hover:text-blue-700">
-              <ArrowLeft className="h-4 w-4" aria-hidden="true" /> Back to the blog
-            </a>
-
-            <div className="flex flex-wrap gap-2">
-              {post.tags.map((tag) => (
-                <span key={tag} className="rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-900">{tag}</span>
-              ))}
-            </div>
-
-            <h1 className="article-serif mt-5 max-w-4xl text-4xl font-semibold leading-[1.08] text-slate-950 sm:text-5xl lg:text-6xl">
-              {post.title}
-            </h1>
-            <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-600 sm:text-xl">{post.subtitle}</p>
-
-            <div className="mt-7 flex flex-wrap items-center gap-x-5 gap-y-3 text-sm text-slate-500">
-              <span className="font-semibold text-slate-800">By {post.author}</span>
-              <span className="flex items-center gap-1.5">
-                <CalendarDays className="h-4 w-4" aria-hidden="true" />
-                <time dateTime={post.publishedAt}>{formatBlogDate(post.publishedAt)}</time>
+      <main id="main-content" className="article-page">
+        <header className="article-header site-shell">
+          <a href="/blog/" className="back-link">
+            <ArrowLeft size={16} aria-hidden="true" />
+            Back to the blog
+          </a>
+          <ul className="plain-tags" aria-label="Topics">
+            {post.tags.map((tag) => (
+              <li key={tag}>{tag}</li>
+            ))}
+          </ul>
+          <h1 className="article-serif">{post.title}</h1>
+          <p className="article-subtitle">{post.subtitle}</p>
+          <div className="article-meta">
+            <span>
+              By <strong>{post.author}</strong>
+            </span>
+            <span>
+              <CalendarDays size={15} aria-hidden="true" />
+              <time dateTime={post.publishedAt}>
+                {formatBlogDate(post.publishedAt)}
+              </time>
+            </span>
+            <span>
+              <Clock3 size={15} aria-hidden="true" />
+              {post.readTime}
+            </span>
+            {post.updatedAt !== post.publishedAt && (
+              <span>
+                <RefreshCw size={15} aria-hidden="true" />
+                Updated {formatBlogDate(post.updatedAt)}
               </span>
-              <span className="flex items-center gap-1.5"><Clock3 className="h-4 w-4" aria-hidden="true" />{post.readTime}</span>
-              {post.updatedAt !== post.publishedAt && (
-                <span className="flex items-center gap-1.5"><RefreshCw className="h-4 w-4" aria-hidden="true" />Updated {formatBlogDate(post.updatedAt)}</span>
-              )}
-            </div>
-
-            <div className="mt-7">
-              <ShareButtons title={post.title} text={post.excerpt} url={canonical} />
-            </div>
+            )}
           </div>
+          <ShareButtons
+            title={post.title}
+            text={post.excerpt}
+            url={canonical}
+          />
         </header>
-
-        <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14 lg:grid lg:grid-cols-[minmax(0,760px)_240px] lg:justify-center lg:gap-16 lg:px-8 lg:py-16">
-          <div className="min-w-0">
+        <div className="site-shell article-layout">
+          <div className="article-body">
             <img
-              src={post.ogImage}
+              src={
+                post.ogImage === "/assets/long-journey.jpg"
+                  ? "/assets/optimized/long-journey-1280.webp"
+                  : post.ogImage
+              }
               alt="A long mountain trail leading toward distant peaks"
-              className="mb-8 aspect-[1200/630] w-full rounded-2xl border border-slate-200 object-cover object-bottom shadow-[0_18px_55px_-38px_rgba(15,23,42,0.55)] sm:mb-10"
+              width="1200"
+              height="630"
+              className="article-cover"
             />
-
-            <div className="mb-8 rounded-xl border border-blue-100 bg-blue-50/70 p-5 text-sm leading-6 text-slate-700 sm:text-base">
-              <strong className="text-blue-950">Last checked: {post.lastChecked}.</strong>{" "}
-              Requirements, deadlines, funding programs, and fee-waiver rules change every cycle. Treat this guide as a map, then verify every decision on current department and university websites.
+            <div className="article-notice">
+              <strong>Last checked: {post.lastChecked}.</strong> Requirements,
+              deadlines, funding programs, and fee-waiver rules change every
+              cycle. Treat this guide as a map, then verify every decision on
+              current department and university websites.
             </div>
-
             <TableOfContents items={tableOfContents} compact />
-
-            <article className="blog-prose mt-9 sm:mt-11">
-              <ReactMarkdown remarkPlugins={[remarkGfm]} components={markdownComponents}>
+            <article className="blog-prose">
+              <ReactMarkdown
+                remarkPlugins={[remarkGfm]}
+                components={markdownComponents}
+              >
                 {post.content}
               </ReactMarkdown>
             </article>
-
-            <div className="mt-14 rounded-2xl border border-slate-200 bg-white p-6 sm:p-8">
-              <p className="article-serif text-2xl font-semibold leading-snug text-slate-950">Was this guide useful?</p>
-              <p className="mt-2 leading-7 text-slate-600">Share it with someone navigating the same hidden curriculum.</p>
-              <div className="mt-5"><ShareButtons title={post.title} text={post.excerpt} url={canonical} /></div>
+            <div className="article-share">
+              <h2 className="article-serif">Was this guide useful?</h2>
+              <p>
+                Share it with someone navigating the same hidden curriculum.
+              </p>
+              <ShareButtons
+                title={post.title}
+                text={post.excerpt}
+                url={canonical}
+              />
             </div>
-
             <GiscusComments />
           </div>
-
-          <aside className="sticky top-24 hidden h-fit max-h-[calc(100vh-7rem)] overflow-y-auto border-l border-slate-200 pl-7 lg:block">
+          <aside className="article-toc">
             <TableOfContents items={tableOfContents} />
           </aside>
         </div>
       </main>
-
       <Footer />
     </div>
   );

@@ -2,15 +2,15 @@ import type { MiscContent } from "./types";
 
 export const misc: MiscContent = {
   intro:
-    "In my free time, I enjoy hiking, running, and playing tennis. I also love exploring great food, coffee, and drinks. Beyond that, I genuinely enjoy spending time with animals — well, most of them :)",
+    "In my free time, I enjoy hiking, running, and playing tennis. I also love exploring great food, coffee, and drinks. Beyond that, I enjoy spending time with animals (well, most of them).",
   journeyHeading: "A few milestones I’ve completed along my journey so far.",
-  journeyHint: "Click the mountain to reveal the trail",
+  journeyHint: "Explore my hiking, running, and travel milestones",
   milestones: [
     {
       year: 2022,
       title: "45 Days on the Tibetan Plateau",
       description:
-        "Traveled solo across the Tibetan Plateau for 45 days at age 18, reaching elevations above 5,000 m — still my favorite place in China.",
+        "Traveled solo across the Tibetan Plateau for 45 days at age 18, reaching elevations above 5,000 m, still my favorite place in China.",
       location: "Tibetan Plateau, China",
       metrics: ["Age 18", "45 days", "5,000 m+"],
       icon: "plateau",

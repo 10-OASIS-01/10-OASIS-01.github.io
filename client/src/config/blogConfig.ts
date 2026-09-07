@@ -1,4 +1,5 @@
-import postsManifest from "@/content/blog/posts.json";
+import { blogMetadata } from "./blogMetadata";
+export { blogConfig } from "./blogMetadata";
 import hiddenCurriculum from "@/content/blog/the-hidden-curriculum-of-cs-phd-applications.md?raw";
 
 export interface BlogPost {
@@ -22,17 +23,10 @@ const contentBySlug: Record<string, string> = {
   "the-hidden-curriculum-of-cs-phd-applications": hiddenCurriculum,
 };
 
-export const blogPosts: BlogPost[] = postsManifest.posts.map((post) => ({
+export const blogPosts: BlogPost[] = blogMetadata.map((post) => ({
   ...post,
   content: contentBySlug[post.slug] ?? "",
 }));
-
-export const blogConfig = {
-  title: "Blog",
-  eyebrow: "NOTES & FIELD GUIDES",
-  description:
-    "Practical guides, research notes, and reflections on building a life in AI and robotics.",
-};
 
 export const giscusConfig = {
   repo: "10-OASIS-01/10-OASIS-01.github.io",

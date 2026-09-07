@@ -7,7 +7,7 @@ const root = process.cwd();
 describe("CS PhD Application Coach promotion", () => {
   it("promotes the standalone Skill from the blog index", async () => {
     const blogPage = await readFile(path.join(root, "client/src/pages/Blog.tsx"), "utf8");
-    expect(blogPage).toContain('const APPLICATION_COACH_URL = "https://10-oasis-01.github.io/cs-phd-application-coach/"');
+    expect(blogPage).toMatch(/const APPLICATION_COACH_URL\s*=\s*"https:\/\/10-oasis-01\.github\.io\/cs-phd-application-coach\/"/);
     expect(blogPage).toContain("href={APPLICATION_COACH_URL}");
     expect(blogPage).toContain("NEW PROJECT");
     expect(blogPage).toContain("Open project");

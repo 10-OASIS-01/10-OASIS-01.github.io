@@ -25,26 +25,25 @@ export const aboutMe: AboutMe = {
     },
     ", starting in Spring 2027 under the supervision of Presidential Young Professor ",
     { text: "Prof. Weiyu Liu", url: "https://www.weiyuliu.com/" },
-    ". Currently I am a Tech Genius Team Intern (TGT) at ",
-    { text: "Joy Future Academy", url: "https://research.joyai.com/career" },
-    ", JD.COM. I work on compositional generation for long-horizon manipulation and mobile manipulation. I received my B.Eng. in Artificial Intelligence from Northeastern University, China.",
+    ". I received my B.Eng. in Artificial Intelligence from Northeastern University, China.",
   ],
-  researchFocus: `My research focuses on lifelong and compositional robot learning, uncertainty-aware multimodal reasoning and planning, and grounded program synthesis for open-world mobile manipulation. My long-term goal is to build agentic robots that learn from real-world interaction and reliably transfer their knowledge across novel tasks, objects, and environments.`,
+  researchFocus:
+    "My long-term goal is to build agentic robots that learn from real-world interaction and transfer their knowledge reliably across new tasks, objects, and environments. My research connects three directions:",
   researchInterests: [
     {
       title: "Lifelong and Compositional Robot Learning",
       description:
-        "Developing embodied agents that continually acquire reusable skills, abstractions, and world knowledge, and compositionally recombine prior experience to solve novel tasks without retraining from scratch.",
+        "Learning reusable skills and world knowledge that robots can combine to solve new tasks without retraining from scratch.",
     },
     {
       title: "Uncertainty-Aware Multimodal Reasoning and Planning",
       description:
-        "Integrating vision, language, memory, and action to support physical reasoning, active information gathering, long-horizon planning, replanning, and failure recovery in partially observed open-world environments.",
+        "Combining vision, language, memory, and action to plan over long horizons, gather information, and recover from failures.",
     },
     {
       title: "Grounded Program Synthesis for Embodied Agents",
       description:
-        "Learning structured and interpretable task and action programs from language, visual observations, demonstrations, and interaction, and grounding these programs into executable robot behaviors.",
+        "Turning language, observations, demonstrations, and interaction into structured, interpretable programs that robots can execute.",
     },
   ],
 };

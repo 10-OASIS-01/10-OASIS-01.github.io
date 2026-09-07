@@ -10,10 +10,19 @@ export const personalInfo: PersonalInfo = {
   chineseName: "刘艺彬",
   pronouns: "he/him",
   title: "Incoming PhD Student",
+  heroSummary: "I study how robots learn, reason, and act in an open world.",
+  arrival: "Spring 2027",
+  currentRole: [
+    "Currently a TGT Intern at ",
+    {
+      text: "Joy Future Academy, JD.COM",
+      url: "https://research.joyai.com/career",
+    },
+    ", working on compositional generation for long-horizon and mobile manipulation.",
+  ],
   university: "National University of Singapore",
   location: "Shenzhen, China",
-  // Rendered with an anti-crawler trick (@ → 😊) in SidebarProfile — keep as-is.
-  email: "yibin.leon.liu@outlook.com",
+  email: "yibin.leon.liu😊outlook.com",
 
   // Hero Section
   heroQuote: "Live, travel, adventure, bless, and don't be sorry.",

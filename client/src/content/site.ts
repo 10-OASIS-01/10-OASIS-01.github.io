@@ -24,8 +24,7 @@ export const socialLinks: SocialLinks = {
   googleScholar: "https://scholar.google.com/citations?user=WbnbTWoAAAAJ",
   github: "https://github.com/10-OASIS-01",
   linkedin: "https://www.linkedin.com/in/yibin-leon-liu",
-  bluesky: "https://bsky.app/profile/yibinleonliu.bsky.social",
-  email: "mailto:liuyibin@stumail.neu.edu.cn",
+  x: "https://x.com/yibinleonliu",
 };
 
 export const navigationMenu: NavItem[] = [

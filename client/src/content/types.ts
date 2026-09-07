@@ -48,6 +48,10 @@ export interface AboutMe {
 }
 
 export interface PersonalInfo {
+  /** Short, explicitly authored introduction for the homepage hero. */
+  heroSummary: string;
+  arrival: string;
+  currentRole: RichText;
   name: string;
   chineseName: string;
   pronouns: string;
@@ -219,8 +223,7 @@ export interface SocialLinks {
   googleScholar?: string;
   github?: string;
   linkedin?: string;
-  bluesky?: string;
-  email?: string;
+  x?: string;
 }
 
 export interface NavItem {

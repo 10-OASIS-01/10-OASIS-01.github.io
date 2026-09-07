@@ -1,7 +1,6 @@
 import type { RichText as RichTextData } from "@/config/siteConfig";
 
-const LINK_CLASS =
-  "text-blue-900 dark:text-blue-300 hover:underline";
+const LINK_CLASS = "text-link";
 
 /**
  * Renders a RichText value: plain strings as text, `{ text, url }` segments as
@@ -24,7 +23,7 @@ export default function RichText({ content }: { content: RichTextData }) {
           >
             {segment.text}
           </a>
-        )
+        ),
       )}
     </>
   );
