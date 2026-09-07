@@ -6,6 +6,16 @@
  */
 import type { AboutMe, Org } from "./types";
 
+export const outreachNote = {
+  introduction:
+    "I’m always happy to connect and collaborate with people from all backgrounds.",
+  invitation: "I’m especially glad to support students from",
+  term: "underrepresented groups",
+  closing: "so feel free to reach out for a chat about life, career plans, or research. 👋 🤗",
+  definition:
+    "Including, but not limited to, people with marginalized identities, gender, racial, and ethnic minorities, and people from economically disadvantaged backgrounds.",
+};
+
 /** Advisors (the first is linked in the intro below). */
 export const advisors: Org[] = [
   { name: "Prof. Weiyu Liu", url: "https://www.weiyuliu.com/" },

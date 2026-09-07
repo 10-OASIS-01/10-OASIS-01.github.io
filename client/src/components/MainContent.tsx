@@ -16,6 +16,7 @@ import { formatBlogDate } from "@/lib/blog";
 import type { Org, ExperienceLogo } from "@/content/types";
 import RichText from "./RichText";
 import JourneyTrail from "./JourneyTrail";
+import OutreachNote from "./OutreachNote";
 
 const NEWS_VISIBLE_COUNT = 3;
 function Section({
@@ -111,6 +112,7 @@ export default function MainContent() {
           ))}
         </dl>
         {personalInfo.aboutMe.goal && <p>{personalInfo.aboutMe.goal}</p>}
+        <OutreachNote />
       </Section>
       {sortedNews.length > 0 && (
         <Section id="news" title="News">

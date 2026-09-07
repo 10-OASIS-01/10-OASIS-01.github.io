@@ -536,6 +536,39 @@
   color: var(--muted-foreground);
   line-height: 1.7;
 }
+.outreach-note {
+  margin-top: 28px;
+  padding: 20px 24px;
+  width: 100%;
+  max-width: 70ch;
+  background: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 16px;
+  line-height: 1.75;
+}
+.outreach-term {
+  color: var(--primary);
+  cursor: pointer;
+  text-decoration: underline dotted;
+  text-underline-offset: 4px;
+}
+.outreach-term:hover,
+.outreach-term[aria-expanded="true"] {
+  text-decoration-style: solid;
+}
+.outreach-definition {
+  width: 320px;
+  max-width: calc(100vw - 32px);
+  border-radius: 8px;
+  box-shadow: none;
+  font-size: 13px;
+  line-height: 1.7;
+}
+.outreach-definition p:first-child {
+  color: var(--primary);
+  margin-bottom: 6px;
+}
 .news-list {
   list-style: none;
   display: grid;
