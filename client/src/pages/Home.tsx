@@ -1,9 +1,9 @@
 import { useEffect } from "react";
-import Navigation from "@/components/Navigation";
-import HeroSection from "@/components/HeroSection";
-import SidebarProfile from "@/components/SidebarProfile";
-import MainContent from "@/components/MainContent";
-import Footer from "@/components/Footer";
+import Navigation from "@/components/layout/Navigation";
+import Footer from "@/components/layout/Footer";
+import HeroSection from "@/features/home/HeroSection";
+import SidebarProfile from "@/features/home/SidebarProfile";
+import MainContent from "@/features/home/MainContent";
 
 export default function Home() {
   useEffect(() => {

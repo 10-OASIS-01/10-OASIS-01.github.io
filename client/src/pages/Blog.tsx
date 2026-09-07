@@ -1,8 +1,11 @@
 import { ArrowUpRight } from "lucide-react";
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
-import { blogMetadata as blogPosts, blogConfig } from "@/config/blogMetadata";
-import { formatBlogDate } from "@/lib/blog";
+import Navigation from "@/components/layout/Navigation";
+import Footer from "@/components/layout/Footer";
+import {
+  blogMetadata as blogPosts,
+  blogConfig,
+} from "@/features/blog/metadata";
+import { formatBlogDate } from "@/features/blog/utils";
 import { usePageMetadata } from "@/lib/usePageMetadata";
 
 const SITE_URL = "https://10-oasis-01.github.io";

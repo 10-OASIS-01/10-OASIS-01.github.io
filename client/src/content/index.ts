@@ -1,9 +1,8 @@
 /**
  * Content barrel — single import surface for all site content.
  *
- * Components import from here (or from `@/config/siteConfig`, a thin shim that
- * re-exports this module). Each named export below lives in its own file under
- * `content/`, so editing one section never touches another.
+ * Components import from this directory. Each named export below lives in its
+ * own file, so editing one section never touches another.
  */
 export type * from "./types";
 

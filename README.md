@@ -1,205 +1,100 @@
-# Yibin (Leon) Liu - Academic Personal Website
+# Yibin (Leon) Liu — Academic Homepage
 
-A modern, responsive academic personal website built with React and deployed as a static site on GitHub Pages.
+Personal academic website for Yibin (Leon) Liu, built with React, TypeScript,
+Vite, and Tailwind CSS. The site includes the academic homepage, publication
+record, experience, blog, dark mode, and static metadata for GitHub Pages.
 
+[View the live website](https://10-oasis-01.github.io/)
 
-Visit the live website: [https://10-oasis-01.github.io](https://10-oasis-01.github.io)
+## Project structure
 
-Also check out these incredible researchers' homepages based on Yibin's version: 
-
-[Buqiang Xu, Zhejiang University](https://xubqpanda.github.io/),
-
-
-
-> **For detailed development information, see [DEVELOPMENT.md](DEVELOPMENT.md)**
-
-## Features
-
-- **Modern Tech Stack**: Built with React 19, Vite, TypeScript, and Tailwind CSS
-- **Responsive Design**: Optimized for all devices using Radix UI components
-- **SEO Optimized**: Comprehensive meta tags, structured data, and sitemap
-- **Fast Performance**: Static site generation with optimized builds
-- **Academic Focus**: Designed specifically for academic professionals and researchers
-
-## Architecture
-
-This is a **single-page application (SPA)** deployed as a static website:
-
-- **Frontend**: React 19 with TypeScript
-- **Styling**: Tailwind CSS with Radix UI components  
-- **Routing**: Wouter for client-side routing
-- **Build Tool**: Vite for fast development and optimized builds
-- **Deployment**: GitHub Pages with automated CI/CD
-
-## Project Structure
-
-```
-├── client/                 # Frontend application
-│   ├── src/               # Source code
-│   │   ├── components/    # React components
-│   │   ├── content/       # Site content, one file per section (edit here)
-│   │   ├── config/        # siteConfig.ts shim (re-exports content/)
-│   │   ├── pages/         # Page components
-│   │   └── styles/        # Global styles
-│   ├── public/
-│   │   └── assets/        # Uploaded files: avatar, backgrounds, CV, PDFs
-│   └── index.html         # HTML template
-├── .github/workflows/     # GitHub Actions
-└── package.json           # Dependencies and scripts
+```text
+client/
+├── public/                 Static assets, fonts, favicons, and SEO files
+└── src/
+    ├── components/
+    │   ├── layout/         Shared navigation, footer, and error boundary
+    │   └── ui/             The two Radix primitives used by the site
+    ├── content/            Typed homepage content and blog source files
+    ├── contexts/           Theme state
+    ├── features/
+    │   ├── blog/           Blog components, metadata, and helpers
+    │   └── home/           Homepage sections and interactions
+    ├── lib/                Shared utilities
+    ├── pages/              Route-level components
+    ├── App.tsx             Router and providers
+    ├── index.css           Global styles and design tokens
+    └── main.tsx            Browser entry point
+docs/                       Development notes
+scripts/                    Image optimization and static-page generation
+source-assets/              Original images kept outside the deployed bundle
+tests/                      Content and route regression tests
 ```
 
-## Quick Start
+## Local development
 
-### Prerequisites
-- Node.js 18+
-- pnpm (recommended) or npm
+Node.js 22 and pnpm are recommended.
 
-### Getting Started
 ```bash
-# Clone the repository
-git clone https://github.com/10-OASIS-01/10-OASIS-01.github.io.git
-cd 10-OASIS-01.github.io
-
-# Install dependencies
 pnpm install
-
-# Start development server
 pnpm dev
-
-# Build for production
-pnpm build
-
-# Preview production build
-pnpm preview
 ```
 
-### Available Scripts
-- `pnpm dev` - Start development server
-- `pnpm build` - Build for production
-- `pnpm preview` - Preview production build
-- `pnpm check` - Type checking
-- `pnpm format` - Format code with Prettier
+Useful commands:
 
-For detailed development documentation, including architecture, configuration, and deployment guides, see [DEVELOPMENT.md](DEVELOPMENT.md).
+```bash
+pnpm check       # TypeScript validation
+pnpm test        # Vitest regression tests
+pnpm build       # Production build and static blog pages
+pnpm preview     # Preview dist/public locally
+pnpm format      # Format tracked source files
+```
 
-## Customization
+## Editing content
 
-### Editing content
-All site content lives in `client/src/content/`, **one file per section** — edit
-the file you care about, nothing else:
+Homepage content is maintained in `client/src/content/`:
 
-| File | Controls |
-|------|----------|
-| `personal.ts` | Name, title, affiliation, hero quote, email |
-| `about.ts` | About-me intro, research focus & interests, advisors |
-| `news.ts` | News / updates (newest first, collapses past 5) |
-| `publications.ts` | Publications list |
-| `experience.ts` | Research & industry experience |
-| `activities.ts` | Talks, academic service, awards |
-| `projects.ts` | Projects and the skills list |
-| `site.ts` | Asset paths, social links, navigation menu |
-| `types.ts` | Field definitions (the safety net — see below) |
+| File              | Content                                              |
+| ----------------- | ---------------------------------------------------- |
+| `personal.ts`     | Name, affiliation, status, location, and hero quote  |
+| `about.ts`        | Introduction, research directions, and outreach note |
+| `news.ts`         | News items in reverse chronological order            |
+| `publications.ts` | Selected publications and resource links             |
+| `experience.ts`   | Research and industry experience                     |
+| `activities.ts`   | Talks, service, and awards                           |
+| `misc.ts`         | Interests and travel milestones                      |
+| `site.ts`         | Asset paths, social links, navigation, and metadata  |
 
-Every file is typed, so a bad edit (a dropped field, a truncated string) is
-caught by `pnpm check`, which **runs in CI before each deploy** — a broken edit
-fails the check instead of breaking the live site. You can edit these files
-directly in the GitHub web UI and the site auto-deploys on commit.
+Shared field definitions live in `client/src/content/types.ts`. Run
+`pnpm check` after editing content so malformed entries are caught before
+deployment.
 
-Inline links inside a paragraph (e.g. an advisor's name in the intro, or a
-linked phrase in an academic-service entry) are declared as data: a list of
-plain strings and `{ text, url }` segments. No need to touch component code to
-add or move a link.
+Blog articles live in `client/src/content/blog/`. To add an article:
 
-> `client/src/config/siteConfig.ts` still works as an import path — it simply
-> re-exports everything from `content/`.
+1. Add its metadata to `posts.json`.
+2. Add the Markdown file and register it in `client/src/features/blog/config.ts`.
+3. Add its permanent URL to `client/public/sitemap.xml`.
 
-### Uploaded files (avatar, backgrounds, CV, PDFs)
-Put files in `client/public/assets/` and reference them by the absolute path
-`/assets/<filename>`. The key paths (avatar, hero background, CV) are centralized
-in **`client/src/content/site.ts`** under `assets` — to swap one, drop in the new
-file and update that single line. The CV menu item reuses `assets.cv`
-automatically.
+## Static assets
 
-### "Last updated" date
-Shown in the footer and set **automatically** to the date of the last git commit
-at build time (injected via `vite.config.ts`). It updates on every push/deploy —
-no manual editing needed.
+Public files live in `client/public/`. The main profile image, hero photograph,
+CV, and social URLs are centralized in `client/src/content/site.ts`. Keep the
+original publication images in `source-assets/publications/`; the image
+optimization script uses them to regenerate WebP display assets without copying
+the large source files into the deployed site.
 
-### Blog Posts
-Blog articles live in `client/src/content/blog/` as Markdown. To add one:
-
-1. Add the article metadata to `posts.json`.
-2. Add the matching `.md` file and register its import in
-   `client/src/config/blogConfig.ts`.
-3. Add the new permalink to `client/public/sitemap.xml`.
-
-The build generates a real `index.html` for the blog and every registered post,
-so direct links have article-specific Open Graph, Twitter Card, canonical, and
-JSON-LD metadata on GitHub Pages.
+```bash
+python3 scripts/optimize-images.py
+```
 
 ## Deployment
 
-The site automatically deploys to GitHub Pages via GitHub Actions when changes are pushed to the `main` or `master` branch. The workflow runs a **type check (`pnpm check`) before building**, so a malformed content edit (a dropped field, a truncated string) fails the check instead of breaking the live site — safe to edit content directly in the GitHub web UI.
+Pushes to `master` or `main` trigger `.github/workflows/deploy.yml`. The workflow
+installs dependencies, runs type checks and tests, builds `dist/public`, creates
+the SPA fallback, and deploys the result to GitHub Pages.
 
-For manual deployment and advanced configuration, see the [Deployment section in DEVELOPMENT.md](DEVELOPMENT.md#deployment).
-
-## SEO Features
-
-- Comprehensive meta tags for search engines
-- Open Graph tags for social media sharing  
-- Twitter Card support
-- JSON-LD structured data for academic profiles
-- XML sitemap generation
-- Robots.txt for crawler guidance
-- Canonical URLs and proper heading hierarchy
-
-## Performance
-
-- Static site generation for fast loading
-- Code splitting and lazy loading
-- Optimized images and assets
-- Minimal bundle size
-- Progressive Web App features
-
-## Technology Stack
-
-### Core
-- **React 19** - UI framework
-- **TypeScript** - Type safety
-- **Vite** - Build tool and dev server
-
-### Styling & UI
-- **Tailwind CSS** - Utility-first CSS framework
-- **Radix UI** - Accessible component primitives
-- **Framer Motion** - Animation library
-
-### Tools & Utilities
-- **Wouter** - Lightweight router
-- **Lucide React** - Icon library
-- **React Hook Form** - Form handling
-- **Date-fns** - Date utilities
-
-## Documentation
-
-- [README.md](README.md) - This file, quick start and overview
-- [DEVELOPMENT.md](DEVELOPMENT.md) - Comprehensive development documentation
-- [FILE_STORAGE_GUIDE.md](FILE_STORAGE_GUIDE.md) - File storage and asset management
+More implementation details are in [docs/DEVELOPMENT.md](docs/DEVELOPMENT.md).
 
 ## License
 
-MIT License - see [LICENSE](LICENSE) file for details.
-
-## Contributing
-
-Contributions, issues, and feature requests are welcome! Please read [DEVELOPMENT.md](DEVELOPMENT.md) for development guidelines.
-
-## Contact
-
-**Yibin (Leon) Liu**
-- Email: kevin.lau.stu@gmail.com
-- GitHub: [@10-OASIS-01](https://github.com/10-OASIS-01)
-- LinkedIn: [yibin-leon-liu](https://www.linkedin.com/in/yibin-leon-liu)
-
----
-
-*This website serves as a professional academic portfolio showcasing research, publications, and professional experience in the field of Artificial Intelligence and Robotics.*
+[MIT](LICENSE)

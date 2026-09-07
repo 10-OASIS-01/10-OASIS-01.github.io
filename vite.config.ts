@@ -1,12 +1,10 @@
-import { jsxLocPlugin } from "@builder.io/vite-plugin-jsx-loc";
 import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react";
 import { execSync } from "child_process";
 import path from "path";
 import { defineConfig } from "vite";
 
-
-const plugins = [react(), tailwindcss(), jsxLocPlugin()];
+const plugins = [react(), tailwindcss()];
 
 /**
  * "Last updated" date, frozen at build time. Since deploys are triggered by a
@@ -29,7 +27,7 @@ export default defineConfig({
   define: {
     __LAST_UPDATED__: JSON.stringify(resolveLastUpdated()),
   },
-  base: '/',
+  base: "/",
   resolve: {
     alias: {
       "@": path.resolve(import.meta.dirname, "client", "src"),

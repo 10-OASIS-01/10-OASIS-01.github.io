@@ -7,7 +7,6 @@ package-lock.json
 dist/
 build/
 *.dist
-docs/
 
 # Generated files
 *.tsbuildinfo

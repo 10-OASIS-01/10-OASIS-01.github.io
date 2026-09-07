@@ -3,18 +3,18 @@ import { motion, useScroll } from "framer-motion";
 import ReactMarkdown, { type Components } from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { ArrowLeft, CalendarDays, Clock3, RefreshCw } from "lucide-react";
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
-import GiscusComments from "@/components/GiscusComments";
-import ShareButtons from "@/components/ShareButtons";
-import TableOfContents from "@/components/TableOfContents";
-import { getBlogPost } from "@/config/blogConfig";
+import Navigation from "@/components/layout/Navigation";
+import Footer from "@/components/layout/Footer";
+import GiscusComments from "@/features/blog/GiscusComments";
+import ShareButtons from "@/features/blog/ShareButtons";
+import TableOfContents from "@/features/blog/TableOfContents";
+import { getBlogPost } from "@/features/blog/config";
 import {
   extractTableOfContents,
   formatBlogDate,
   headingToId,
   reactNodeToText,
-} from "@/lib/blog";
+} from "@/features/blog/utils";
 import { usePageMetadata } from "@/lib/usePageMetadata";
 import NotFound from "@/pages/NotFound";
 

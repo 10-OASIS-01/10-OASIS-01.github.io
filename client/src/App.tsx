@@ -1,8 +1,8 @@
 import { lazy, Suspense } from "react";
-import Navigation from "./components/Navigation";
+import Navigation from "@/components/layout/Navigation";
 import NotFound from "@/pages/NotFound";
 import { Route, Switch } from "wouter";
-import ErrorBoundary from "./components/ErrorBoundary";
+import ErrorBoundary from "@/components/layout/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 const Blog = lazy(() => import("./pages/Blog"));

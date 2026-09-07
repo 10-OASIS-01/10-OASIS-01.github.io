@@ -132,7 +132,7 @@ await writeRoute(
     title: "Blog | Yibin (Leon) Liu",
     description: blogDescription,
     canonical: `${siteUrl}/blog/`,
-    image: `${siteUrl}${posts[0]?.ogImage ?? "/assets/avatar.jpg"}`,
+    image: `${siteUrl}${posts[0]?.ogImage ?? "/assets/head-2026.jpg"}`,
     type: "website",
     keywords:
       "Yibin Liu, Leon Liu, AI research blog, CS PhD applications, robotics",
