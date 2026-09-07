@@ -195,7 +195,7 @@
   display: inline-flex;
   align-items: center;
   gap: 15px;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 550;
   letter-spacing: -0.025em;
   white-space: nowrap;
@@ -204,7 +204,7 @@
   padding-left: 15px;
   border-left: 1px solid var(--border);
   color: var(--muted-foreground);
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 400;
   letter-spacing: 0.08em;
 }
@@ -385,21 +385,15 @@
   font-size: 12px;
   margin-top: 4px;
 }
-.profile-email {
-  display: inline-block;
-  font-size: 12px;
-  color: var(--primary);
-  margin-top: 20px;
-  overflow-wrap: anywhere;
-}
 .profile-links {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 40px));
   justify-content: center;
   gap: 2px;
   margin-top: 16px;
 }
-.profile-links a {
+.profile-links a,
+.email-trigger {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -411,13 +405,62 @@
     background-color 150ms ease,
     color 150ms ease;
 }
-.profile-links a:hover {
+.profile-links a:hover,
+.email-trigger:hover {
   background: var(--muted);
   color: var(--foreground);
 }
-.profile-email:hover {
-  text-decoration: underline;
-  text-underline-offset: 4px;
+.email-trigger {
+  cursor: pointer;
+  background: transparent;
+  flex-shrink: 0;
+}
+.profile-links a,
+.profile-links .email-trigger {
+  width: 100%;
+}
+.email-popover {
+  width: 288px;
+  max-width: calc(100vw - 32px);
+  border-radius: 8px;
+  box-shadow: none;
+}
+.email-address {
+  color: var(--primary);
+  font-size: 13px;
+  overflow-wrap: anywhere;
+  user-select: text;
+}
+.email-hint,
+.email-copy-status {
+  color: var(--muted-foreground);
+  font-size: 12px;
+  line-height: 1.5;
+  margin-top: 8px;
+}
+.email-copy-status:empty {
+  display: none;
+}
+.email-actions {
+  display: grid;
+  gap: 4px;
+  margin-top: 12px;
+}
+.email-actions button,
+.email-actions a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: 8px;
+  border-radius: 4px;
+  color: var(--primary);
+  font-size: 14px;
+  cursor: pointer;
+}
+.email-actions button:hover,
+.email-actions a:hover {
+  background: var(--muted);
 }
 .home-content {
   min-width: 0;
@@ -882,21 +925,12 @@
   align-items: start;
   gap: 32px;
 }
-.profile-email,
-.footer-email {
-  cursor: pointer;
-  text-align: inherit;
-  background: transparent;
-}
 .footer-name {
   display: block;
   font-size: 16px;
   font-weight: 550;
 }
 .footer-email {
-  display: inline-block;
-  font-size: 13px;
-  color: var(--primary);
   margin-top: 6px;
 }
 .footer-top p {
@@ -1482,12 +1516,12 @@
     gap: 6px;
   }
   .wordmark {
-    font-size: 14px;
-    gap: 8px;
+    font-size: 16px;
+    gap: 6px;
   }
   .wordmark-cn {
-    padding-left: 8px;
-    font-size: 12px;
+    padding-left: 6px;
+    font-size: 13px;
     letter-spacing: 0.03em;
   }
   .nav-controls {
@@ -1733,9 +1767,6 @@
   .profile-affiliation {
     margin-top: 9px;
   }
-  .profile-email {
-    margin-top: 10px;
-  }
   .section-label {
     margin-bottom: 24px;
   }
@@ -1754,12 +1785,12 @@
     margin-top: 20px;
   }
   .profile-sidebar {
-    grid-template-columns: 82px minmax(0, 1fr);
-    align-items: start;
-    gap: 18px;
+    grid-template-columns: clamp(82px, 23vw, 140px) minmax(0, 1fr);
+    align-items: center;
+    gap: clamp(14px, 4vw, 26px);
   }
   .profile-portrait {
-    width: 82px;
+    width: 100%;
   }
   .profile-details h1 {
     font-size: 20px;
@@ -1768,9 +1799,6 @@
     font-size: 12px;
   }
   .profile-status {
-    font-size: 11px;
-  }
-  .profile-email {
     font-size: 11px;
   }
   .profile-links {

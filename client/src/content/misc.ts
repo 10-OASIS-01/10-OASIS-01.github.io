@@ -2,7 +2,7 @@ import type { MiscContent } from "./types";
 
 export const misc: MiscContent = {
   intro:
-    "In my free time, I enjoy hiking, running, and playing tennis. I also love exploring great food, coffee, and drinks. Beyond that, I enjoy spending time with animals (well, most of them).",
+    "In my free time, I enjoy hiking, running, and playing tennis. I also love exploring great food, coffee, and drinks. Beyond that, I enjoy spending time with animals — well, most of them :)",
   journeyHeading: "A few milestones I’ve completed along my journey so far.",
   journeyHint: "Explore my hiking, running, and travel milestones",
   milestones: [

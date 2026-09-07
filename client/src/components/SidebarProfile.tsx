@@ -21,8 +21,8 @@ export default function SidebarProfile() {
           {personalInfo.title} · {personalInfo.arrival}
         </p>
         <p className="profile-location">{personalInfo.location}</p>
-        <EmailContact className="profile-email" />
         <div className="profile-links" aria-label="Professional links">
+          <EmailContact className="profile-email" />
           {[
             { label: "CV", href: assets.cv, Icon: FileText },
             {

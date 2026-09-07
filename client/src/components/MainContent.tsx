@@ -23,13 +23,13 @@ function Section({
   title,
   children,
   note,
-  noteBeforeTitle = false,
+  inlineNote = false,
 }: {
   id: string;
   title: string;
   children: ReactNode;
   note?: ReactNode;
-  noteBeforeTitle?: boolean;
+  inlineNote?: boolean;
 }) {
   return (
     <section
@@ -38,11 +38,10 @@ function Section({
       aria-labelledby={`${id}-title`}
     >
       <header
-        className={`section-label${noteBeforeTitle ? " section-label-inline" : ""}`}
+        className={`section-label${inlineNote ? " section-label-inline" : ""}`}
       >
-        {noteBeforeTitle && note}
         <h2 id={`${id}-title`}>{title}</h2>
-        {!noteBeforeTitle && note}
+        {note}
       </header>
       <div className="section-body">{children}</div>
     </section>
@@ -147,7 +146,7 @@ export default function MainContent() {
       )}
       <Section
         id="publications"
-        noteBeforeTitle
+        inlineNote
         title="Selected publications"
         note={
           <a
