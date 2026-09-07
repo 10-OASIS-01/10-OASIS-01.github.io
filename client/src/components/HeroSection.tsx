@@ -1,4 +1,5 @@
 import { personalInfo, images } from "@/config/siteConfig";
+import { ArrowDown } from "lucide-react";
 
 export default function HeroSection() {
   return (
@@ -16,6 +17,10 @@ export default function HeroSection() {
         <p>{personalInfo.heroQuote}</p>
         <cite>{personalInfo.heroAttribution}</cite>
       </blockquote>
+      <a className="hero-scroll-link" href="#profile">
+        <span>Scroll to explore</span>
+        <ArrowDown size={18} strokeWidth={1.5} aria-hidden="true" />
+      </a>
     </section>
   );
 }

@@ -42,3 +42,10 @@ export const siteMetadata: SiteMetadata = {
   // Updates automatically on every push/deploy — no need to edit by hand.
   lastUpdated: __LAST_UPDATED__,
 };
+
+export const footerContent = {
+  forkInvitation:
+    "Feel free to fork this GitHub repository and develop your own version.",
+  repositoryLabel: "@10-OASIS-01/10-OASIS-01.github.io",
+  repositoryUrl: "https://github.com/10-OASIS-01/10-OASIS-01.github.io",
+};

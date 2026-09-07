@@ -51,6 +51,12 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
       window.removeEventListener("storage", sync);
     };
   }, []);
+  useEffect(
+    () => () => {
+      document.documentElement.classList.remove("theme-transitioning");
+    },
+    [],
+  );
   useEffect(() => {
     const root = document.documentElement;
     const isDark = theme === "dark";
@@ -60,7 +66,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
       !window.matchMedia("(prefers-reduced-motion: reduce)").matches
     ) {
       root.classList.add("theme-transitioning");
-      // Apply transition styles before changing the theme's color variables.
+      // Interpolate the palette once; descendants inherit the same color each frame.
       void root.offsetWidth;
     }
     root.classList.toggle("dark", isDark);
@@ -71,7 +77,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     );
     return () => {
       window.clearTimeout(cleanup);
-      root.classList.remove("theme-transitioning");
+      // Keep an in-progress transition when a rapid toggle reverses its direction.
     };
   }, [theme]);
   const setPreference = (value: ThemePreference) => {

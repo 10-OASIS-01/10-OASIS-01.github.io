@@ -35,7 +35,9 @@ export const aboutMe: AboutMe = {
     },
     ", starting in Spring 2027 under the supervision of Presidential Young Professor ",
     { text: "Prof. Weiyu Liu", url: "https://www.weiyuliu.com/" },
-    ". I received my B.Eng. in Artificial Intelligence from Northeastern University, China.",
+    ". I received my B.Eng. in Artificial Intelligence from ",
+    { text: "Northeastern University, China", url: "https://english.neu.edu.cn/" },
+    ".",
   ],
   researchFocus:
     "My long-term goal is to build agentic robots that learn from real-world interaction and transfer their knowledge reliably across new tasks, objects, and environments. My research connects three directions:",

@@ -21,4 +21,5 @@ export {
   socialLinks,
   navigationMenu,
   siteMetadata,
+  footerContent,
 } from "./site";

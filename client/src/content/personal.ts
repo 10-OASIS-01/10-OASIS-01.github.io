@@ -13,7 +13,7 @@ export const personalInfo: PersonalInfo = {
   heroSummary: "I study how robots learn, reason, and act in an open world.",
   arrival: "Spring 2027",
   currentRole: [
-    "Currently a TGT Intern at ",
+    "Currently a Tech Genius Team Intern (TGT) at ",
     {
       text: "Joy Future Academy, JD.COM",
       url: "https://research.joyai.com/career",

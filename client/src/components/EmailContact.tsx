@@ -3,7 +3,13 @@ import { useState } from "react";
 import { Copy, Mail, Send } from "lucide-react";
 import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
 
-export default function EmailContact({ className }: { className: string }) {
+export default function EmailContact({
+  className,
+  textLabel = false,
+}: {
+  className: string;
+  textLabel?: boolean;
+}) {
   const [open, setOpen] = useState(false);
   const [copyStatus, setCopyStatus] = useState("");
 
@@ -31,9 +37,13 @@ export default function EmailContact({ className }: { className: string }) {
           type="button"
           className={`email-trigger ${className}`}
           aria-label="Email Leon"
-          title="Email"
+          data-instant-label={textLabel ? undefined : "Email"}
         >
-          <Mail size={20} strokeWidth={1.7} aria-hidden="true" />
+          {textLabel ? (
+            "Email"
+          ) : (
+            <Mail size={20} strokeWidth={1.7} aria-hidden="true" />
+          )}
         </button>
       </PopoverTrigger>
       <PopoverContent
@@ -46,10 +56,13 @@ export default function EmailContact({ className }: { className: string }) {
         <p className="email-hint">Replace 😊 with @ before sending.</p>
         <div className="email-actions">
           <button type="button" onClick={copyEmail}>
-            <Copy size={16} aria-hidden="true" /> Copy email
+            {!textLabel && <Copy size={16} aria-hidden="true" />} Copy email
           </button>
-          <a href={`mailto:${personalInfo.email}`} onClick={() => setOpen(false)}>
-            <Send size={16} aria-hidden="true" /> Send email
+          <a
+            href={`mailto:${personalInfo.email}`}
+            onClick={() => setOpen(false)}
+          >
+            {!textLabel && <Send size={16} aria-hidden="true" />} Send email
           </a>
         </div>
         <p className="email-copy-status" role="status">

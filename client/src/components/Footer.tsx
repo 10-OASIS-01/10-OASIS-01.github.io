@@ -1,5 +1,10 @@
 import EmailContact from "./EmailContact";
-import { siteMetadata, personalInfo, socialLinks } from "@/config/siteConfig";
+import {
+  siteMetadata,
+  personalInfo,
+  socialLinks,
+  footerContent,
+} from "@/config/siteConfig";
 import { useEffect, useRef, useState } from "react";
 
 export default function Footer() {
@@ -61,14 +66,52 @@ export default function Footer() {
     <footer className="site-footer">
       <div className="site-shell">
         <div className="footer-top">
-          <div>
+          <div className="footer-intro">
             <a className="footer-name" href="/">
               {personalInfo.name}
+              <span>{personalInfo.chineseName}</span>
             </a>
-            <EmailContact className="footer-email" />
-            <p>
+            <p className="footer-location">
               {personalInfo.pronouns} · {personalInfo.location}
             </p>
+            <div className="footer-social" aria-label="Contact links">
+              <EmailContact className="footer-email" textLabel />
+              <a
+                href={socialLinks.googleScholar}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Google Scholar
+              </a>
+              <a
+                href={socialLinks.github}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub
+              </a>
+              <a
+                href={socialLinks.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                LinkedIn
+              </a>
+              <a href={socialLinks.x} target="_blank" rel="noopener noreferrer">
+                X
+              </a>
+            </div>
+            <div className="footer-fork">
+              <p>{footerContent.forkInvitation}</p>
+              <a
+                className="text-link"
+                href={footerContent.repositoryUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {footerContent.repositoryLabel}
+              </a>
+            </div>
           </div>
           <section className="visitor-section" aria-label="Visitor statistics">
             <div className="visitor-heading">
@@ -78,7 +121,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                MapMyVisitors ↗
+                MapMyVisitors
               </a>
             </div>
             <div className="visitor-frame">
@@ -109,31 +152,12 @@ export default function Footer() {
               )}
             </div>
           </section>
-          <div className="footer-links">
-            <a
-              href={socialLinks.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              LinkedIn
-            </a>
-            <a href={socialLinks.x} target="_blank" rel="noopener noreferrer">
-              X
-            </a>
-            <a
-              href="https://github.com/10-OASIS-01/10-OASIS-01.github.io"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Website source
-            </a>
-            <p className="footer-updated">Updated {siteMetadata.lastUpdated}</p>
-          </div>
         </div>
         <div className="footer-bottom">
           <p>
             © {new Date().getFullYear()} {personalInfo.name}
           </p>
+          <p className="footer-updated">Updated {siteMetadata.lastUpdated}</p>
         </div>
       </div>
     </footer>

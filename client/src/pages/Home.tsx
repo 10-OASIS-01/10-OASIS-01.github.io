@@ -17,7 +17,7 @@ export default function Home() {
       <Navigation />
       <main id="main-content">
         <HeroSection />
-        <div className="site-shell academic-layout">
+        <div id="profile" className="site-shell academic-layout" tabIndex={-1}>
           <SidebarProfile />
           <MainContent />
         </div>

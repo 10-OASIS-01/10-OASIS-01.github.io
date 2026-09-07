@@ -43,17 +43,160 @@
 }
 
 @font-face {
-  font-family: "Geist";
-  src: url("/fonts/geist-latin.woff2") format("woff2");
-  font-weight: 100 900;
+  font-family: "IBM Plex Sans";
+  src: url("/fonts/IBMPlexSans-Regular-Latin1.woff2") format("woff2");
+  font-weight: 400;
   font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "IBM Plex Sans";
+  src: url("/fonts/IBMPlexSans-Medium-Latin1.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "IBM Plex Sans";
+  src: url("/fonts/IBMPlexSans-SemiBold-Latin1.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "IBM Plex Sans";
+  src: url("/fonts/IBMPlexSans-Bold-Latin1.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "IBM Plex Sans";
+  src: url("/fonts/IBMPlexSans-Italic-Latin1.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "IBM Plex Sans";
+  src: url("/fonts/IBMPlexSans-MediumItalic-Latin1.woff2") format("woff2");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "IBM Plex Sans";
+  src: url("/fonts/IBMPlexSans-SemiBoldItalic-Latin1.woff2") format("woff2");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "IBM Plex Sans";
+  src: url("/fonts/IBMPlexSans-BoldItalic-Latin1.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
   font-display: swap;
 }
 @theme inline {
   --font-sans:
-    "Geist", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+    "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
     "Microsoft YaHei", sans-serif;
 }
+/* Animate palette values once at the root, not inherited colors on every element. */
+@property --background {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #fafaf8;
+}
+@property --foreground {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #252b30;
+}
+@property --card {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #f2f3f1;
+}
+@property --popover {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #fafaf8;
+}
+@property --primary {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #315571;
+}
+@property --primary-foreground {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #fff;
+}
+@property --secondary {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #edf0f1;
+}
+@property --secondary-foreground {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #35414a;
+}
+@property --muted {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #f0f1ef;
+}
+@property --muted-foreground {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #626b71;
+}
+@property --accent {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #e9eef0;
+}
+@property --accent-foreground {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #274c68;
+}
+@property --border {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #dfe2df;
+}
+@property --input {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #dfe2df;
+}
+@property --ring {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #315571;
+}
+@property --destructive {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #aa3737;
+}
+@property --destructive-foreground {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #fff;
+}
+
 :root {
   --background: #fafaf8;
   --foreground: #252b30;
@@ -130,9 +273,9 @@
   h2,
   h3,
   h4 {
-    font-weight: 550;
+    font-weight: 600;
     line-height: 1.25;
-    letter-spacing: -0.025em;
+    letter-spacing: -0.015em;
     text-wrap: balance;
   }
   p {
@@ -195,16 +338,16 @@
   display: inline-flex;
   align-items: center;
   gap: 15px;
-  font-size: 18px;
-  font-weight: 550;
-  letter-spacing: -0.025em;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.015em;
   white-space: nowrap;
 }
 .wordmark-cn {
   padding-left: 15px;
   border-left: 1px solid var(--border);
   color: var(--muted-foreground);
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 400;
   letter-spacing: 0.08em;
 }
@@ -293,7 +436,7 @@
   align-items: center;
   gap: 5px;
   font-size: 13px;
-  font-weight: 550;
+  font-weight: 600;
   min-height: 44px;
 }
 .blog-action-button:active {
@@ -342,6 +485,38 @@
   margin-top: 19px;
   font-size: 13px;
   font-style: normal;
+}
+.hero-scroll-link {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  min-height: 44px;
+  padding-inline: 12px;
+  color: #fff;
+  opacity: 0.62;
+  font-size: 12px;
+  line-height: 1.3;
+  border-radius: 4px;
+  transition: opacity 150ms ease;
+}
+.hero-scroll-link:hover,
+.hero-scroll-link:focus-visible {
+  opacity: 0.9;
+}
+.hero-scroll-link svg {
+  transition: transform 150ms ease;
+}
+.hero-scroll-link:hover svg {
+  transform: translateY(3px);
+}
+.hero-scroll-link:focus-visible {
+  outline-color: #fff;
 }
 .academic-layout {
   display: grid;
@@ -418,6 +593,39 @@
 .profile-links a,
 .profile-links .email-trigger {
   width: 100%;
+}
+[data-instant-label] {
+  position: relative;
+}
+[data-instant-label]::after {
+  content: attr(data-instant-label);
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 30;
+  width: max-content;
+  padding: 5px 8px;
+  border-radius: 4px;
+  background: var(--foreground);
+  color: var(--background);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.4;
+  white-space: nowrap;
+  pointer-events: none;
+  visibility: hidden;
+}
+[data-instant-label]:focus-visible::after {
+  visibility: visible;
+}
+@media (hover: hover) {
+  [data-instant-label]:hover::after {
+    visibility: visible;
+  }
+}
+[data-instant-label][aria-expanded="true"]::after {
+  visibility: hidden;
 }
 .email-popover {
   width: 288px;
@@ -503,7 +711,7 @@
   min-width: 0;
 }
 .about-prose {
-  max-width: 70ch;
+  max-width: 78ch;
   font-size: 16px;
   line-height: 1.8;
 }
@@ -524,11 +732,11 @@
   margin-top: 30px;
   display: grid;
   gap: 21px;
-  max-width: 70ch;
+  max-width: 78ch;
 }
 .research-interests dt {
   font-size: 15px;
-  font-weight: 550;
+  font-weight: 600;
 }
 .research-interests dd {
   margin-top: 3px;
@@ -536,11 +744,16 @@
   color: var(--muted-foreground);
   line-height: 1.7;
 }
-.outreach-note {
+.outreach-section {
+  position: relative;
   margin-top: 28px;
+  max-width: 78ch;
+  font-size: 16px;
+}
+.outreach-note {
   padding: 20px 24px;
   width: 100%;
-  max-width: 70ch;
+  max-width: 78ch;
   background: var(--muted);
   border: 1px solid var(--border);
   border-radius: 8px;
@@ -558,12 +771,30 @@
   text-decoration-style: solid;
 }
 .outreach-definition {
-  width: 320px;
-  max-width: calc(100vw - 32px);
+  position: absolute;
+  top: calc(100% - 11px);
+  left: 0;
+  z-index: 20;
+  width: min(100%, 420px);
+  padding: 16px;
+  background: var(--popover);
+  color: var(--popover-foreground);
+  border: 1px solid var(--border);
   border-radius: 8px;
-  box-shadow: none;
   font-size: 13px;
   line-height: 1.7;
+}
+.outreach-definition::before {
+  content: "";
+  position: absolute;
+  top: -7px;
+  left: calc(var(--outreach-arrow-left, 20px) - 7px);
+  width: 12px;
+  height: 12px;
+  background: var(--popover);
+  border-top: 1px solid var(--border);
+  border-left: 1px solid var(--border);
+  transform: rotate(45deg);
 }
 .outreach-definition p:first-child {
   color: var(--primary);
@@ -596,7 +827,7 @@
   background: transparent;
   border: 0;
   font-size: 12px;
-  font-weight: 550;
+  font-weight: 600;
   min-height: 40px;
 }
 .publication-note {
@@ -636,14 +867,14 @@
 .publication-venue {
   font-size: 11px;
   color: var(--primary);
-  font-weight: 650;
+  font-weight: 600;
   line-height: 1.5;
   margin-bottom: 7px;
 }
 .publication h3 {
   font-size: 17px;
   line-height: 1.4;
-  letter-spacing: -0.022em;
+  letter-spacing: -0.015em;
   font-weight: 600;
   text-wrap: pretty;
 }
@@ -677,7 +908,7 @@
   align-items: center;
   gap: 3px;
   font-size: 12px;
-  font-weight: 550;
+  font-weight: 600;
   color: var(--primary);
   min-height: 28px;
 }
@@ -793,7 +1024,7 @@
   list-style: none;
 }
 .service-list strong {
-  font-weight: 550;
+  font-weight: 600;
 }
 .service-list .stars-badge {
   margin-left: 8px;
@@ -854,7 +1085,7 @@
 .misc-intro {
   font-size: 16px;
   line-height: 1.8;
-  max-width: 65ch;
+  max-width: 69ch;
 }
 .personal-quote {
   margin-block: 30px;
@@ -954,41 +1185,72 @@
 }
 .footer-top {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(260px, 400px) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 400px);
   align-items: start;
-  gap: 32px;
+  gap: 64px;
+}
+.footer-intro {
+  min-width: 0;
 }
 .footer-name {
-  display: block;
-  font-size: 16px;
-  font-weight: 550;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 12px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.footer-name span {
+  color: var(--muted-foreground);
+  font-size: 14px;
+  font-weight: 400;
+}
+.footer-location {
+  color: var(--muted-foreground);
+  font-size: 13px;
+  margin-top: 8px;
+}
+.footer-social {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0 20px;
+  margin-top: 12px;
+  font-size: 13px;
+  color: var(--primary);
+}
+.footer-social a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
 }
 .footer-email {
+  width: auto;
+  border-radius: 0;
+}
+.footer-social a:hover,
+.footer-email:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  background: transparent;
+}
+.footer-fork {
+  margin-top: 24px;
+  max-width: 52ch;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--muted-foreground);
+}
+.footer-fork a {
+  display: inline-block;
   margin-top: 6px;
-}
-.footer-top p {
-  color: var(--muted-foreground);
-  font-size: 11px;
-  margin-top: 5px;
-}
-.footer-links {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 12px;
-  font-size: 12px;
-  color: var(--muted-foreground);
-  padding-top: 5px;
-}
-.footer-updated {
-  text-align: right;
-}
-.footer-links a:hover {
-  color: var(--primary);
+  overflow-wrap: anywhere;
 }
 .footer-bottom {
   margin-top: 32px;
-  font-size: 11px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  font-size: 12px;
   color: var(--muted-foreground);
 }
 .visitor-section {
@@ -1055,11 +1317,7 @@
 }
 .profile-name {
   font-size: 15px;
-  font-weight: 550;
-}
-.article-serif {
-  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
-  letter-spacing: -0.03em;
+  font-weight: 600;
 }
 .blog-index {
   padding-block: 70px 110px;
@@ -1216,7 +1474,7 @@
   gap: 7px;
 }
 .article-meta strong {
-  font-weight: 550;
+  font-weight: 600;
   color: var(--foreground);
 }
 .blog-action-button {
@@ -1238,7 +1496,7 @@
 }
 .article-layout {
   display: grid;
-  grid-template-columns: minmax(0, 760px) 220px;
+  grid-template-columns: minmax(0, 820px) 220px;
   justify-content: space-between;
   gap: 56px;
   padding-bottom: 96px;
@@ -1307,7 +1565,7 @@
   transform-origin: 0 50%;
 }
 .blog-prose {
-  max-width: 70ch;
+  max-width: 76ch;
   font-size: 17px;
   line-height: 1.85;
   overflow-wrap: anywhere;
@@ -1320,9 +1578,8 @@
 }
 .blog-prose h2,
 .blog-prose h3 {
-  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
-  letter-spacing: -0.025em;
-  font-weight: 550;
+  letter-spacing: -0.015em;
+  font-weight: 600;
 }
 .blog-prose h2 {
   font-size: 29px;
@@ -1366,7 +1623,7 @@
   color: var(--primary);
 }
 .blog-prose strong {
-  font-weight: 620;
+  font-weight: 600;
 }
 .blog-prose blockquote {
   border-left: 2px solid var(--primary);
@@ -1544,17 +1801,20 @@
   .site-shell {
     width: calc(100% - 40px);
   }
+  .site-header .site-shell {
+    width: calc(100% - 32px);
+  }
   .nav-layout {
     height: 64px;
     gap: 6px;
   }
   .wordmark {
-    font-size: 16px;
+    font-size: 17px;
     gap: 6px;
   }
   .wordmark-cn {
     padding-left: 6px;
-    font-size: 13px;
+    font-size: 14px;
     letter-spacing: 0.03em;
   }
   .nav-controls {
@@ -1655,15 +1915,10 @@
     grid-template-columns: 1fr;
     gap: 28px;
   }
-  .footer-links {
-    align-items: flex-start;
-  }
-  .footer-updated {
-    text-align: left;
-  }
   .footer-bottom {
-    font-size: 10px;
-    gap: 12px;
+    flex-wrap: wrap;
+    font-size: 11px;
+    gap: 8px 20px;
   }
   .blog-heading h1 {
     font-size: 52px;
@@ -1855,18 +2110,6 @@
     grid-template-columns: minmax(0, 1fr) minmax(240px, 320px);
     gap: 24px;
   }
-  .footer-links {
-    grid-column: 1;
-    grid-row: 2;
-    align-items: flex-start;
-  }
-  .visitor-section {
-    grid-column: 2;
-    grid-row: 1 / span 2;
-  }
-  .footer-updated {
-    text-align: left;
-  }
 }
 
 @media (max-width: 767px) {
@@ -1891,17 +2134,26 @@
   margin-top: 0;
 }
 
-/* Only animate palette changes after first paint; honor reduced motion. */
+/* Enable only for actual theme changes; hover and transform transitions stay independent. */
 @media (prefers-reduced-motion: no-preference) {
-  .theme-transitioning,
-  .theme-transitioning *,
-  .theme-transitioning *::before,
-  .theme-transitioning *::after {
+  :root.theme-transitioning {
     transition:
-      background-color 300ms ease,
-      color 300ms ease,
-      border-color 300ms ease,
-      fill 300ms ease,
-      stroke 300ms ease !important;
+      --background 300ms ease,
+      --foreground 300ms ease,
+      --card 300ms ease,
+      --popover 300ms ease,
+      --primary 300ms ease,
+      --primary-foreground 300ms ease,
+      --secondary 300ms ease,
+      --secondary-foreground 300ms ease,
+      --muted 300ms ease,
+      --muted-foreground 300ms ease,
+      --accent 300ms ease,
+      --accent-foreground 300ms ease,
+      --border 300ms ease,
+      --input 300ms ease,
+      --ring 300ms ease,
+      --destructive 300ms ease,
+      --destructive-foreground 300ms ease;
   }
 }

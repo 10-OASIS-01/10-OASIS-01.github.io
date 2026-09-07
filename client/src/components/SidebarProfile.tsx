@@ -40,7 +40,7 @@ export default function SidebarProfile() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={label}
-              title={label}
+              data-instant-label={label}
             >
               <Icon size={20} strokeWidth={1.7} aria-hidden="true" />
             </a>

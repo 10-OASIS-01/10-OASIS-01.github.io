@@ -21,7 +21,7 @@ export default function Blog() {
       <main id="main-content" className="site-shell blog-index">
         <header className="blog-heading">
           <p className="eyebrow">Writing & resources</p>
-          <h1 className="article-serif">Blog</h1>
+          <h1>Blog</h1>
           <p>{blogConfig.description}</p>
         </header>
         <div className="blog-layout">
@@ -34,7 +34,7 @@ export default function Blog() {
                   </time>
                   <span>{post.readTime}</span>
                 </div>
-                <h2 className="article-serif">
+                <h2>
                   <a href={`/blog/${post.slug}/`}>{post.title}</a>
                 </h2>
                 <p className="entry-excerpt">{post.excerpt}</p>

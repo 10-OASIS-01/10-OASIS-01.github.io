@@ -121,7 +121,7 @@ export default function BlogPostPage({ slug }: BlogPostPageProps) {
               <li key={tag}>{tag}</li>
             ))}
           </ul>
-          <h1 className="article-serif">{post.title}</h1>
+          <h1>{post.title}</h1>
           <p className="article-subtitle">{post.subtitle}</p>
           <div className="article-meta">
             <span>
@@ -179,7 +179,7 @@ export default function BlogPostPage({ slug }: BlogPostPageProps) {
               </ReactMarkdown>
             </article>
             <div className="article-share">
-              <h2 className="article-serif">Was this guide useful?</h2>
+              <h2>Was this guide useful?</h2>
               <p>
                 Share it with someone navigating the same hidden curriculum.
               </p>
