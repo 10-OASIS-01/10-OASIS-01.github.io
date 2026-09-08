@@ -259,6 +259,12 @@
   html {
     scroll-behavior: smooth;
     scroll-padding-top: 96px;
+    overscroll-behavior-x: none;
+  }
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: clip;
   }
   body {
     margin: 0;
@@ -267,6 +273,7 @@
     font-family: var(--font-sans);
     font-size: 16px;
     line-height: 1.65;
+    touch-action: pan-y pinch-zoom;
     -webkit-font-smoothing: antialiased;
   }
   h1,
@@ -312,6 +319,20 @@
     background: var(--accent);
     color: var(--accent-foreground);
   }
+}
+@supports not (overflow: clip) {
+  html,
+  body,
+  #root,
+  .site-page {
+    overflow-x: hidden;
+  }
+}
+.site-page,
+#root {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
 }
 .site-page {
   min-height: 100dvh;
@@ -1979,6 +2000,30 @@
   }
   .blog-prose h3 {
     font-size: 23px;
+  }
+}
+@media (max-width: 319px) {
+  .site-header .site-shell {
+    width: calc(100% - 20px);
+  }
+  .nav-layout {
+    gap: 4px;
+  }
+  .wordmark {
+    gap: 4px;
+    font-size: 15px;
+  }
+  .wordmark-cn {
+    padding-left: 4px;
+    font-size: 12px;
+    letter-spacing: 0;
+  }
+  .nav-controls {
+    gap: 0;
+  }
+  .theme-toggle,
+  .menu-button {
+    width: 34px;
   }
 }
 @media (prefers-reduced-motion: reduce) {
