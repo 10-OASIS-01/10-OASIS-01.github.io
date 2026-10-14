@@ -6,6 +6,7 @@ import {
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
 import type { MiscContent } from "@/content/types";
+import RichText from "./RichText";
 
 export default function JourneyTrail({ content }: { content: MiscContent }) {
   const [open, setOpen] = useState(false);
@@ -30,7 +31,13 @@ export default function JourneyTrail({ content }: { content: MiscContent }) {
               <time>{item.year}</time>
               <div>
                 <h3>{item.title}</h3>
-                <p>{item.description}</p>
+                <p>
+                  {typeof item.description === "string" ? (
+                    item.description
+                  ) : (
+                    <RichText content={item.description} />
+                  )}
+                </p>
                 <p className="journey-meta">{item.location}</p>
                 <ul className="journey-metrics" aria-label="Milestone details">
                   {item.metrics.map((metric) => (

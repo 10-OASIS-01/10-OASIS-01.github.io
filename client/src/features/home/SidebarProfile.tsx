@@ -6,14 +6,15 @@ import { personalInfo, images, socialLinks, assets } from "@/content";
 export default function SidebarProfile() {
   return (
     <aside className="profile-sidebar" aria-label="Personal profile">
-      <img
-        className="profile-portrait"
-        src={images.profileAvatar}
-        width="2981"
-        height="2981"
-        alt="Leon hiking in the mountains"
-        decoding="async"
-      />
+      <div className="profile-portrait">
+        <img
+          src={images.profileAvatar}
+          width="3000"
+          height="4000"
+          alt="Leon with a hiking backpack in a mountain valley"
+          decoding="async"
+        />
+      </div>
       <div className="profile-details">
         <h1>{personalInfo.name}</h1>
         <p className="profile-affiliation">{personalInfo.university}</p>

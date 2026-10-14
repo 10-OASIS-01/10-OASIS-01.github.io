@@ -8,6 +8,15 @@ import type { NewsItem } from "./types";
 
 export const news: NewsItem[] = [
   {
+    id: 7,
+    date: "2026-10",
+    content: [
+      "We released ",
+      { text: "RobotWorld", url: "https://robotworldai.github.io/" },
+      ", a benchmark for multimodal agents using robots across diverse tasks and embodiments.",
+    ],
+  },
+  {
     id: 6,
     date: "2026-07",
     content: [

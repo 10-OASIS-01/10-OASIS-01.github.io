@@ -41,5 +41,20 @@ export const misc: MiscContent = {
       metrics: ["5,276 m", "First snow summit"],
       icon: "summit",
     },
+    {
+      year: 2026,
+      title: "Zhagana Small Loop",
+      description: [
+        "Hiked the 23 km small loop in Zhagana, retracing explorer ",
+        {
+          text: "Joseph Rock",
+          url: "https://zh.wikipedia.org/wiki/约瑟夫·洛克",
+        },
+        "’s footsteps along the Rock Road.",
+      ],
+      location: "Zhagana, Gansu, China",
+      metrics: ["23 km", "Rock Road"],
+      icon: "hike",
+    },
   ],
 };

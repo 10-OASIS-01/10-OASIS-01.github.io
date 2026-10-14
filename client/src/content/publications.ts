@@ -6,6 +6,25 @@ import type { Publication } from "./types";
 
 export const publications: Publication[] = [
   {
+    id: 8,
+    authors:
+      "Zhiqin Yang*, Chenxin Li*, Xiaomeng Hu*, Yibin Liu, et al.",
+    title:
+      "RobotWorld: Benchmarking Multimodal Agents for Robot Use Across Diverse Tasks and Embodiments",
+    venue: "Technical Report",
+    year: 2026,
+    thumbnail: {
+      src: "/assets/optimized/robotworld-framework.webp",
+      alt: "Figure 3: The RobotWorld framework, connecting multimodal agents, robot tools, simulation scenes, and evaluation",
+    },
+    contribution: "Core contributor",
+    links: [
+      { text: "Paper", url: "https://arxiv.org/pdf/2610.10409" },
+      { text: "Project Page", url: "https://robotworldai.github.io/#top" },
+      { text: "Code", url: "https://github.com/robotworldai/robotworld" },
+    ],
+  },
+  {
     id: 7,
     authors: "Robbyant Team",
     title:

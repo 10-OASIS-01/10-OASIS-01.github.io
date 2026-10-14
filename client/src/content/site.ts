@@ -11,7 +11,7 @@ import type { NavItem, SiteImages, SiteMetadata, SocialLinks } from "./types";
 /** Single source of truth for uploaded asset paths. */
 export const assets = {
   heroBackground: "/assets/hero-2026.jpg",
-  profileAvatar: "/assets/head-2026.jpg",
+  profileAvatar: "/assets/profile-2026-10.jpg",
   cv: "/assets/Leon_s_CV.pdf",
 } as const;
 

@@ -182,7 +182,7 @@ export type JourneyMilestoneIcon = "plateau" | "run" | "hike" | "summit";
 export interface JourneyMilestone {
   year: number;
   title: string;
-  description: string;
+  description: string | RichText;
   location: string;
   metrics: string[];
   icon: JourneyMilestoneIcon;
