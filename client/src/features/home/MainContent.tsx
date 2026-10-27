@@ -103,14 +103,16 @@ export default function MainContent() {
           </p>
           <p>{personalInfo.aboutMe.researchFocus}</p>
         </div>
-        <dl className="research-interests">
-          {personalInfo.aboutMe.researchInterests.map((interest) => (
-            <div key={interest.title}>
-              <dt>{interest.title}</dt>
-              <dd>{interest.description}</dd>
-            </div>
-          ))}
-        </dl>
+        {personalInfo.aboutMe.researchInterests.length > 0 && (
+          <dl className="research-interests">
+            {personalInfo.aboutMe.researchInterests.map((interest) => (
+              <div key={interest.title}>
+                <dt>{interest.title}</dt>
+                <dd>{interest.description}</dd>
+              </div>
+            ))}
+          </dl>
+        )}
         {personalInfo.aboutMe.goal && <p>{personalInfo.aboutMe.goal}</p>}
         <OutreachNote />
       </Section>

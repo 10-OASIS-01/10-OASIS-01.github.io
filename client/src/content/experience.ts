@@ -60,7 +60,7 @@ export const industryExperiences: IndustryExperience[] = [
     role: "TGT Intern",
     org: {
       name: "Joy Future Academy",
-      url: "https://research.joyai.com/career",
+      url: "https://research.joyai.com/",
     },
     parentOrg: { name: "JD.COM" },
     parentOrgPrefix: "",

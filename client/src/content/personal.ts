@@ -16,7 +16,7 @@ export const personalInfo: PersonalInfo = {
     "Currently a Tech Genius Team Intern (TGT) at ",
     {
       text: "Joy Future Academy, JD.COM",
-      url: "https://research.joyai.com/career",
+      url: "https://research.joyai.com/",
     },
     ", working on compositional generation for long-horizon and mobile manipulation.",
   ],

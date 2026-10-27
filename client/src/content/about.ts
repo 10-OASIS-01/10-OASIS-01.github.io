@@ -40,22 +40,6 @@ export const aboutMe: AboutMe = {
     ".",
   ],
   researchFocus:
-    "My long-term goal is to build agentic robots that learn from real-world interaction and transfer their knowledge reliably across new tasks, objects, and environments. My research connects three directions:",
-  researchInterests: [
-    {
-      title: "Lifelong and Compositional Robot Learning",
-      description:
-        "Learning reusable skills and world knowledge that robots can combine to solve new tasks without retraining from scratch.",
-    },
-    {
-      title: "Uncertainty-Aware Multimodal Reasoning and Planning",
-      description:
-        "Combining vision, language, memory, and action to plan over long horizons, gather information, and recover from failures.",
-    },
-    {
-      title: "Grounded Program Synthesis for Embodied Agents",
-      description:
-        "Turning language, observations, demonstrations, and interaction into structured, interpretable programs that robots can execute.",
-    },
-  ],
+    "My long-term goal is to build agentic robots that learn from real-world interaction and transfer their knowledge reliably across new tasks, objects, and environments.",
+  researchInterests: [],
 };
