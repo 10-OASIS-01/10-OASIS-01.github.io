@@ -19,6 +19,8 @@ import JourneyTrail from "./JourneyTrail";
 import OutreachNote from "./OutreachNote";
 
 const NEWS_VISIBLE_COUNT = 3;
+// Temporarily hidden; keep the section and its content available for restoration.
+const SHOW_RESEARCH_EXPERIENCE = false;
 function Section({
   id,
   title,
@@ -237,47 +239,49 @@ export default function MainContent() {
           ))}
         </div>
       </Section>
-      <Section id="research" title="Research experience">
-        <div className="experience-list">
-          {researchExperiences.map((exp) => (
-            <article className="experience" key={exp.id}>
-              <Logo logo={exp.logo} />
-              <div className="experience-body">
-                <div className="experience-summary">
-                  <h3>
-                    {exp.titleLink ? (
-                      <a
-                        href={exp.titleLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {exp.title}
-                      </a>
-                    ) : (
-                      exp.title
+      {SHOW_RESEARCH_EXPERIENCE && (
+        <Section id="research" title="Research experience">
+          <div className="experience-list">
+            {researchExperiences.map((exp) => (
+              <article className="experience" key={exp.id}>
+                <Logo logo={exp.logo} />
+                <div className="experience-body">
+                  <div className="experience-summary">
+                    <h3>
+                      {exp.titleLink ? (
+                        <a
+                          href={exp.titleLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {exp.title}
+                        </a>
+                      ) : (
+                        exp.title
+                      )}
+                    </h3>
+                    <p className="experience-date">{exp.duration}</p>
+                    {exp.advisors && exp.advisors.length > 0 && (
+                      <p className="experience-advisors">
+                        Advisor:{" "}
+                        {exp.advisors.map((advisor, index) => (
+                          <span key={advisor.name}>
+                            {index > 0 && ", "}
+                            <Organization org={advisor} />
+                          </span>
+                        ))}
+                      </p>
                     )}
-                  </h3>
-                  <p className="experience-date">{exp.duration}</p>
-                  {exp.advisors && exp.advisors.length > 0 && (
-                    <p className="experience-advisors">
-                      Advisor:{" "}
-                      {exp.advisors.map((advisor, index) => (
-                        <span key={advisor.name}>
-                          {index > 0 && ", "}
-                          <Organization org={advisor} />
-                        </span>
-                      ))}
+                    <p className="meta-text experience-location">
+                      {exp.location}
                     </p>
-                  )}
-                  <p className="meta-text experience-location">
-                    {exp.location}
-                  </p>
+                  </div>
                 </div>
-              </div>
-            </article>
-          ))}
-        </div>
-      </Section>
+              </article>
+            ))}
+          </div>
+        </Section>
+      )}
       <Section id="industry" title="Industry experience">
         <div className="experience-list">
           {industryExperiences.map((exp) => (
